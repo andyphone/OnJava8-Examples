@@ -48,7 +48,7 @@ public class StaticInitialization {
     table.f2(1);
     cupboard.f3(1);
   }
-  static Table table = new Table();  // *** table的构造方法被static提前了
+  static Table table = new Table();  // self-note *** table的构造方法被static提前了
   static Cupboard cupboard = new Cupboard();
 }
 /* Output:
@@ -74,6 +74,7 @@ f3(1)
 */
 
 /**
+ * self-note
  父类--静态变量
  父类--静态初始化块
  子类--静态变量

@@ -117,4 +117,7 @@ float: f1(float) f2(float) f3(float) f4(float)
 f5(float) f6(float) f7(double)
 double: f1(double) f2(double) f3(double) f4(double)
 f5(double) f6(double) f7(double)
+
+
+self-note: 小参数类型会自动入参  大参数类型的方法
 */
