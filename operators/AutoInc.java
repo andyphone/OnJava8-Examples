@@ -7,13 +7,13 @@
 public class AutoInc {
   public static void main(String[] args) {
     int i = 1;
-    System.out.println("i: " + i);
-    System.out.println("++i: " + ++i); // Pre-increment
-    System.out.println("i++: " + i++); // Post-increment
-    System.out.println("i: " + i);
-    System.out.println("--i: " + --i); // Pre-decrement
-    System.out.println("i--: " + i--); // Post-decrement
-    System.out.println("i: " + i);
+    System.err.println("i: " + i);
+    System.err.println("++i: " + ++i); // Pre-increment
+    System.err.println("i++: " + i++); // Post-increment
+    System.err.println("i: " + i);
+    System.err.println("--i: " + --i); // Pre-decrement
+    System.err.println("i--: " + i--); // Post-decrement
+    System.err.println("i: " + i);
   }
 }
 /* Output:

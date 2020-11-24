@@ -9,7 +9,7 @@ public class CurriedIntAdd {
     IntFunction<IntUnaryOperator>
       curriedIntAdd = a -> b -> a + b;
     IntUnaryOperator add4 = curriedIntAdd.apply(4);
-    System.out.println(add4.applyAsInt(5));
+    System.err.println(add4.applyAsInt(5));
   }
 }
 /* Output:

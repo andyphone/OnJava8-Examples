@@ -10,7 +10,7 @@ public class StreamOfOptionals {
     Signal.stream()
       .limit(10)
       .forEach(System.out::println);
-    System.out.println(" ---");
+    System.err.println(" ---");
     Signal.stream()
       .limit(10)
       .filter(Optional::isPresent)

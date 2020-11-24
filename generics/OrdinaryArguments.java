@@ -5,13 +5,13 @@
 
 class OrdinarySetter {
   void set(Base base) {
-    System.out.println("OrdinarySetter.set(Base)");
+    System.err.println("OrdinarySetter.set(Base)");
   }
 }
 
 class DerivedSetter extends OrdinarySetter {
   void set(Derived derived) {
-    System.out.println("DerivedSetter.set(Derived)");
+    System.err.println("DerivedSetter.set(Derived)");
   }
 }
 

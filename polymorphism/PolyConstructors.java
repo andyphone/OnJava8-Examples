@@ -6,11 +6,11 @@
 // don't produce what you might expect
 
 class Glyph {
-  void draw() { System.out.println("Glyph.draw()"); }
+  void draw() { System.err.println("Glyph.draw()"); }
   Glyph() {
-    System.out.println("Glyph() before draw()");
+    System.err.println("Glyph() before draw()");
     draw();
-    System.out.println("Glyph() after draw()");
+    System.err.println("Glyph() after draw()");
   }
 }
 
@@ -18,12 +18,12 @@ class RoundGlyph extends Glyph {
   private int radius = 1;
   RoundGlyph(int r) {
     radius = r;
-    System.out.println(
+    System.err.println(
       "RoundGlyph.RoundGlyph(), radius = " + radius);
   }
   @Override
   void draw() {
-    System.out.println(
+    System.err.println(
       "RoundGlyph.draw(), radius = " + radius);
   }
 }

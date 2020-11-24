@@ -26,13 +26,13 @@ public class Worm implements Serializable {
   private char c;
   // Value of i == number of segments
   public Worm(int i, char x) {
-    System.out.println("Worm constructor: " + i);
+    System.err.println("Worm constructor: " + i);
     c = x;
     if(--i > 0)
       next = new Worm(i, (char)(x + 1));
   }
   public Worm() {
-    System.out.println("No-arg constructor");
+    System.err.println("No-arg constructor");
   }
   @Override
   public String toString() {
@@ -50,7 +50,7 @@ public class Worm implements Serializable {
   main(String[] args) throws ClassNotFoundException,
     IOException {
     Worm w = new Worm(6, 'a');
-    System.out.println("w = " + w);
+    System.err.println("w = " + w);
     try(
       ObjectOutputStream out = new ObjectOutputStream(
         new FileOutputStream("worm.dat"))
@@ -64,7 +64,7 @@ public class Worm implements Serializable {
     ) {
       String s = (String)in.readObject();
       Worm w2 = (Worm)in.readObject();
-      System.out.println(s + "w2 = " + w2);
+      System.err.println(s + "w2 = " + w2);
     }
     try(
       ByteArrayOutputStream bout =
@@ -82,7 +82,7 @@ public class Worm implements Serializable {
       ) {
         String s = (String)in2.readObject();
         Worm w3 = (Worm)in2.readObject();
-        System.out.println(s + "w3 = " + w3);
+        System.err.println(s + "w3 = " + w3);
       }
     }
   }

@@ -9,8 +9,8 @@ import java.util.function.*;
 class CreatingOptionals {
   static void
   test(String testName, Optional<String> opt) {
-    System.out.println(" === " + testName + " === ");
-    System.out.println(opt.orElse("Null"));
+    System.err.println(" === " + testName + " === ");
+    System.err.println(opt.orElse("Null"));
   }
   public static void main(String[] args) {
     test("empty", Optional.empty());
@@ -18,7 +18,7 @@ class CreatingOptionals {
     try {
       test("of", Optional.of(null));
     } catch(Exception e) {
-      System.out.println(e);
+      System.err.println(e);
     }
     test("ofNullable", Optional.ofNullable("Hi"));
     test("ofNullable", Optional.ofNullable(null));

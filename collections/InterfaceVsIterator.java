@@ -9,14 +9,14 @@ public class InterfaceVsIterator {
   public static void display(Iterator<Pet> it) {
     while(it.hasNext()) {
       Pet p = it.next();
-      System.out.print(p.id() + ":" + p + " ");
+      System.err.print(p.id() + ":" + p + " ");
     }
-    System.out.println();
+    System.err.println();
   }
   public static void display(Collection<Pet> pets) {
     for(Pet p : pets)
-      System.out.print(p.id() + ":" + p + " ");
-    System.out.println();
+      System.err.print(p.id() + ":" + p + " ");
+    System.err.println();
   }
   public static void main(String[] args) {
     List<Pet> petList = Pets.list(8);
@@ -30,8 +30,8 @@ public class InterfaceVsIterator {
     display(petSet);
     display(petList.iterator());
     display(petSet.iterator());
-    System.out.println(petMap);
-    System.out.println(petMap.keySet());
+    System.err.println(petMap);
+    System.err.println(petMap.keySet());
     display(petMap.values());
     display(petMap.values().iterator());
   }

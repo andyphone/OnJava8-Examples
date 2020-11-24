@@ -28,7 +28,7 @@ public class TheReplacements {
     // Replace 1+ spaces at the beginning of each
     // line with no spaces. Must enable MULTILINE mode:
     s = s.replaceAll("(?m)^ +", "");
-    System.out.println(s);
+    System.err.println(s);
     s = s.replaceFirst("[aeiou]", "(VOWEL1)");
     StringBuffer sbuf = new StringBuffer();
     Pattern p = Pattern.compile("[aeiou]");
@@ -40,7 +40,7 @@ public class TheReplacements {
         sbuf, m.group().toUpperCase());
     // Put in the remainder of the text:
     m.appendTail(sbuf);
-    System.out.println(sbuf);
+    System.err.println(sbuf);
   }
 }
 /* Output:

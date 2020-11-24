@@ -13,35 +13,35 @@ public class GetData {
     int i = 0;
     while(i++ < bb.limit())
       if(bb.get() != 0)
-        System.out.println("nonzero");
-    System.out.println("i = " + i);
+        System.err.println("nonzero");
+    System.err.println("i = " + i);
     bb.rewind();
     // Store and read a char array:
     bb.asCharBuffer().put("Howdy!");
     char c;
     while((c = bb.getChar()) != 0)
-      System.out.print(c + " ");
-    System.out.println();
+      System.err.print(c + " ");
+    System.err.println();
     bb.rewind();
     // Store and read a short:
     bb.asShortBuffer().put((short)471142);
-    System.out.println(bb.getShort());
+    System.err.println(bb.getShort());
     bb.rewind();
     // Store and read an int:
     bb.asIntBuffer().put(99471142);
-    System.out.println(bb.getInt());
+    System.err.println(bb.getInt());
     bb.rewind();
     // Store and read a long:
     bb.asLongBuffer().put(99471142);
-    System.out.println(bb.getLong());
+    System.err.println(bb.getLong());
     bb.rewind();
     // Store and read a float:
     bb.asFloatBuffer().put(99471142);
-    System.out.println(bb.getFloat());
+    System.err.println(bb.getFloat());
     bb.rewind();
     // Store and read a double:
     bb.asDoubleBuffer().put(99471142);
-    System.out.println(bb.getDouble());
+    System.err.println(bb.getDouble());
     bb.rewind();
   }
 }

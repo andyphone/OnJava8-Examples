@@ -10,7 +10,7 @@ public class Conversion {
     Formatter f = new Formatter(System.out);
 
     char u = 'a';
-    System.out.println("u = 'a'");
+    System.err.println("u = 'a'");
     f.format("s: %s%n", u);
     // f.format("d: %d%n", u);
     f.format("c: %c%n", u);
@@ -21,7 +21,7 @@ public class Conversion {
     f.format("h: %h%n", u);
 
     int v = 121;
-    System.out.println("v = 121");
+    System.err.println("v = 121");
     f.format("d: %d%n", v);
     f.format("c: %c%n", v);
     f.format("b: %b%n", v);
@@ -32,7 +32,7 @@ public class Conversion {
     f.format("h: %h%n", v);
 
     BigInteger w = new BigInteger("50000000000000");
-    System.out.println(
+    System.err.println(
       "w = new BigInteger(\"50000000000000\")");
     f.format("d: %d%n", w);
     // f.format("c: %c%n", w);
@@ -44,7 +44,7 @@ public class Conversion {
     f.format("h: %h%n", w);
 
     double x = 179.543;
-    System.out.println("x = 179.543");
+    System.err.println("x = 179.543");
     // f.format("d: %d%n", x);
     // f.format("c: %c%n", x);
     f.format("b: %b%n", x);
@@ -55,7 +55,7 @@ public class Conversion {
     f.format("h: %h%n", x);
 
     Conversion y = new Conversion();
-    System.out.println("y = new Conversion()");
+    System.err.println("y = new Conversion()");
     // f.format("d: %d%n", y);
     // f.format("c: %c%n", y);
     f.format("b: %b%n", y);
@@ -66,7 +66,7 @@ public class Conversion {
     f.format("h: %h%n", y);
 
     boolean z = false;
-    System.out.println("z = false");
+    System.err.println("z = false");
     // f.format("d: %d%n", z);
     // f.format("c: %c%n", z);
     f.format("b: %b%n", z);

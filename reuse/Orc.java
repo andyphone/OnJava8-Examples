@@ -30,9 +30,9 @@ public class Orc extends Villain {
   }
   public static void main(String[] args) {
     Orc orc = new Orc("Limburger", 12);
-    System.out.println(orc);
+    System.err.println(orc);
     orc.change("Bob", 19);
-    System.out.println(orc);
+    System.err.println(orc);
   }
 }
 /* Output:

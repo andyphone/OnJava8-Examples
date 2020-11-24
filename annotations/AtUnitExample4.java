@@ -43,24 +43,24 @@ public class AtUnitExample4 {
   }
   @Test
   boolean words() {
-    System.out.println("'" + getWord() + "'");
+    System.err.println("'" + getWord() + "'");
     return getWord().equals("are");
   }
   @Test
   boolean scramble1() {
     // Use specific seed to get verifiable results:
     rand = new Random(47);
-    System.out.println("'" + getWord() + "'");
+    System.err.println("'" + getWord() + "'");
     String scrambled = scrambleWord();
-    System.out.println(scrambled);
+    System.err.println(scrambled);
     return scrambled.equals("lAl");
   }
   @Test
   boolean scramble2() {
     rand = new Random(74);
-    System.out.println("'" + getWord() + "'");
+    System.err.println("'" + getWord() + "'");
     String scrambled = scrambleWord();
-    System.out.println(scrambled);
+    System.err.println(scrambled);
     return scrambled.equals("tsaeborornussu");
   }
 }

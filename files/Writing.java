@@ -14,14 +14,14 @@ public class Writing {
     byte[] bytes = new byte[SIZE];
     rand.nextBytes(bytes);
     Files.write(Paths.get("bytes.dat"), bytes);
-    System.out.println("bytes.dat: " +
+    System.err.println("bytes.dat: " +
       Files.size(Paths.get("bytes.dat")));
 
     // Write an iterable to a file:
     List<String> lines = Files.readAllLines(
       Paths.get("../streams/Cheese.dat"));
     Files.write(Paths.get("Cheese.txt"), lines);
-    System.out.println("Cheese.txt: " +
+    System.err.println("Cheese.txt: " +
       Files.size(Paths.get("Cheese.txt")));
   }
 }

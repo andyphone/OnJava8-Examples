@@ -11,17 +11,17 @@ public class AvailableCharSets {
     SortedMap<String,Charset> charSets =
       Charset.availableCharsets();
     for(String csName : charSets.keySet()) {
-      System.out.print(csName);
+      System.err.print(csName);
       Iterator aliases = charSets.get(csName)
         .aliases().iterator();
       if(aliases.hasNext())
-        System.out.print(": ");
+        System.err.print(": ");
       while(aliases.hasNext()) {
-        System.out.print(aliases.next());
+        System.err.print(aliases.next());
         if(aliases.hasNext())
-          System.out.print(", ");
+          System.err.print(", ");
       }
-      System.out.println();
+      System.err.println();
     }
   }
 }

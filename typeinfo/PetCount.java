@@ -21,7 +21,7 @@ public class PetCount {
     Counter counter = new Counter();
     for(Pet pet : Pets.array(20)) {
       // List each individual pet:
-      System.out.print(
+      System.err.print(
         pet.getClass().getSimpleName() + " ");
       if(pet instanceof Pet)
         counter.count("Pet");
@@ -49,8 +49,8 @@ public class PetCount {
         counter.count("Hamster");
     }
     // Show the counts:
-    System.out.println();
-    System.out.println(counter);
+    System.err.println();
+    System.err.println(counter);
   }
   public static void main(String[] args) {
     countPets(new ForNameCreator());

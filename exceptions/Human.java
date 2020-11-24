@@ -13,15 +13,15 @@ public class Human {
     try {
       throw new Sneeze();
     } catch(Sneeze s) {
-      System.out.println("Caught Sneeze");
+      System.err.println("Caught Sneeze");
     } catch(Annoyance a) {
-      System.out.println("Caught Annoyance");
+      System.err.println("Caught Annoyance");
     }
     // Catch the base type:
     try {
       throw new Sneeze();
     } catch(Annoyance a) {
-      System.out.println("Caught Annoyance");
+      System.err.println("Caught Annoyance");
     }
   }
 }

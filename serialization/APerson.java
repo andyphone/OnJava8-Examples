@@ -53,7 +53,7 @@ public class APerson {
       new APerson("Dr. Bunsen", "Honeydew"),
       new APerson("Gonzo", "The Great"),
       new APerson("Phillip J.", "Fry"));
-    System.out.println(people);
+    System.err.println(people);
     Element root = new Element("people");
     for(APerson p : people)
       root.appendChild(p.getXML());

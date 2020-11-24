@@ -19,7 +19,7 @@ public class Summing2 {
   public static final long CHECK =
     (long)SZ * ((long)SZ + 1)/2;
   public static void main(String[] args) {
-    System.out.println(CHECK);
+    System.err.println(CHECK);
     long[] la = new long[SZ+1];
     Arrays.parallelSetAll(la, i -> i);
     Summing.timeTest("Array Stream Sum", CHECK, () ->

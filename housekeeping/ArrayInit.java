@@ -15,8 +15,8 @@ public class ArrayInit {
       1, 2,
       3, // Autoboxing
     };
-    System.out.println(Arrays.toString(a));
-    System.out.println(Arrays.toString(b));
+    System.err.println(Arrays.toString(a));
+    System.err.println(Arrays.toString(b));
   }
 }
 /* Output:

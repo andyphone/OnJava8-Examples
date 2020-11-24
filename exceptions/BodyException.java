@@ -11,12 +11,12 @@ public class BodyException {
       First f = new First();
       Second s2 = new Second()
     ) {
-      System.out.println("In body");
+      System.err.println("In body");
       Third t = new Third();
       new SecondExcept();
-      System.out.println("End of body");
+      System.err.println("End of body");
     } catch(CE e) {
-      System.out.println("Caught: " + e);
+      System.err.println("Caught: " + e);
     }
   }
 }

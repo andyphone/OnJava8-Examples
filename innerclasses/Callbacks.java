@@ -16,13 +16,13 @@ class Callee1 implements Incrementable {
   @Override
   public void increment() {
     i++;
-    System.out.println(i);
+    System.err.println(i);
   }
 }
 
 class MyIncrement {
   public void increment() {
-    System.out.println("Other operation");
+    System.err.println("Other operation");
   }
   static void f(MyIncrement mi) { mi.increment(); }
 }
@@ -35,7 +35,7 @@ class Callee2 extends MyIncrement {
   public void increment() {
     super.increment();
     i++;
-    System.out.println(i);
+    System.err.println(i);
   }
   private class Closure implements Incrementable {
     @Override

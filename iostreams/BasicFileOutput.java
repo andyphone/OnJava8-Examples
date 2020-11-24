@@ -21,6 +21,6 @@ public class BasicFileOutput {
       throw new RuntimeException(e);
     }
     // Show the stored file:
-    System.out.println(BufferedInputFile.read(file));
+    System.err.println(BufferedInputFile.read(file));
   }
 }

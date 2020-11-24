@@ -18,19 +18,19 @@ public class CircularQueueTest {
   private void showFullness() {
     assertTrue(queue.full());
     assertFalse(queue.empty());
-    System.out.println(queue.dump());
+    System.err.println(queue.dump());
   }
   private void showEmptiness() {
     assertFalse(queue.full());
     assertTrue(queue.empty());
-    System.out.println(queue.dump());
+    System.err.println(queue.dump());
   }
   @Test
   public void full() {
-    System.out.println("testFull");
-    System.out.println(queue.dump());
-    System.out.println(queue.get());
-    System.out.println(queue.get());
+    System.err.println("testFull");
+    System.err.println(queue.dump());
+    System.err.println(queue.get());
+    System.err.println(queue.get());
     while(!queue.full())
       queue.put(Integer.toString(i++));
     String msg = "";
@@ -38,53 +38,53 @@ public class CircularQueueTest {
       queue.put("");
     } catch(CircularQueueException e) {
       msg = e.getMessage();
-      System.out.println(msg);
+      System.err.println(msg);
     }
     assertEquals(msg, "put() into full CircularQueue");
     showFullness();
   }
   @Test
   public void empty() {
-    System.out.println("testEmpty");
+    System.err.println("testEmpty");
     while(!queue.empty())
-      System.out.println(queue.get());
+      System.err.println(queue.get());
     String msg = "";
     try {
       queue.get();
     } catch(CircularQueueException e) {
       msg = e.getMessage();
-      System.out.println(msg);
+      System.err.println(msg);
     }
     assertEquals(msg, "get() from empty CircularQueue");
     showEmptiness();
   }
   @Test
   public void nullPut() {
-    System.out.println("testNullPut");
+    System.err.println("testNullPut");
     String msg = "";
     try {
       queue.put(null);
     } catch(CircularQueueException e) {
       msg = e.getMessage();
-      System.out.println(msg);
+      System.err.println(msg);
     }
     assertEquals(msg, "put() null item");
   }
   @Test
   public void circularity() {
-    System.out.println("testCircularity");
+    System.err.println("testCircularity");
     while(!queue.full())
       queue.put(Integer.toString(i++));
     showFullness();
     assertTrue(queue.isWrapped());
     while(!queue.empty())
-      System.out.println(queue.get());
+      System.err.println(queue.get());
     showEmptiness();
     while(!queue.full())
       queue.put(Integer.toString(i++));
     showFullness();
     while(!queue.empty())
-      System.out.println(queue.get());
+      System.err.println(queue.get());
     showEmptiness();
   }
 }

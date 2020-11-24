@@ -32,9 +32,9 @@ public class StrategyPattern2 {
     List<Double> line = Arrays.asList(
       1.0, 2.0, 1.0, 2.0, -1.0,
       3.0, 4.0, 5.0, 4.0 );
-    System.out.println(solver.minima(line));
+    System.err.println(solver.minima(line));
     solver.bisection();
-    System.out.println(solver.minima(line));
+    System.err.println(solver.minima(line));
   }
 }
 /* Output:

@@ -12,6 +12,6 @@ public interface Operations {
       op.execute();
   }
   static void show(String msg) {
-    System.out.println(msg);
+    System.err.println(msg);
   }
 }

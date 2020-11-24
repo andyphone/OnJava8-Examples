@@ -26,8 +26,8 @@ class StaticSub extends StaticSuper {
 public class StaticPolymorphism {
   public static void main(String[] args) {
     StaticSuper sup = new StaticSub(); // Upcast
-    System.out.println(StaticSuper.staticGet());
-    System.out.println(sup.dynamicGet());
+    System.err.println(StaticSuper.staticGet());
+    System.err.println(sup.dynamicGet());
   }
 }
 /* Output:

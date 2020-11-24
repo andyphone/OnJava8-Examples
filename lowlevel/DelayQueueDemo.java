@@ -34,7 +34,7 @@ class DelayedTask implements Runnable, Delayed {
   }
   @Override
   public void run() {
-    System.out.print(this + " ");
+    System.err.print(this + " ");
   }
   @Override
   public String toString() {
@@ -49,7 +49,7 @@ class DelayedTask implements Runnable, Delayed {
     @Override
     public void run() {
       sequence.forEach(dt ->
-        System.out.println(dt.summary()));
+        System.err.println(dt.summary()));
     }
   }
 }

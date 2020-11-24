@@ -67,48 +67,48 @@ public class ListOps {
     it.set("47");
   }
   public static void testVisual(List<String> a) {
-    System.out.println(a);
+    System.err.println(a);
     List<String> b = LIST;
-    System.out.println("b = " + b);
+    System.err.println("b = " + b);
     a.addAll(b);
     a.addAll(b);
-    System.out.println(a);
+    System.err.println(a);
     // Insert, remove, and replace elements
     // using a ListIterator:
     ListIterator<String> x =
       a.listIterator(a.size()/2);
     x.add("one");
-    System.out.println(a);
-    System.out.println(x.next());
+    System.err.println(a);
+    System.err.println(x.next());
     x.remove();
-    System.out.println(x.next());
+    System.err.println(x.next());
     x.set("47");
-    System.out.println(a);
+    System.err.println(a);
     // Traverse the list backwards:
     x = a.listIterator(a.size());
     while(x.hasPrevious())
-      System.out.print(x.previous() + " ");
-    System.out.println();
-    System.out.println("testVisual finished");
+      System.err.print(x.previous() + " ");
+    System.err.println();
+    System.err.println("testVisual finished");
   }
   // There are some things that only LinkedLists can do:
   public static void testLinkedList() {
     LinkedList<String> ll = new LinkedList<>();
     ll.addAll(LIST);
-    System.out.println(ll);
+    System.err.println(ll);
     // Treat it like a stack, pushing:
     ll.addFirst("one");
     ll.addFirst("two");
-    System.out.println(ll);
+    System.err.println(ll);
     // Like "peeking" at the top of a stack:
-    System.out.println(ll.getFirst());
+    System.err.println(ll.getFirst());
     // Like popping a stack:
-    System.out.println(ll.removeFirst());
-    System.out.println(ll.removeFirst());
+    System.err.println(ll.removeFirst());
+    System.err.println(ll.removeFirst());
     // Treat it like a queue, pulling elements
     // off the tail end:
-    System.out.println(ll.removeLast());
-    System.out.println(ll);
+    System.err.println(ll.removeLast());
+    System.err.println(ll);
   }
   public static void main(String[] args) {
     // Make and fill a new list each time:

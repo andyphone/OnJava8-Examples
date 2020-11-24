@@ -11,20 +11,20 @@ public class SimpleIteration {
     Iterator<Pet> it = pets.iterator();
     while(it.hasNext()) {
       Pet p = it.next();
-      System.out.print(p.id() + ":" + p + " ");
+      System.err.print(p.id() + ":" + p + " ");
     }
-    System.out.println();
+    System.err.println();
     // A simpler approach, when possible:
     for(Pet p : pets)
-      System.out.print(p.id() + ":" + p + " ");
-    System.out.println();
+      System.err.print(p.id() + ":" + p + " ");
+    System.err.println();
     // An Iterator can also remove elements:
     it = pets.iterator();
     for(int i = 0; i < 6; i++) {
       it.next();
       it.remove();
     }
-    System.out.println(pets);
+    System.err.println(pets);
   }
 }
 /* Output:

@@ -9,7 +9,7 @@ import java.lang.reflect.*;
 class Mime {
   public void walkAgainstTheWind() {}
   public void sit() {
-    System.out.println("Pretending to sit");
+    System.err.println("Pretending to sit");
   }
   public void pushInvisibleWalls() {}
   @Override
@@ -18,8 +18,8 @@ class Mime {
 
 // Does not implement Performs:
 class SmartDog {
-  public void speak() { System.out.println("Woof!"); }
-  public void sit() { System.out.println("Sitting"); }
+  public void speak() { System.err.println("Woof!"); }
+  public void sit() { System.err.println("Sitting"); }
   public void reproduce() {}
 }
 
@@ -31,13 +31,13 @@ class CommunicateReflectively {
         Method speak = spkr.getMethod("speak");
         speak.invoke(speaker);
       } catch(NoSuchMethodException e) {
-        System.out.println(speaker + " cannot speak");
+        System.err.println(speaker + " cannot speak");
       }
       try {
         Method sit = spkr.getMethod("sit");
         sit.invoke(speaker);
       } catch(NoSuchMethodException e) {
-        System.out.println(speaker + " cannot sit");
+        System.err.println(speaker + " cannot sit");
       }
     } catch(SecurityException |
             IllegalAccessException |

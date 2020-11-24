@@ -8,21 +8,21 @@ package reuse;
 
 class Shape {
   Shape(int i) {
-    System.out.println("Shape constructor");
+    System.err.println("Shape constructor");
   }
   void dispose() {
-    System.out.println("Shape dispose");
+    System.err.println("Shape dispose");
   }
 }
 
 class Circle extends Shape {
   Circle(int i) {
     super(i);
-    System.out.println("Drawing Circle");
+    System.err.println("Drawing Circle");
   }
   @Override
   void dispose() {
-    System.out.println("Erasing Circle");
+    System.err.println("Erasing Circle");
     super.dispose();
   }
 }
@@ -30,11 +30,11 @@ class Circle extends Shape {
 class Triangle extends Shape {
   Triangle(int i) {
     super(i);
-    System.out.println("Drawing Triangle");
+    System.err.println("Drawing Triangle");
   }
   @Override
   void dispose() {
-    System.out.println("Erasing Triangle");
+    System.err.println("Erasing Triangle");
     super.dispose();
   }
 }
@@ -45,12 +45,12 @@ class Line extends Shape {
     super(start);
     this.start = start;
     this.end = end;
-    System.out.println(
+    System.err.println(
       "Drawing Line: " + start + ", " + end);
   }
   @Override
   void dispose() {
-    System.out.println(
+    System.err.println(
       "Erasing Line: " + start + ", " + end);
     super.dispose();
   }
@@ -66,11 +66,11 @@ public class CADSystem extends Shape {
       lines[j] = new Line(j, j*j);
     c = new Circle(1);
     t = new Triangle(1);
-    System.out.println("Combined constructor");
+    System.err.println("Combined constructor");
   }
   @Override
   public void dispose() {
-    System.out.println("CADSystem.dispose()");
+    System.err.println("CADSystem.dispose()");
     // The order of cleanup is the reverse
     // of the order of initialization:
     t.dispose();

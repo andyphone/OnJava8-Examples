@@ -22,7 +22,7 @@ implements Supplier<CartoonCharacter> {
 
 public class EnumImplementation {
   public static <T> void printNext(Supplier<T> rg) {
-    System.out.print(rg.get() + ", ");
+    System.err.print(rg.get() + ", ");
   }
   public static void main(String[] args) {
     // Choose any instance:

@@ -9,17 +9,17 @@ public class Burrito {
     this.degree = degree;
   }
   public void describe() {
-    System.out.print("This burrito is ");
+    System.err.print("This burrito is ");
     switch(degree) {
-      case NOT:    System.out.println(
+      case NOT:    System.err.println(
                       "not spicy at all.");
                    break;
       case MILD:
-      case MEDIUM: System.out.println("a little hot.");
+      case MEDIUM: System.err.println("a little hot.");
                    break;
       case HOT:
       case FLAMING:
-      default:     System.out.println("maybe too hot.");
+      default:     System.err.println("maybe too hot.");
     }
   }
   public static void main(String[] args) {

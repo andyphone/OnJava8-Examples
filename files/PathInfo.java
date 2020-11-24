@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class PathInfo {
   static void show(String id, Object p) {
-    System.out.println(id + ": " + p);
+    System.err.println(id + ": " + p);
   }
   static void info(Path p) {
     show("toString", p);
@@ -20,10 +20,10 @@ public class PathInfo {
     show("FileName", p.getFileName());
     show("Parent", p.getParent());
     show("Root", p.getRoot());
-    System.out.println("******************");
+    System.err.println("******************");
   }
   public static void main(String[] args) {
-    System.out.println(System.getProperty("os.name"));
+    System.err.println(System.getProperty("os.name"));
     info(Paths.get(
       "C:", "path", "to", "nowhere", "NoFile.txt"));
     Path p = Paths.get("PathInfo.java");
@@ -34,12 +34,12 @@ public class PathInfo {
     try {
       info(p.toRealPath());
     } catch(IOException e) {
-      System.out.println(e);
+      System.err.println(e);
     }
     URI u = p.toUri();
-    System.out.println("URI: " + u);
+    System.err.println("URI: " + u);
     Path puri = Paths.get(u);
-    System.out.println(Files.exists(puri));
+    System.err.println(Files.exists(puri));
     File f = ap.toFile(); // Don't be fooled
   }
 }

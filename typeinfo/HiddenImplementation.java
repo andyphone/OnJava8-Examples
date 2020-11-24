@@ -12,7 +12,7 @@ public class HiddenImplementation {
   main(String[] args) throws Exception {
     A a = HiddenC.makeA();
     a.f();
-    System.out.println(a.getClass().getName());
+    System.err.println(a.getClass().getName());
     // Compile error: cannot find symbol 'C':
     /* if(a instanceof C) {
       C c = (C)a;

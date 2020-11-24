@@ -14,7 +14,7 @@ class TwoException extends Exception {
 
 public class RethrowNew {
   public static void f() throws OneException {
-    System.out.println(
+    System.err.println(
       "originating the exception in f()");
     throw new OneException("thrown from f()");
   }
@@ -23,13 +23,13 @@ public class RethrowNew {
       try {
         f();
       } catch(OneException e) {
-        System.out.println(
+        System.err.println(
           "Caught in inner try, e.printStackTrace()");
         e.printStackTrace(System.out);
         throw new TwoException("from inner try");
       }
     } catch(TwoException e) {
-      System.out.println(
+      System.err.println(
         "Caught in outer try, e.printStackTrace()");
       e.printStackTrace(System.out);
     }

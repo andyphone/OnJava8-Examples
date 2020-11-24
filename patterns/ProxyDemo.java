@@ -26,13 +26,13 @@ class Proxy implements ProxyBase {
 
 class Implementation implements ProxyBase {
   public void f() {
-    System.out.println("Implementation.f()");
+    System.err.println("Implementation.f()");
   }
   public void g() {
-    System.out.println("Implementation.g()");
+    System.err.println("Implementation.g()");
   }
   public void h() {
-    System.out.println("Implementation.h()");
+    System.err.println("Implementation.h()");
   }
 }
 

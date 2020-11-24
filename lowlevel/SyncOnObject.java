@@ -41,7 +41,7 @@ public class SyncOnObject {
   }
   public static void main(String[] args) {
     test(true, false);
-    System.out.println("****");
+    System.err.println("****");
     test(false, true);
   }
 }

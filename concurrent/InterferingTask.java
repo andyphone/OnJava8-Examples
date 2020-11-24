@@ -11,7 +11,7 @@ public class InterferingTask implements Runnable {
   public void run() {
     for(int i = 0; i < 100; i++)
       val++;
-    System.out.println(id + " " +
+    System.err.println(id + " " +
       Thread.currentThread().getName() + " " + val);
   }
 }

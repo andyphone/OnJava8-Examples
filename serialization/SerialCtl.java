@@ -27,7 +27,7 @@ public class SerialCtl implements Serializable {
   }
   public static void main(String[] args) {
     SerialCtl sc = new SerialCtl("Test1", "Test2");
-    System.out.println("Before:\n" + sc);
+    System.err.println("Before:\n" + sc);
     try (
       ByteArrayOutputStream buf =
         new ByteArrayOutputStream();
@@ -43,7 +43,7 @@ public class SerialCtl implements Serializable {
               buf.toByteArray()));
       ) {
         SerialCtl sc2 = (SerialCtl)in.readObject();
-        System.out.println("After:\n" + sc2);
+        System.err.println("After:\n" + sc2);
       }
     } catch(IOException | ClassNotFoundException e) {
       throw new RuntimeException(e);

@@ -7,7 +7,7 @@ import java.util.*;
 public class SuccinctEquality extends Equality {
   public SuccinctEquality(int i, String s, double d) {
     super(i, s, d);
-    System.out.println("made 'SuccinctEquality'");
+    System.err.println("made 'SuccinctEquality'");
   }
   @Override
   public boolean equals(Object rval) {

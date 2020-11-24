@@ -24,7 +24,7 @@ public class ZipCompress {
       zos.setComment("A test of Java Zipping");
       // No corresponding getComment(), though.
       for(String arg : args) {
-        System.out.println("Writing file " + arg);
+        System.err.println("Writing file " + arg);
         try(
           InputStream in = new BufferedInputStream(
             new FileInputStream(arg))
@@ -37,13 +37,13 @@ public class ZipCompress {
         out.flush();
       }
       // Checksum valid only after the file is closed!
-      System.out.println(
+      System.err.println(
         "Checksum: " + csum.getChecksum().getValue());
     } catch(IOException e) {
       throw new RuntimeException(e);
     }
     // Now extract the files:
-    System.out.println("Reading file");
+    System.err.println("Reading file");
     try(
       FileInputStream fi =
         new FileInputStream("test.zip");
@@ -55,13 +55,13 @@ public class ZipCompress {
     ) {
       ZipEntry ze;
       while((ze = in2.getNextEntry()) != null) {
-        System.out.println("Reading file " + ze);
+        System.err.println("Reading file " + ze);
         int x;
         while((x = bis.read()) != -1)
-          System.out.write(x);
+          System.err.write(x);
       }
       if(args.length == 1)
-        System.out.println(
+        System.err.println(
           "Checksum: "+csumi.getChecksum().getValue());
     } catch(IOException e) {
       throw new RuntimeException(e);
@@ -73,7 +73,7 @@ public class ZipCompress {
       Enumeration e = zf.entries();
       while(e.hasMoreElements()) {
         ZipEntry ze2 = (ZipEntry)e.nextElement();
-        System.out.println("File: " + ze2);
+        System.err.println("File: " + ze2);
         // ... and extract the data as before
       }
     } catch(IOException e) {

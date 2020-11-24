@@ -11,7 +11,7 @@ public class ShapeFactory2 implements FactoryMethod {
   Map<String, Constructor> factories =
     new HashMap<>();
   static Constructor load(String id) {
-    System.out.println("loading " + id);
+    System.err.println("loading " + id);
     try {
       return Class.forName("patterns.shapes." + id)
         .getConstructor();

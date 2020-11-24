@@ -21,7 +21,7 @@ public class ThreadSize {
         count++;
       }
     } catch(Error e) {
-      System.out.println(
+      System.err.println(
         e.getClass().getSimpleName() + ": " + count);
       System.exit(0);
     } finally {

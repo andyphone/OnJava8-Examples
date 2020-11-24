@@ -19,9 +19,9 @@ public class ConstructorException {
       SecondExcept s = new SecondExcept();
       Second s2 = new Second()
     ) {
-      System.out.println("In body");
+      System.err.println("In body");
     } catch(CE e) {
-      System.out.println("Caught: " + e);
+      System.err.println("Caught: " + e);
     }
   }
 }

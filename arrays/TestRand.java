@@ -11,7 +11,7 @@ import static onjava.ArrayShow.*;
 public class TestRand {
   static final int SZ = 5;
   public static void main(String[] args) {
-    System.out.println("Boolean");
+    System.err.println("Boolean");
     Boolean[] a1 = new Boolean[SZ];
     Arrays.setAll(a1, new Rand.Boolean()::get);
     show(a1);
@@ -24,7 +24,7 @@ public class TestRand {
       new Rand.Pboolean().array(SZ + 3);
     show(a1b);
 
-    System.out.println("Byte");
+    System.err.println("Byte");
     Byte[] a2 = new Byte[SZ];
     Arrays.setAll(a2, new Rand.Byte()::get);
     show(a2);
@@ -36,7 +36,7 @@ public class TestRand {
     byte[] a2b = new Rand.Pbyte().array(SZ + 3);
     show(a2b);
 
-    System.out.println("Character");
+    System.err.println("Character");
     Character[] a3 = new Character[SZ];
     Arrays.setAll(a3, new Rand.Character()::get);
     show(a3);
@@ -48,7 +48,7 @@ public class TestRand {
     char[] a3b = new Rand.Pchar().array(SZ + 3);
     show(a3b);
 
-    System.out.println("Short");
+    System.err.println("Short");
     Short[] a4 = new Short[SZ];
     Arrays.setAll(a4, new Rand.Short()::get);
     show(a4);
@@ -60,7 +60,7 @@ public class TestRand {
     short[] a4b = new Rand.Pshort().array(SZ + 3);
     show(a4b);
 
-    System.out.println("Integer");
+    System.err.println("Integer");
     int[] a5 = new int[SZ];
     Arrays.setAll(a5, new Rand.Integer()::get);
     show(a5);
@@ -76,7 +76,7 @@ public class TestRand {
     a5 = new Rand.Pint().array(SZ + 3);
     show(a5);
 
-    System.out.println("Long");
+    System.err.println("Long");
     long[] a6 = new long[SZ];
     Arrays.setAll(a6, new Rand.Long()::get);
     show(a6);
@@ -91,7 +91,7 @@ public class TestRand {
     a6 = new Rand.Plong().array(SZ + 3);
     show(a6);
 
-    System.out.println("Float");
+    System.err.println("Float");
     Float[] a7 = new Float[SZ];
     Arrays.setAll(a7, new Rand.Float()::get);
     show(a7);
@@ -103,7 +103,7 @@ public class TestRand {
     float[] a7b = new Rand.Pfloat().array(SZ + 3);
     show(a7b);
 
-    System.out.println("Double");
+    System.err.println("Double");
     double[] a8 = new double[SZ];
     Arrays.setAll(a8, new Rand.Double()::get);
     show(a8);
@@ -119,7 +119,7 @@ public class TestRand {
     a8 = new Rand.Pdouble().array(SZ + 3);
     show(a8);
 
-    System.out.println("String");
+    System.err.println("String");
     String[] s = new String[SZ - 1];
     Arrays.setAll(s, new Rand.String()::get);
     show(s);

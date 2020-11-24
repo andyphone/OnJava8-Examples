@@ -29,7 +29,7 @@ public class ParallelStreamPuzzle2 {
         .limit(10)
         .parallel()
         .collect(Collectors.toList());
-    System.out.println(x);
+    System.err.println(x);
     Files.write(Paths.get("PSP2.txt"), trace);
   }
 }

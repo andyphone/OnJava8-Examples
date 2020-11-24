@@ -10,10 +10,10 @@ interface Instrument {
   // Compile-time constant:
   int VALUE = 5; // static & final
   default void play(Note n) {  // Automatically public
-    System.out.println(this + ".play() " + n);
+    System.err.println(this + ".play() " + n);
   }
   default void adjust() {
-    System.out.println("Adjusting " + this);
+    System.err.println("Adjusting " + this);
   }
 }
 

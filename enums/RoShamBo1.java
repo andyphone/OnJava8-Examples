@@ -72,7 +72,7 @@ public class RoShamBo1 {
     }
   }
   public static void match(Item a, Item b) {
-    System.out.println(
+    System.err.println(
       a + " vs. " + b + ": " +  a.compete(b));
   }
   public static void main(String[] args) {

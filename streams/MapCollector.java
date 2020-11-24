@@ -39,7 +39,7 @@ public class MapCollector {
         .limit(8)
         .collect(
           Collectors.toMap(Pair::getI, Pair::getC));
-    System.out.println(map);
+    System.err.println(map);
   }
 }
 /* Output:

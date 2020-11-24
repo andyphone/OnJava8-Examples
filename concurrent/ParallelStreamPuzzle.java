@@ -20,7 +20,7 @@ public class ParallelStreamPuzzle {
         .limit(10)
         .parallel()  // [1]
         .collect(Collectors.toList());
-    System.out.println(x);
+    System.err.println(x);
   }
 }
 /* Output:

@@ -5,19 +5,19 @@
 
 public class MultipleReturns {
   public static void f(int i) {
-    System.out.println(
+    System.err.println(
       "Initialization that requires cleanup");
     try {
-      System.out.println("Point 1");
+      System.err.println("Point 1");
       if(i == 1) return;
-      System.out.println("Point 2");
+      System.err.println("Point 2");
       if(i == 2) return;
-      System.out.println("Point 3");
+      System.err.println("Point 3");
       if(i == 3) return;
-      System.out.println("End");
+      System.err.println("End");
       return;
     } finally {
-      System.out.println("Performing cleanup");
+      System.err.println("Performing cleanup");
     }
   }
   public static void main(String[] args) {

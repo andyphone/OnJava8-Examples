@@ -8,14 +8,14 @@ import java.lang.reflect.*;
 
 class Dog {
   public void talk() {
-    System.out.println("Woof!");
+    System.err.println("Woof!");
   }
   public void reproduce() {}
 }
 
 class Robot {
   public void talk() {
-    System.out.println("Click!");
+    System.err.println("Click!");
   }
   public void oilChange() {}
 }
@@ -34,13 +34,13 @@ class Communicate {
        spkr.getMethod("talk", (Class[])null);
      talk.invoke(speaker, new Object[]{});
     } catch(NoSuchMethodException e) {
-     System.out.println(
+     System.err.println(
        speaker + " cannot talk");
     } catch(IllegalAccessException e) {
-     System.out.println(
+     System.err.println(
        speaker + " IllegalAccessException");
     } catch(InvocationTargetException e) {
-     System.out.println(
+     System.err.println(
        speaker + " InvocationTargetException");
     }
   }

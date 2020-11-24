@@ -21,7 +21,7 @@ public class RecoverCADState {
       Line.deserializeStaticState(in);
       List<Shape> shapes =
         (List<Shape>)in.readObject();
-      System.out.println(shapes);
+      System.err.println(shapes);
     } catch(IOException | ClassNotFoundException e) {
       throw new RuntimeException(e);
     }

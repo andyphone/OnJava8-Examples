@@ -9,10 +9,10 @@ public class ArrayClassObj {
   public static void main(String[] args) {
     Random rand = new Random(47);
     Integer[] a = new Integer[rand.nextInt(20)];
-    System.out.println("length of a = " + a.length);
+    System.err.println("length of a = " + a.length);
     for(int i = 0; i < a.length; i++)
       a[i] = rand.nextInt(500); // Autoboxing
-    System.out.println(Arrays.toString(a));
+    System.err.println(Arrays.toString(a));
   }
 }
 /* Output:

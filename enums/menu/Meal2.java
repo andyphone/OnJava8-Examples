@@ -39,9 +39,9 @@ public enum Meal2 {
     for(int i = 0; i < 5; i++) {
       for(Meal2 meal : Meal2.values()) {
         Food food = meal.randomSelection();
-        System.out.println(food);
+        System.err.println(food);
       }
-      System.out.println("***");
+      System.err.println("***");
     }
   }
 }

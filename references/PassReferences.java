@@ -5,11 +5,11 @@
 
 public class PassReferences {
   public static void f(PassReferences h) {
-    System.out.println("h inside f(): " + h);
+    System.err.println("h inside f(): " + h);
   }
   public static void main(String[] args) {
     PassReferences p = new PassReferences();
-    System.out.println("p inside main(): " + p);
+    System.err.println("p inside main(): " + p);
     f(p);
   }
 }

@@ -9,13 +9,13 @@ import static com.google.common.base.Preconditions.*;
 public class GuavaPreconditions {
   static void test(Consumer<String> c, String s) {
     try {
-      System.out.println(s);
+      System.err.println(s);
       c.accept(s);
-      System.out.println("Success");
+      System.err.println("Success");
     } catch(Exception e) {
       String type = e.getClass().getSimpleName();
       String msg = e.getMessage();
-      System.out.println(type +
+      System.err.println(type +
         (msg == null ? "" : ": " + msg));
     }
   }

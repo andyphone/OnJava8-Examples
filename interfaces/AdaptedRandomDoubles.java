@@ -24,7 +24,7 @@ implements RandomDoubles, Readable {
     Scanner s =
       new Scanner(new AdaptedRandomDoubles(7));
     while(s.hasNextDouble())
-      System.out.print(s.nextDouble() + " ");
+      System.err.print(s.nextDouble() + " ");
   }
 }
 /* Output:

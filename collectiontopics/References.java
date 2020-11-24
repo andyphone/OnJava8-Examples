@@ -16,7 +16,7 @@ class VeryBig {
   @SuppressWarnings("deprecation")
   @Override
   protected void finalize() {
-    System.out.println("Finalizing " + ident);
+    System.err.println("Finalizing " + ident);
   }
 }
 
@@ -26,7 +26,7 @@ public class References {
   public static void checkQueue() {
     Reference<? extends VeryBig> inq = rq.poll();
     if(inq != null)
-      System.out.println("In queue: " + inq.get());
+      System.err.println("In queue: " + inq.get());
   }
   public static void main(String[] args) {
     int size = 10;
@@ -38,7 +38,7 @@ public class References {
     for(int i = 0; i < size; i++) {
       sa.add(new SoftReference<>(
         new VeryBig("Soft " + i), rq));
-      System.out.println(
+      System.err.println(
         "Just created: " + sa.getLast());
       checkQueue();
     }
@@ -47,7 +47,7 @@ public class References {
     for(int i = 0; i < size; i++) {
       wa.add(new WeakReference<>(
         new VeryBig("Weak " + i), rq));
-      System.out.println(
+      System.err.println(
         "Just created: " + wa.getLast());
       checkQueue();
     }
@@ -61,7 +61,7 @@ public class References {
     for(int i = 0; i < size; i++) {
       pa.add(new PhantomReference<>(
         new VeryBig("Phantom " + i), rq));
-      System.out.println(
+      System.err.println(
         "Just created: " + pa.getLast());
       checkQueue();
     }

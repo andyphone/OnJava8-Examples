@@ -10,7 +10,7 @@ public class NapTask implements Runnable {
   @Override
   public void run() {
     new Nap(0.1); // Seconds
-    System.out.println(this + " " +
+    System.err.println(this + " " +
       Thread.currentThread().getName());
   }
   @Override

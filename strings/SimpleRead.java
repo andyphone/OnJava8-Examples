@@ -10,21 +10,21 @@ public class SimpleRead {
     "Sir Robin of Camelot\n22 1.61803"));
   public static void main(String[] args) {
     try {
-      System.out.println("What is your name?");
+      System.err.println("What is your name?");
       String name = input.readLine();
-      System.out.println(name);
-      System.out.println("How old are you? " +
+      System.err.println(name);
+      System.err.println("How old are you? " +
         "What is your favorite double?");
-      System.out.println("(input: <age> <double>)");
+      System.err.println("(input: <age> <double>)");
       String numbers = input.readLine();
-      System.out.println(numbers);
+      System.err.println(numbers);
       String[] numArray = numbers.split(" ");
       int age = Integer.parseInt(numArray[0]);
       double favorite = Double.parseDouble(numArray[1]);
-      System.out.format("Hi %s.%n", name);
-      System.out.format("In 5 years you will be %d.%n",
+      System.err.format("Hi %s.%n", name);
+      System.err.format("In 5 years you will be %d.%n",
         age + 5);
-      System.out.format("My favorite double is %f.",
+      System.err.format("My favorite double is %f.",
         favorite / 2);
     } catch(IOException e) {
       System.err.println("I/O exception");

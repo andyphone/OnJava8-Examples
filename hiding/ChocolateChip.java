@@ -7,7 +7,7 @@ import hiding.dessert.*;
 
 public class ChocolateChip extends Cookie {
   public ChocolateChip() {
-    System.out.println("ChocolateChip constructor");
+    System.err.println("ChocolateChip constructor");
   }
   public void chomp() {
     //- bite(); // Can't access bite

@@ -25,8 +25,8 @@ public class UsingStringBuilder {
     return "[" + result + "]";
   }
   public static void main(String[] args) {
-    System.out.println(string1());
-    System.out.println(string2());
+    System.err.println(string1());
+    System.err.println(string2());
   }
 }
 /* Output:

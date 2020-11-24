@@ -23,8 +23,8 @@ extends AbstractList<Integer> {
   public static void main(String[] args) {
     List<Integer> cil =
       new CountingIntegerList(30);
-    System.out.println(cil);
-    System.out.println(cil.get(500));
+    System.err.println(cil);
+    System.err.println(cil.get(500));
   }
 }
 /* Output:

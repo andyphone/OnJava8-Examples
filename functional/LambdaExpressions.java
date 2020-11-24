@@ -26,16 +26,16 @@ public class LambdaExpressions {
   static Multi mult = (h, n) -> h + n; // [4]
 
   static Description moreLines = () -> { // [5]
-    System.out.println("moreLines()");
+    System.err.println("moreLines()");
     return "from moreLines()";
   };
 
   public static void main(String[] args) {
-    System.out.println(bod.detailed("Oh!"));
-    System.out.println(bod2.detailed("Hi!"));
-    System.out.println(desc.brief());
-    System.out.println(mult.twoArg("Pi! ", 3.14159));
-    System.out.println(moreLines.brief());
+    System.err.println(bod.detailed("Oh!"));
+    System.err.println(bod2.detailed("Hi!"));
+    System.err.println(desc.brief());
+    System.err.println(mult.twoArg("Pi! ", 3.14159));
+    System.err.println(moreLines.brief());
   }
 }
 /* Output:

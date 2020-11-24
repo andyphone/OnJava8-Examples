@@ -9,14 +9,14 @@ interface Speaks { void talk(); }
 
 class Dog implements Speaks {
   public void talk() {
-    System.out.println("Woof!");
+    System.err.println("Woof!");
   }
   public void reproduce() { }
 }
 
 class Robot implements Speaks {
   public void talk() {
-    System.out.println("Click!");
+    System.err.println("Click!");
   }
   public void oilChange() { }
 }

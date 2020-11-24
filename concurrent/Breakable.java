@@ -18,12 +18,12 @@ public class Breakable {
   }
   public static Breakable work(Breakable b) {
     if(--b.failcount == 0) {
-      System.out.println(
+      System.err.println(
         "Throwing Exception for " + b.id + "");
       throw new RuntimeException(
         "Breakable_" + b.id + " failed");
     }
-    System.out.println(b);
+    System.err.println(b);
     return b;
   }
 }

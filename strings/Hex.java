@@ -25,11 +25,11 @@ public class Hex {
   main(String[] args) throws Exception {
     if(args.length == 0)
       // Test by displaying this class file:
-      System.out.println(format(
+      System.err.println(format(
         Files.readAllBytes(Paths.get(
           "build/classes/java/main/onjava/Hex.class"))));
     else
-      System.out.println(format(
+      System.err.println(format(
         Files.readAllBytes(Paths.get(args[0]))));
   }
 }

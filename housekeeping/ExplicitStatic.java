@@ -6,10 +6,10 @@
 
 class Cup {
   Cup(int marker) {
-    System.out.println("Cup(" + marker + ")");
+    System.err.println("Cup(" + marker + ")");
   }
   void f(int marker) {
-    System.out.println("f(" + marker + ")");
+    System.err.println("f(" + marker + ")");
   }
 }
 
@@ -21,14 +21,14 @@ class Cups {
     cup2 = new Cup(2);
   }
   Cups() {
-    System.out.println("Cups()");
+    System.err.println("Cups()");
   }
 }
 
 public class ExplicitStatic {
   public static void main(String[] args) {
-    System.out.println("Inside main()");
-    Cups.cup1.f(99);  // [1]
+    System.err.println("Inside main()");
+//    Cups.cup1.f(99);  // [1]
   }
   // static Cups cups1 = new Cups();  // [2]
   // static Cups cups2 = new Cups();  // [2]
@@ -39,3 +39,7 @@ Cup(1)
 Cup(2)
 f(99)
 */
+
+/**
+ * 静态初始化只有在必要时刻才会进行。(如果同时注释 [1] 和 [2] 处，那么 Cups 的静态初始化就不会进行。)
+ **/

@@ -19,7 +19,7 @@ public class Workable {
   public static Workable work(Workable tt) {
     new Nap(tt.duration); // Seconds
     tt.id = tt.id + "W";
-    System.out.println(tt);
+    System.err.println(tt);
     return tt;
   }
   public static CompletableFuture<Workable>

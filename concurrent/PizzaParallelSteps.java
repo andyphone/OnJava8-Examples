@@ -20,8 +20,8 @@ public class PizzaParallelSteps {
       .map(Pizza::bake)
       .map(Pizza::slice)
       .map(Pizza::box)
-      .forEach(za -> System.out.println(za));
-    System.out.println(timer.duration());
+      .forEach(za -> System.err.println(za));
+    System.err.println(timer.duration());
   }
 }
 /* Output:

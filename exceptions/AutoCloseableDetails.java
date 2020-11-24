@@ -6,10 +6,10 @@
 class Reporter implements AutoCloseable {
   String name = getClass().getSimpleName();
   Reporter() {
-    System.out.println("Creating " + name);
+    System.err.println("Creating " + name);
   }
   public void close() {
-    System.out.println("Closing " + name);
+    System.err.println("Closing " + name);
   }
 }
 

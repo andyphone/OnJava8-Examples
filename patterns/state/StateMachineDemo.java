@@ -26,7 +26,7 @@ abstract class StateMachine {
 class Wash implements State {
   @Override
   public void run() {
-    System.out.println("Washing");
+    System.err.println("Washing");
     new Nap(0.5);
   }
 }
@@ -34,7 +34,7 @@ class Wash implements State {
 class Spin implements State {
   @Override
   public void run() {
-    System.out.println("Spinning");
+    System.err.println("Spinning");
     new Nap(0.5);
   }
 }
@@ -42,7 +42,7 @@ class Spin implements State {
 class Rinse implements State {
   @Override
   public void run() {
-    System.out.println("Rinsing");
+    System.err.println("Rinsing");
     new Nap(0.5);
   }
 }

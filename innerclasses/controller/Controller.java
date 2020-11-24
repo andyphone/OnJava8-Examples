@@ -16,7 +16,7 @@ public class Controller {
       // while you're selecting the elements in it:
       for(Event e : new ArrayList<>(eventList))
         if(e.ready()) {
-          System.out.println(e);
+          System.err.println(e);
           e.action();
           eventList.remove(e);
         }

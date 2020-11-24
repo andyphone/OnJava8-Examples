@@ -61,18 +61,18 @@ public class CheckCloneable {
   public static
   Ordinary tryToClone(Ordinary ord) {
     String id = ord.getClass().getName();
-    System.out.println("Attempting " + id);
+    System.err.println("Attempting " + id);
     Ordinary x = null;
     if(ord instanceof Cloneable) {
       try {
         x = (Ordinary)((IsCloneable)ord).clone();
-        System.out.println("Cloned " + id);
+        System.err.println("Cloned " + id);
       } catch(CloneNotSupportedException e) {
-        System.out.println(
+        System.err.println(
           "Could not clone " + id);
       }
     } else {
-      System.out.println("Doesn't implement Cloneable");
+      System.err.println("Doesn't implement Cloneable");
     }
     return x;
   }

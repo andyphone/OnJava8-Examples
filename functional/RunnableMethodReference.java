@@ -6,7 +6,7 @@
 
 class Go {
   static void go() {
-    System.out.println("Go::go()");
+    System.err.println("Go::go()");
   }
 }
 
@@ -15,12 +15,12 @@ public class RunnableMethodReference {
 
     new Thread(new Runnable() {
       public void run() {
-        System.out.println("Anonymous");
+        System.err.println("Anonymous");
       }
     }).start();
 
     new Thread(
-      () -> System.out.println("lambda")
+      () -> System.err.println("lambda")
     ).start();
 
     new Thread(Go::go).start();

@@ -20,13 +20,13 @@ public abstract class Trash {
     val = 0.0f;
     bin.forEach( t -> {
       val += t.weight() * t.value();
-      System.out.println("weight of " +
+      System.err.println("weight of " +
         // RTTI gets type information
         // about the class:
         t.getClass().getName() +
         " = " + t.weight());
     });
-    System.out.println("Total value = " + val);
+    System.err.println("Total value = " + val);
   }
   @Override
   public String toString() {
@@ -80,7 +80,7 @@ public abstract class Trash {
     // The necessary Class was not in the list. Try to
     // load it, but it must be in your class path!
     try {
-      System.out.println("Loading " + info.id);
+      System.err.println("Loading " + info.id);
       trashTypes.add(Class.forName(info.id));
     } catch(Exception e) {
       throw new TrashClassNotFoundException(e);

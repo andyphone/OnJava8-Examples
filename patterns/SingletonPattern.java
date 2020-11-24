@@ -40,10 +40,10 @@ final class Singleton {
 public class SingletonPattern {
   public static void main(String[] args) {
     Resource r = Singleton.getResource();
-    System.out.println(r.getValue());
+    System.err.println(r.getValue());
     Resource s2 = Singleton.getResource();
     s2.setValue(9);
-    System.out.println(r.getValue());
+    System.err.println(r.getValue());
     try {
       // Can't do this: compile-time error.
       // Singleton s3 = (Singleton)s2.clone();

@@ -14,10 +14,10 @@ public class FileLocking {
       FileLock fl = fos.getChannel().tryLock()
     ) {
       if(fl != null) {
-        System.out.println("Locked File");
+        System.err.println("Locked File");
         TimeUnit.MILLISECONDS.sleep(100);
         fl.release();
-        System.out.println("Released Lock");
+        System.err.println("Released Lock");
       }
     } catch(IOException | InterruptedException e) {
       throw new RuntimeException(e);

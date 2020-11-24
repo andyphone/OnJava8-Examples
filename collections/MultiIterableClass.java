@@ -37,13 +37,13 @@ public class MultiIterableClass extends IterableClass {
   public static void main(String[] args) {
     MultiIterableClass mic = new MultiIterableClass();
     for(String s : mic.reversed())
-      System.out.print(s + " ");
-    System.out.println();
+      System.err.print(s + " ");
+    System.err.println();
     for(String s : mic.randomized())
-      System.out.print(s + " ");
-    System.out.println();
+      System.err.print(s + " ");
+    System.err.println();
     for(String s : mic)
-      System.out.print(s + " ");
+      System.err.print(s + " ");
   }
 }
 /* Output:

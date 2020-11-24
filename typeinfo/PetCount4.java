@@ -11,9 +11,9 @@ public class PetCount4 {
     Pets.stream()
       .limit(20)
       .peek(counter::count)
-      .forEach(p -> System.out.print(
+      .forEach(p -> System.err.print(
         p.getClass().getSimpleName() + " "));
-    System.out.println("\n" + counter);
+    System.err.println("\n" + counter);
   }
 }
 /* Output:

@@ -21,11 +21,11 @@ public class UsingBuffers {
       ByteBuffer.allocate(data.length * 2);
     CharBuffer cb = bb.asCharBuffer();
     cb.put(data);
-    System.out.println(cb.rewind());
+    System.err.println(cb.rewind());
     symmetricScramble(cb);
-    System.out.println(cb.rewind());
+    System.err.println(cb.rewind());
     symmetricScramble(cb);
-    System.out.println(cb.rewind());
+    System.err.println(cb.rewind());
   }
 }
 /* Output:

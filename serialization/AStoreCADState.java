@@ -102,7 +102,7 @@ public class AStoreCADState {
       throw new RuntimeException(e);
     }
     // Display the shapes:
-    System.out.println(shapes);
+    System.err.println(shapes);
   }
 }
 /* Output:

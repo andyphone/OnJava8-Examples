@@ -37,8 +37,8 @@ class Splitter extends Processor {
 
 public class Applicator {
   public static void apply(Processor p, Object s) {
-    System.out.println("Using Processor " + p.name());
-    System.out.println(p.process(s));
+    System.err.println("Using Processor " + p.name());
+    System.err.println(p.process(s));
   }
   public static void main(String[] args) {
     String s =

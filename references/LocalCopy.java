@@ -39,11 +39,11 @@ public class LocalCopy {
     Duplo a = new Duplo(11);
     Duplo b = g(a);
     // Reference equivalence, not object equivalence:
-    System.out.println("a == b: " + (a == b) +
+    System.err.println("a == b: " + (a == b) +
       "\na = " + a + "\nb = " + b);
     Duplo c = new Duplo(47);
     Duplo d = f(c);
-    System.out.println("c == d: " + (c == d) +
+    System.err.println("c == d: " + (c == d) +
       "\nc = " + c + "\nd = " + d);
   }
 }

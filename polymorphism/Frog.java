@@ -10,10 +10,10 @@ class Characteristic {
   private String s;
   Characteristic(String s) {
     this.s = s;
-    System.out.println("Creating Characteristic " + s);
+    System.err.println("Creating Characteristic " + s);
   }
   protected void dispose() {
-    System.out.println("disposing Characteristic " + s);
+    System.err.println("disposing Characteristic " + s);
   }
 }
 
@@ -21,10 +21,10 @@ class Description {
   private String s;
   Description(String s) {
     this.s = s;
-    System.out.println("Creating Description " + s);
+    System.err.println("Creating Description " + s);
   }
   protected void dispose() {
-    System.out.println("disposing Description " + s);
+    System.err.println("disposing Description " + s);
   }
 }
 
@@ -34,10 +34,10 @@ class LivingCreature {
   private Description t =
     new Description("Basic Living Creature");
   LivingCreature() {
-    System.out.println("LivingCreature()");
+    System.err.println("LivingCreature()");
   }
   protected void dispose() {
-    System.out.println("LivingCreature dispose");
+    System.err.println("LivingCreature dispose");
     t.dispose();
     p.dispose();
   }
@@ -48,10 +48,10 @@ class Animal extends LivingCreature {
     new Characteristic("has heart");
   private Description t =
     new Description("Animal not Vegetable");
-  Animal() { System.out.println("Animal()"); }
+  Animal() { System.err.println("Animal()"); }
   @Override
   protected void dispose() {
-    System.out.println("Animal dispose");
+    System.err.println("Animal dispose");
     t.dispose();
     p.dispose();
     super.dispose();
@@ -64,11 +64,11 @@ class Amphibian extends Animal {
   private Description t =
     new Description("Both water and land");
   Amphibian() {
-    System.out.println("Amphibian()");
+    System.err.println("Amphibian()");
   }
   @Override
   protected void dispose() {
-    System.out.println("Amphibian dispose");
+    System.err.println("Amphibian dispose");
     t.dispose();
     p.dispose();
     super.dispose();
@@ -79,17 +79,17 @@ public class Frog extends Amphibian {
   private Characteristic p =
     new Characteristic("Croaks");
   private Description t = new Description("Eats Bugs");
-  public Frog() { System.out.println("Frog()"); }
+  public Frog() { System.err.println("Frog()"); }
   @Override
   protected void dispose() {
-    System.out.println("Frog dispose");
+    System.err.println("Frog dispose");
     t.dispose();
     p.dispose();
     super.dispose();
   }
   public static void main(String[] args) {
     Frog frog = new Frog();
-    System.out.println("Bye!");
+    System.err.println("Bye!");
     frog.dispose();
   }
 }

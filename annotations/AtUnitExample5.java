@@ -32,7 +32,7 @@ public class AtUnitExample5 {
   }
   @TestObjectCleanup
   static void cleanup(AtUnitExample5 tobj) {
-    System.out.println("Running cleanup");
+    System.err.println("Running cleanup");
     output.close();
   }
   @Test

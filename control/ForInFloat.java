@@ -11,7 +11,7 @@ public class ForInFloat {
     for(int i = 0; i < 10; i++)
       f[i] = rand.nextFloat();
     for(float x : f)
-      System.out.println(x);
+      System.err.println(x);
   }
 }
 /* Output:

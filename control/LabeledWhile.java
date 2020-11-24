@@ -9,24 +9,24 @@ public class LabeledWhile {
     int i = 0;
     outer:
     while(true) {
-      System.out.println("Outer while loop");
+      System.err.println("Outer while loop");
       while(true) {
         i++;
-        System.out.println("i = " + i);
+        System.err.println("i = " + i);
         if(i == 1) {
-          System.out.println("continue");
+          System.err.println("continue");
           continue;
         }
         if(i == 3) {
-          System.out.println("continue outer");
+          System.err.println("continue outer");
           continue outer;
         }
         if(i == 5) {
-          System.out.println("break");
+          System.err.println("break");
           break;
         }
         if(i == 7) {
-          System.out.println("break outer");
+          System.err.println("break outer");
           break outer;
         }
       }

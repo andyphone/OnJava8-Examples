@@ -113,12 +113,12 @@ public class CopyConstructor {
   public static void ripen(Tomato t) {
     // Use the "copy constructor":
     t = new Tomato(t); // [1]
-    System.out.println("In ripen, t is a " +
+    System.err.println("In ripen, t is a " +
       t.getClass().getName());
   }
   public static void slice(Fruit f) {
     f = new Fruit(f); // [2] Hmmm... will this work?
-    System.out.println("In slice, f is a " +
+    System.err.println("In slice, f is a " +
       f.getClass().getName());
   }
   @SuppressWarnings("unchecked")
@@ -130,7 +130,7 @@ public class CopyConstructor {
         c.getConstructor(new Class[] { c });
       Object obj =
         ct.newInstance(new Object[] { t });
-      System.out.println("In ripen2, t is a " +
+      System.err.println("In ripen2, t is a " +
         obj.getClass().getName());
     } catch(NoSuchMethodException |
             SecurityException |
@@ -138,7 +138,7 @@ public class CopyConstructor {
             IllegalAccessException |
             IllegalArgumentException |
             InvocationTargetException e) {
-      System.out.println(e);
+      System.err.println(e);
     }
   }
   @SuppressWarnings("unchecked")
@@ -149,7 +149,7 @@ public class CopyConstructor {
         c.getConstructor(new Class[] { c });
       Object obj =
         ct.newInstance(new Object[] { f });
-      System.out.println("In slice2, f is a " +
+      System.err.println("In slice2, f is a " +
         obj.getClass().getName());
     } catch(NoSuchMethodException |
             SecurityException |
@@ -157,7 +157,7 @@ public class CopyConstructor {
             IllegalAccessException |
             IllegalArgumentException |
             InvocationTargetException e) {
-      System.out.println(e);
+      System.err.println(e);
     }
   }
   public static void main(String[] args) {

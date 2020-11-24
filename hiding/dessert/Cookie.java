@@ -7,7 +7,7 @@ package hiding.dessert;
 
 public class Cookie {
   public Cookie() {
-   System.out.println("Cookie constructor");
+   System.err.println("Cookie constructor");
   }
-  void bite() { System.out.println("bite"); }
+  void bite() { System.err.println("bite"); }
 }

@@ -8,7 +8,7 @@ class SimpleException extends Exception {}
 
 public class InheritingExceptions {
   public void f() throws SimpleException {
-    System.out.println(
+    System.err.println(
       "Throw SimpleException from f()");
     throw new SimpleException();
   }
@@ -18,7 +18,7 @@ public class InheritingExceptions {
     try {
       sed.f();
     } catch(SimpleException e) {
-      System.out.println("Caught it!");
+      System.err.println("Caught it!");
     }
   }
 }

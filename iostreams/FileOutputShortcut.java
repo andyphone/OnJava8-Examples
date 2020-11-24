@@ -19,6 +19,6 @@ public class FileOutputShortcut {
     } catch(IOException e) {
       throw new RuntimeException(e);
     }
-    System.out.println(BufferedInputFile.read(file));
+    System.err.println(BufferedInputFile.read(file));
   }
 }

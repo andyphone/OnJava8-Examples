@@ -9,6 +9,6 @@ interface Concept { // Package access
 }
 
 class Implementation implements Concept {
-  public void idea1() { System.out.println("idea1"); }
-  public void idea2() { System.out.println("idea2"); }
+  public void idea1() { System.err.println("idea1"); }
+  public void idea2() { System.err.println("idea2"); }
 }

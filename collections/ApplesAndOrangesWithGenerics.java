@@ -12,7 +12,7 @@ public class ApplesAndOrangesWithGenerics {
     // Compile-time error:
     // apples.add(new Orange());
     for(Apple apple : apples) {
-      System.out.println(apple.id());
+      System.err.println(apple.id());
     }
   }
 }

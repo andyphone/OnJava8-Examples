@@ -14,7 +14,7 @@ public class AlphabeticSearch {
     show(sa);
     int index = Arrays.binarySearch(sa,
       sa[10], String.CASE_INSENSITIVE_ORDER);
-    System.out.println(
+    System.err.println(
      "Index: "+ index + "\n"+ sa[index]);
   }
 }

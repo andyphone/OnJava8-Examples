@@ -9,7 +9,7 @@ import onjava.*;
 public class RoShamBo {
   public static <T extends Competitor<T>>
   void match(T a, T b) {
-    System.out.println(
+    System.err.println(
       a + " vs. " + b + ": " +  a.compete(b));
   }
   public static <T extends Enum<T> & Competitor<T>>

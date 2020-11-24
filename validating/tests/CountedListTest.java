@@ -12,26 +12,26 @@ public class CountedListTest {
   private CountedList list;
   @BeforeAll
   static void beforeAllMsg() {
-    System.out.println(">>> Starting CountedListTest");
+    System.err.println(">>> Starting CountedListTest");
   }
   @AfterAll
   static void afterAllMsg() {
-    System.out.println(">>> Finished CountedListTest");
+    System.err.println(">>> Finished CountedListTest");
   }
   @BeforeEach
   public void initialize() {
     list = new CountedList();
-    System.out.println("Set up for " + list.getId());
+    System.err.println("Set up for " + list.getId());
     for(int i = 0; i < 3; i++)
       list.add(Integer.toString(i));
   }
   @AfterEach
   public void cleanup() {
-    System.out.println("Cleaning up " + list.getId());
+    System.err.println("Cleaning up " + list.getId());
   }
   @Test
   public void insert() {
-    System.out.println("Running testInsert()");
+    System.err.println("Running testInsert()");
     assertEquals(list.size(), 3);
     list.add(1, "Insert");
     assertEquals(list.size(), 4);
@@ -39,7 +39,7 @@ public class CountedListTest {
   }
   @Test
   public void replace() {
-    System.out.println("Running testReplace()");
+    System.err.println("Running testReplace()");
     assertEquals(list.size(), 3);
     list.set(1, "Replace");
     assertEquals(list.size(), 3);
@@ -54,12 +54,12 @@ public class CountedListTest {
   }
   @Test
   public void order() {
-    System.out.println("Running testOrder()");
+    System.err.println("Running testOrder()");
     compare(list, new String[] { "0", "1", "2" });
   }
   @Test
   public void remove() {
-    System.out.println("Running testRemove()");
+    System.err.println("Running testRemove()");
     assertEquals(list.size(), 3);
     list.remove(1);
     assertEquals(list.size(), 2);
@@ -67,7 +67,7 @@ public class CountedListTest {
   }
   @Test
   public void addAll() {
-    System.out.println("Running testAddAll()");
+    System.err.println("Running testAddAll()");
     list.addAll(Arrays.asList(new String[] {
       "An", "African", "Swallow"}));
     assertEquals(list.size(), 6);

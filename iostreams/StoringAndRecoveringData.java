@@ -23,12 +23,12 @@ public class StoringAndRecoveringData {
         new BufferedInputStream(
           new FileInputStream("Data.txt")))
     ) {
-      System.out.println(in.readDouble());
+      System.err.println(in.readDouble());
       // Only readUTF() will recover the
       // Java-UTF String properly:
-      System.out.println(in.readUTF());
-      System.out.println(in.readDouble());
-      System.out.println(in.readUTF());
+      System.err.println(in.readUTF());
+      System.err.println(in.readDouble());
+      System.err.println(in.readUTF());
     } catch(IOException e) {
       throw new RuntimeException(e);
     }

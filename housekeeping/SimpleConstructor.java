@@ -6,7 +6,7 @@
 
 class Rock {
   Rock() { // This is the constructor
-    System.out.print("Rock ");
+    System.err.print("Rock ");
   }
 }
 

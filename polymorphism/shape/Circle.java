@@ -7,10 +7,10 @@ package polymorphism.shape;
 public class Circle extends Shape {
   @Override
   public void draw() {
-    System.out.println("Circle.draw()");
+    System.err.println("Circle.draw()");
   }
   @Override
   public void erase() {
-    System.out.println("Circle.erase()");
+    System.err.println("Circle.erase()");
   }
 }

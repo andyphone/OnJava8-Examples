@@ -15,10 +15,10 @@ interface ServiceFactory {
 class Service1 implements Service {
   Service1() {} // Package access
   public void method1() {
-    System.out.println("Service1 method1");
+    System.err.println("Service1 method1");
   }
   public void method2() {
-    System.out.println("Service1 method2");
+    System.err.println("Service1 method2");
   }
 }
 
@@ -32,10 +32,10 @@ class Service1Factory implements ServiceFactory {
 class Service2 implements Service {
   Service2() {} // Package access
   public void method1() {
-    System.out.println("Service2 method1");
+    System.err.println("Service2 method1");
   }
   public void method2() {
-    System.out.println("Service2 method2");
+    System.err.println("Service2 method2");
   }
 }
 

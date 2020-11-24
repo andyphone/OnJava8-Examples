@@ -15,13 +15,13 @@ public class LostInformation {
     Map<Frob, Fnorkle> map = new HashMap<>();
     Quark<Fnorkle> quark = new Quark<>();
     Particle<Long, Double> p = new Particle<>();
-    System.out.println(Arrays.toString(
+    System.err.println(Arrays.toString(
       list.getClass().getTypeParameters()));
-    System.out.println(Arrays.toString(
+    System.err.println(Arrays.toString(
       map.getClass().getTypeParameters()));
-    System.out.println(Arrays.toString(
+    System.err.println(Arrays.toString(
       quark.getClass().getTypeParameters()));
-    System.out.println(Arrays.toString(
+    System.err.println(Arrays.toString(
       p.getClass().getTypeParameters()));
   }
 }

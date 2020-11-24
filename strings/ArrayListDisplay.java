@@ -12,7 +12,7 @@ public class ArrayListDisplay {
       Stream.generate(new CoffeeSupplier())
         .limit(10)
         .collect(Collectors.toList());
-    System.out.println(coffees);
+    System.err.println(coffees);
   }
 }
 /* Output:

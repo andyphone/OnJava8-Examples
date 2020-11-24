@@ -25,7 +25,7 @@ public class Multiplier {
   }
   public static void main(String[] args) {
     Multiplier m = new Multiplier();
-    System.out.println(
+    System.err.println(
       "11 * 16 = " + m.multiply(11, 16));
   }
 }

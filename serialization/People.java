@@ -20,7 +20,7 @@ public class People extends ArrayList<APerson> {
   public static void
   main(String[] args) throws Exception {
     People p = new People("People.xml");
-    System.out.println(p);
+    System.err.println(p);
   }
 }
 /* Output:

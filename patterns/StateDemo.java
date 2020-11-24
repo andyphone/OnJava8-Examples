@@ -32,15 +32,15 @@ class State implements StateBase {
 class Implementation1 implements StateBase {
   @Override
   public void f() {
-    System.out.println("Implementation1.f()");
+    System.err.println("Implementation1.f()");
   }
   @Override
   public void g() {
-    System.out.println("Implementation1.g()");
+    System.err.println("Implementation1.g()");
   }
   @Override
   public void h() {
-    System.out.println("Implementation1.h()");
+    System.err.println("Implementation1.h()");
   }
   @Override
   public void changeImp(StateBase newImp) {}
@@ -49,15 +49,15 @@ class Implementation1 implements StateBase {
 class Implementation2 implements StateBase {
   @Override
   public void f() {
-    System.out.println("Implementation2.f()");
+    System.err.println("Implementation2.f()");
   }
   @Override
   public void g() {
-    System.out.println("Implementation2.g()");
+    System.err.println("Implementation2.g()");
   }
   @Override
   public void h() {
-    System.out.println("Implementation2.h()");
+    System.err.println("Implementation2.h()");
   }
   @Override
   public void changeImp(StateBase newImp) {}

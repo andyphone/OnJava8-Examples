@@ -30,7 +30,7 @@ public class RandomWords implements Supplier<String> {
   }
   public static void
   main(String[] args) throws Exception {
-    System.out.println(
+    System.err.println(
       Stream.generate(new RandomWords("Cheese.dat"))
         .limit(10)
         .collect(Collectors.joining(" ")));

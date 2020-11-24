@@ -17,11 +17,11 @@ public class MappedIO {
       this.name = name;
     }
     public void runTest() {
-      System.out.print(name + ": ");
+      System.err.print(name + ": ");
       long start = System.nanoTime();
       test();
       double duration = System.nanoTime() - start;
-      System.out.format("%.3f%n", duration/1.0e9);
+      System.err.format("%.3f%n", duration/1.0e9);
     }
     public abstract void test();
   }

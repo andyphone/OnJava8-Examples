@@ -17,7 +17,7 @@ public class SerialNumberChecker implements Runnable {
     while(true) {
       int serial = producer.nextSerialNumber();
       if(serials.contains(serial)) {
-        System.out.println("Duplicate: " + serial);
+        System.err.println("Duplicate: " + serial);
         System.exit(0);
       }
       serials.add(serial);

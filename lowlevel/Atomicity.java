@@ -12,7 +12,7 @@ public class Atomicity {
     while(true) {
       int val = it.getAsInt();
       if(val % 2 != 0) {
-        System.out.println("failed with: " + val);
+        System.err.println("failed with: " + val);
         System.exit(0);
       }
     }

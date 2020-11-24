@@ -7,9 +7,9 @@
 public class Overflow {
   public static void main(String[] args) {
     int big = Integer.MAX_VALUE;
-    System.out.println("big = " + big);
+    System.err.println("big = " + big);
     int bigger = big * 4;
-    System.out.println("bigger = " + bigger);
+    System.err.println("bigger = " + bigger);
   }
 }
 /* Output:

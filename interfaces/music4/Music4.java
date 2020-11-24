@@ -17,57 +17,57 @@ abstract class Instrument {
 class Wind extends Instrument {
   @Override
   public void play(Note n) {
-    System.out.println("Wind.play() " + n);
+    System.err.println("Wind.play() " + n);
   }
   @Override
   public String what() { return "Wind"; }
   @Override
   public void adjust() {
-    System.out.println("Adjusting Wind");
+    System.err.println("Adjusting Wind");
   }
 }
 
 class Percussion extends Instrument {
   @Override
   public void play(Note n) {
-    System.out.println("Percussion.play() " + n);
+    System.err.println("Percussion.play() " + n);
   }
   @Override
   public String what() { return "Percussion"; }
   @Override
   public void adjust() {
-    System.out.println("Adjusting Percussion");
+    System.err.println("Adjusting Percussion");
   }
 }
 
 class Stringed extends Instrument {
   @Override
   public void play(Note n) {
-    System.out.println("Stringed.play() " + n);
+    System.err.println("Stringed.play() " + n);
   }
   @Override
   public String what() { return "Stringed"; }
   @Override
   public void adjust() {
-    System.out.println("Adjusting Stringed");
+    System.err.println("Adjusting Stringed");
   }
 }
 
 class Brass extends Wind {
   @Override
   public void play(Note n) {
-    System.out.println("Brass.play() " + n);
+    System.err.println("Brass.play() " + n);
   }
   @Override
   public void adjust() {
-    System.out.println("Adjusting Brass");
+    System.err.println("Adjusting Brass");
   }
 }
 
 class Woodwind extends Wind {
   @Override
   public void play(Note n) {
-    System.out.println("Woodwind.play() " + n);
+    System.err.println("Woodwind.play() " + n);
   }
   @Override
   public String what() { return "Woodwind"; }

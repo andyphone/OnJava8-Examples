@@ -38,13 +38,13 @@ public class LockingMappedFiles {
       try {
         // Exclusive lock with no overlap:
         FileLock fl = fc.lock(start, end, false);
-        System.out.println(
+        System.err.println(
           "Locked: "+ start +" to "+ end);
         // Perform modification:
         while(buff.position() < buff.limit() - 1)
           buff.put((byte)(buff.get() + 1));
         fl.release();
-        System.out.println(
+        System.err.println(
           "Released: " + start + " to " + end);
       } catch(IOException e) {
         throw new RuntimeException(e);

@@ -30,12 +30,12 @@ public class BufferToText {
     }
     buff.flip();
     // Doesn't work:
-    System.out.println(buff.asCharBuffer());
+    System.err.println(buff.asCharBuffer());
     // Decode using this system's default Charset:
     buff.rewind();
     String encoding =
       System.getProperty("file.encoding");
-    System.out.println("Decoded using " +
+    System.err.println("Decoded using " +
       encoding + ": "
       + Charset.forName(encoding).decode(buff));
     // Encode with something that prints:
@@ -59,7 +59,7 @@ public class BufferToText {
       throw new RuntimeException(e);
     }
     buff.flip();
-    System.out.println(buff.asCharBuffer());
+    System.err.println(buff.asCharBuffer());
     // Use a CharBuffer to write through:
     buff = ByteBuffer.allocate(24);
     buff.asCharBuffer().put("Some text");
@@ -82,7 +82,7 @@ public class BufferToText {
       throw new RuntimeException(e);
     }
     buff.flip();
-    System.out.println(buff.asCharBuffer());
+    System.err.println(buff.asCharBuffer());
   }
 }
 /* Output:

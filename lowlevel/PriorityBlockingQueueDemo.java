@@ -32,9 +32,9 @@ class Prioritized implements Comparable<Prioritized>  {
   public void displaySequence() {
     int count = 0;
     for(Prioritized pt : sequence) {
-      System.out.printf("(%d:%d)", pt.id, pt.priority);
+      System.err.printf("(%d:%d)", pt.id, pt.priority);
       if(++count % 5 == 0)
-        System.out.println();
+        System.err.println();
     }
   }
   public static class EndSentinel extends Prioritized {
@@ -73,7 +73,7 @@ class Consumer implements Runnable {
     while(true) {
       try {
         Prioritized pt = q.take();
-        System.out.println(pt);
+        System.err.println(pt);
         if(pt instanceof Prioritized.EndSentinel) {
           pt.displaySequence();
           break;

@@ -18,10 +18,10 @@ public class StartEnd {
     Display(String regex) { this.regex = regex; }
     void display(String message) {
       if(!regexPrinted) {
-        System.out.println(regex);
+        System.err.println(regex);
         regexPrinted = true;
       }
-      System.out.println(message);
+      System.err.println(message);
     }
   }
   static void examine(String s, String regex) {
@@ -40,7 +40,7 @@ public class StartEnd {
   }
   public static void main(String[] args) {
     for(String in : input.split("\n")) {
-      System.out.println("input : " + in);
+      System.err.println("input : " + in);
       for(String regex : new String[]{"\\w*ere\\w*",
         "\\w*ever", "T\\w+", "Never.*?!"})
         examine(in, regex);

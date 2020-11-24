@@ -59,9 +59,9 @@ public class Immutable2 {
     Immutable2 i2 = new Immutable2(47);
     Immutable2 r1 = modify1(i2);
     Immutable2 r2 = modify2(i2);
-    System.out.println("i2 = " + i2.read());
-    System.out.println("r1 = " + r1.read());
-    System.out.println("r2 = " + r2.read());
+    System.err.println("i2 = " + i2.read());
+    System.err.println("r1 = " + r1.read());
+    System.err.println("r2 = " + r2.read());
   }
 }
 /* Output:

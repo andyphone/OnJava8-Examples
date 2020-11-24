@@ -13,9 +13,9 @@ class OptionalMap {
   }
   static void
   test(String descr, Function<String, String> func) {
-    System.out.println(" ---( " + descr + " )---");
+    System.err.println(" ---( " + descr + " )---");
     for(int i = 0; i <= elements.length; i++) {
-      System.out.println(
+      System.err.println(
         testStream()
           .skip(i)
           .findFirst() // Produces an Optional

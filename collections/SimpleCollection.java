@@ -10,7 +10,7 @@ public class SimpleCollection {
     for(int i = 0; i < 10; i++)
       c.add(i); // Autoboxing
     for(Integer i : c)
-      System.out.print(i + ", ");
+      System.err.print(i + ", ");
   }
 }
 /* Output:

@@ -17,7 +17,7 @@ public class PizzaStreams {
         while(!za.complete())
           za.next();
       });
-    System.out.println(timer.duration());
+    System.err.println(timer.duration());
   }
 }
 /* Output:

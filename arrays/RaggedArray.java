@@ -17,7 +17,7 @@ public class RaggedArray {
         Arrays.setAll(a[i][j], n -> val++); // [1]
       }
     }
-    System.out.println(Arrays.deepToString(a));
+    System.err.println(Arrays.deepToString(a));
   }
 }
 /* Output:

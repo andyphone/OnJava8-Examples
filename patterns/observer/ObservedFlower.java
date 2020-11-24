@@ -53,12 +53,12 @@ class Bee {
   Bee(String nm)  { name = nm; }
   // Observe openings:
   public Observer openObserver() {
-    return (ob, a) -> System.out.println(
+    return (ob, a) -> System.err.println(
       "Bee " + name + "'s breakfast time!");
   }
   // Observe closings:
   public Observer closeObserver() {
-    return (ob, a) -> System.out.println(
+    return (ob, a) -> System.err.println(
       "Bee " + name + "'s bed time!");
   }
 }
@@ -68,12 +68,12 @@ class Hummingbird {
   private String name;
   Hummingbird(String nm) { name = nm; }
   public Observer openObserver() {
-    return (ob, a) -> System.out.println(
+    return (ob, a) -> System.err.println(
       "Hummingbird " + name +
       "'s breakfast time!");
   }
   public Observer closeObserver() {
-    return (ob, a) -> System.out.println(
+    return (ob, a) -> System.err.println(
       "Hummingbird " + name + "'s bed time!");
   }
 }

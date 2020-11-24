@@ -5,7 +5,7 @@
 import java.util.stream.*;
 
 abstract class Shape {
-  void draw() { System.out.println(this + ".draw()"); }
+  void draw() { System.err.println(this + ".draw()"); }
   @Override
   public abstract String toString();
 }

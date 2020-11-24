@@ -8,15 +8,15 @@ public enum OverrideConstantSpecific {
   WASHER {
     @Override
     void f() {
-      System.out.println("Overridden method");
+      System.err.println("Overridden method");
     }
   };
   void f() {
-    System.out.println("default behavior");
+    System.err.println("default behavior");
   }
   public static void main(String[] args) {
     for(OverrideConstantSpecific ocs : values()) {
-      System.out.print(ocs + ": ");
+      System.err.print(ocs + ": ");
       ocs.f();
     }
   }

@@ -15,7 +15,7 @@ public class MultidimensionalObjectArrays {
         new BerylliumSphere(), new BerylliumSphere(),
         new BerylliumSphere(), new BerylliumSphere() },
     };
-    System.out.println(Arrays.deepToString(spheres));
+    System.err.println(Arrays.deepToString(spheres));
   }
 }
 /* Output:

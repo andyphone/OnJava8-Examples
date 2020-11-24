@@ -13,7 +13,7 @@ public class MoreTasksAfterShutdown {
     try {
       exec.execute(new NapTask(99));
     } catch(RejectedExecutionException e) {
-      System.out.println(e);
+      System.err.println(e);
     }
   }
 }

@@ -12,11 +12,11 @@ interface Matcher extends
 
 public class Matching {
   static void show(Matcher match, int val) {
-    System.out.println(
+    System.err.println(
       match.test(
         IntStream.rangeClosed(1, 9)
           .boxed()
-          .peek(n -> System.out.format("%d ", n)),
+          .peek(n -> System.err.format("%d ", n)),
         n -> n < val));
   }
   public static void main(String[] args) {

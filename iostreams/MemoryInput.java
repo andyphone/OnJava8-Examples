@@ -12,6 +12,6 @@ public class MemoryInput {
       BufferedInputFile.read("MemoryInput.java"));
     int c;
     while((c = in.read()) != -1)
-      System.out.print((char)c);
+      System.err.print((char)c);
   }
 }

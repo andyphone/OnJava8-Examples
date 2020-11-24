@@ -7,10 +7,10 @@ package polymorphism.shape;
 public class Square extends Shape {
   @Override
   public void draw() {
-    System.out.println("Square.draw()");
+    System.err.println("Square.draw()");
   }
   @Override
   public void erase() {
-    System.out.println("Square.erase()");
+    System.err.println("Square.erase()");
   }
 }

@@ -17,12 +17,12 @@ public class Prime {
   public static void main(String[] args) {
     new Prime().numbers()
       .limit(10)
-      .forEach(n -> System.out.format("%d ", n));
-    System.out.println();
+      .forEach(n -> System.err.format("%d ", n));
+    System.err.println();
     new Prime().numbers()
       .skip(90)
       .limit(10)
-      .forEach(n -> System.out.format("%d ", n));
+      .forEach(n -> System.err.format("%d ", n));
   }
 }
 /* Output:

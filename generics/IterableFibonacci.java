@@ -27,7 +27,7 @@ extends Fibonacci implements Iterable<Integer> {
   }
   public static void main(String[] args) {
     for(int i : new IterableFibonacci(18))
-      System.out.print(i + " ");
+      System.err.print(i + " ");
   }
 }
 /* Output:

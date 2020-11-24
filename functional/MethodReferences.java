@@ -10,24 +10,24 @@ interface Callable { // [1]
 
 class Describe {
   void show(String msg) { // [2]
-    System.out.println(msg);
+    System.err.println(msg);
   }
 }
 
 public class MethodReferences {
   static void hello(String name) { // [3]
-    System.out.println("Hello, " + name);
+    System.err.println("Hello, " + name);
   }
   static class Description {
     String about;
     Description(String desc) { about = desc; }
     void help(String msg) { // [4]
-      System.out.println(about + " " + msg);
+      System.err.println(about + " " + msg);
     }
   }
   static class Helper {
     static void assist(String msg) { // [5]
-      System.out.println(msg);
+      System.err.println(msg);
     }
   }
   public static void main(String[] args) {

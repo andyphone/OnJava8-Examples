@@ -43,7 +43,7 @@ class ToDoList {
     toDo.add(new ToDoItem("Water lawn", 'A', 1));
     toDo.add(new ToDoItem("Feed cat", 'B', 1));
     while(!toDo.isEmpty())
-      System.out.println(toDo.remove());
+      System.err.println(toDo.remove());
   }
 }
 /* Output:

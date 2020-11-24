@@ -12,17 +12,17 @@ public class GuavaAssertions {
     try {
       verify(1 + 2 == 4);
     } catch(VerifyException e) {
-      System.out.println(e);
+      System.err.println(e);
     }
     try {
       verify(1 + 2 == 4, "Bad math");
     } catch(VerifyException e) {
-      System.out.println(e.getMessage());
+      System.err.println(e.getMessage());
     }
     try {
       verify(1 + 2 == 4, "Bad math: %s", "not 4");
     } catch(VerifyException e) {
-      System.out.println(e.getMessage());
+      System.err.println(e.getMessage());
     }
     String s = "";
     s = verifyNotNull(s);
@@ -30,13 +30,13 @@ public class GuavaAssertions {
     try {
       verifyNotNull(s);
     } catch(VerifyException e) {
-      System.out.println(e.getMessage());
+      System.err.println(e.getMessage());
     }
     try {
       verifyNotNull(
         s, "Shouldn't be null: %s", "arg s");
     } catch(VerifyException e) {
-      System.out.println(e.getMessage());
+      System.err.println(e.getMessage());
     }
   }
 }

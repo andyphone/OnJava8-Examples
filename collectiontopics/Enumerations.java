@@ -12,7 +12,7 @@ public class Enumerations {
       new Vector<>(Countries.names(10));
     Enumeration<String> e = v.elements();
     while(e.hasMoreElements())
-      System.out.print(e.nextElement() + ", ");
+      System.err.print(e.nextElement() + ", ");
     // Produce an Enumeration from a Collection:
     e = Collections.enumeration(new ArrayList<>());
   }

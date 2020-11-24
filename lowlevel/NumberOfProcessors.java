@@ -5,7 +5,7 @@
 
 public class NumberOfProcessors {
   public static void main(String[] args) {
-    System.out.println(
+    System.err.println(
       Runtime.getRuntime().availableProcessors());
   }
 }

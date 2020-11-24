@@ -5,17 +5,17 @@
 import java.util.*;
 
 interface One {
-  default void first() { System.out.println("first"); }
+  default void first() { System.err.println("first"); }
 }
 
 interface Two {
   default void second() {
-    System.out.println("second");
+    System.err.println("second");
   }
 }
 
 interface Three {
-  default void third() { System.out.println("third"); }
+  default void third() { System.err.println("third"); }
 }
 
 class MI implements One, Two, Three {}

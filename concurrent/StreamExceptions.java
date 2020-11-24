@@ -23,11 +23,11 @@ public class StreamExceptions {
     test("D", 4);
     test("E", 5);
     // ... until there's a terminal operation:
-    System.out.println("Entering try");
+    System.err.println("Entering try");
     try {
       c.forEach(System.out::println);   // [1]
     } catch(Exception e) {
-      System.out.println(e.getMessage());
+      System.err.println(e.getMessage());
     }
   }
 }

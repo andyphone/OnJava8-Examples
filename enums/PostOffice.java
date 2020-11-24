@@ -76,7 +76,7 @@ public class PostOffice {
       boolean handle(Mail m) {
         switch(m.generalDelivery) {
           case YES:
-            System.out.println(
+            System.err.println(
               "Using general delivery for " + m);
             return true;
           default: return false;
@@ -92,7 +92,7 @@ public class PostOffice {
             switch(m.address) {
               case INCORRECT: return false;
               default:
-                System.out.println(
+                System.err.println(
                   "Delivering "+ m + " automatically");
                 return true;
             }
@@ -108,7 +108,7 @@ public class PostOffice {
             switch(m.address) {
               case INCORRECT: return false;
               default:
-                System.out.println(
+                System.err.println(
                   "Delivering " + m + " normally");
                 return true;
             }
@@ -121,7 +121,7 @@ public class PostOffice {
         switch(m.returnAddress) {
           case MISSING: return false;
           default:
-            System.out.println(
+            System.err.println(
               "Returning " + m + " to sender");
             return true;
         }
@@ -133,13 +133,13 @@ public class PostOffice {
     for(MailHandler handler : MailHandler.values())
       if(handler.handle(m))
         return;
-    System.out.println(m + " is a dead letter");
+    System.err.println(m + " is a dead letter");
   }
   public static void main(String[] args) {
     for(Mail mail : Mail.generator(10)) {
-      System.out.println(mail.details());
+      System.err.println(mail.details());
       handle(mail);
-      System.out.println("*****");
+      System.err.println("*****");
     }
   }
 }

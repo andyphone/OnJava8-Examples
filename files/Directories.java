@@ -31,7 +31,7 @@ public class Directories {
     try {
       Files.createDirectory(variant);
     } catch(Exception e) {
-      System.out.println("Nope, that doesn't work.");
+      System.err.println("Nope, that doesn't work.");
     }
     populateTestDir();
     Path tempdir =
@@ -39,7 +39,7 @@ public class Directories {
     Files.createTempFile(tempdir, "pre", ".non");
     Files.newDirectoryStream(test)
       .forEach(System.out::println);
-    System.out.println("*********");
+    System.err.println("*********");
     Files.walk(test).forEach(System.out::println);
   }
   static void populateTestDir() throws Exception {

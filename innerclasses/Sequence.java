@@ -38,7 +38,7 @@ public class Sequence {
       sequence.add(Integer.toString(i));
     Selector selector = sequence.selector();
     while(!selector.end()) {
-      System.out.print(selector.current() + " ");
+      System.err.print(selector.current() + " ");
       selector.next();
     }
   }

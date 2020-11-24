@@ -30,13 +30,13 @@ public class InstantiateGenericType {
   public static void main(String[] args) {
     ClassAsFactory<Employee> fe =
       new ClassAsFactory<>(Employee.class);
-    System.out.println(fe.get());
+    System.err.println(fe.get());
     ClassAsFactory<Integer> fi =
       new ClassAsFactory<>(Integer.class);
     try {
-      System.out.println(fi.get());
+      System.err.println(fi.get());
     } catch(Exception e) {
-      System.out.println(e.getMessage());
+      System.err.println(e.getMessage());
     }
   }
 }

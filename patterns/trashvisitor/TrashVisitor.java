@@ -15,7 +15,7 @@ class PriceVisitor implements Visitor {
   private double gSum; // Glass
   private double cSum; // Cardboard
   public static void show(String s) {
-    System.out.println(s);
+    System.err.println(s);
   }
   @Override
   public void visit(Aluminum al) {
@@ -57,7 +57,7 @@ class WeightVisitor implements Visitor {
   private double gSum; // Glass
   private double cSum; // Cardboard
   public static void show(String s) {
-    System.out.println(s);
+    System.err.println(s);
   }
   @Override
   public void visit(Aluminum al) {

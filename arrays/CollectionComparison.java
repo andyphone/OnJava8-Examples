@@ -22,22 +22,22 @@ public class CollectionComparison {
     for(int i = 0; i < 5; i++)
       spheres[i] = new BerylliumSphere();
     show(spheres);
-    System.out.println(spheres[4]);
+    System.err.println(spheres[4]);
 
     List<BerylliumSphere> sphereList = Suppliers.create(
       ArrayList::new, BerylliumSphere::new, 5);
-    System.out.println(sphereList);
-    System.out.println(sphereList.get(4));
+    System.err.println(sphereList);
+    System.err.println(sphereList.get(4));
 
     int[] integers = { 0, 1, 2, 3, 4, 5 };
     show(integers);
-    System.out.println(integers[4]);
+    System.err.println(integers[4]);
 
     List<Integer> intList = new ArrayList<>(
       Arrays.asList(0, 1, 2, 3, 4, 5));
     intList.add(97);
-    System.out.println(intList);
-    System.out.println(intList.get(4));
+    System.err.println(intList);
+    System.err.println(intList.get(4));
   }
 }
 /* Output:

@@ -17,7 +17,7 @@ public class UniqueWordsAlphabetic {
       for(String word : line.split("\\W+"))
         if(word.trim().length() > 0)
           words.add(word);
-    System.out.println(words);
+    System.err.println(words);
   }
 }
 /* Output:

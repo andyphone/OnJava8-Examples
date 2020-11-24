@@ -8,7 +8,7 @@ import java.util.concurrent.*;
 class ShowThread implements Runnable {
   @Override
   public void run() {
-    System.out.println(
+    System.err.println(
       Thread.currentThread().getName());
   }
 }
@@ -16,7 +16,7 @@ class ShowThread implements Runnable {
 public class WorkStealingPool {
   public static void main(String[] args)
     throws InterruptedException {
-    System.out.println(
+    System.err.println(
       Runtime.getRuntime().availableProcessors());
     ExecutorService exec =
       Executors.newWorkStealingPool();

@@ -12,7 +12,7 @@ public class StringInverterTests {
   StringInverter inverter = new Inverter4();
   @BeforeAll
   static void startMsg() {
-    System.out.println(">>> StringInverterTests <<<");
+    System.err.println(">>> StringInverterTests <<<");
   }
   @Test
   void basicInversion1() {

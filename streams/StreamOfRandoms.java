@@ -11,7 +11,7 @@ public class StreamOfRandoms {
     Stream.of(1, 2, 3, 4, 5)
       .flatMapToInt(i -> IntStream.concat(
         rand.ints(0, 100).limit(i), IntStream.of(-1)))
-      .forEach(n -> System.out.format("%d ", n));
+      .forEach(n -> System.err.format("%d ", n));
   }
 }
 /* Output:

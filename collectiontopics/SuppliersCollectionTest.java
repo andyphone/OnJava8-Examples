@@ -24,29 +24,29 @@ public class SuppliersCollectionTest {
     // Suppliers class from the Generics chapter:
     Set<String> set = Suppliers.create(
       LinkedHashSet::new, new Government(), 15);
-    System.out.println(set);
+    System.err.println(set);
     List<String> list = Suppliers.create(
       LinkedList::new, new Government(), 15);
-    System.out.println(list);
+    System.err.println(list);
     list = new ArrayList<>();
     Suppliers.fill(list, new Government(), 15);
-    System.out.println(list);
+    System.err.println(list);
 
     // Or we can use Streams:
     set = Arrays.stream(Government.foundation)
       .collect(Collectors.toSet());
-    System.out.println(set);
+    System.err.println(set);
     list = Arrays.stream(Government.foundation)
       .collect(Collectors.toList());
-    System.out.println(list);
+    System.err.println(list);
     list = Arrays.stream(Government.foundation)
       .collect(Collectors
         .toCollection(LinkedList::new));
-    System.out.println(list);
+    System.err.println(list);
     set = Arrays.stream(Government.foundation)
       .collect(Collectors
         .toCollection(LinkedHashSet::new));
-    System.out.println(set);
+    System.err.println(set);
   }
 }
 /* Output:

@@ -19,7 +19,7 @@ public class TimedAbort {
       } catch(InterruptedException e) {
         throw new RuntimeException(e);
       }
-      System.out.println(msg);
+      System.err.println(msg);
       System.exit(0);
     });
   }

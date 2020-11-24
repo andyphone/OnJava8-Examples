@@ -24,7 +24,7 @@ public class Logon implements Serializable {
   }
   public static void main(String[] args) {
     Logon a = new Logon("Hulk", "myLittlePony");
-    System.out.println("logon a = " + a);
+    System.err.println("logon a = " + a);
     try(
       ObjectOutputStream o =
         new ObjectOutputStream(
@@ -40,13 +40,13 @@ public class Logon implements Serializable {
       ObjectInputStream in = new ObjectInputStream(
         new FileInputStream("Logon.dat"))
     ) {
-      System.out.println(
+      System.err.println(
         "Recovering object at " + new Date());
       a = (Logon)in.readObject();
     } catch(IOException | ClassNotFoundException e) {
       throw new RuntimeException(e);
     }
-    System.out.println("logon a = " + a);
+    System.err.println("logon a = " + a);
   }
 }
 /* Output:

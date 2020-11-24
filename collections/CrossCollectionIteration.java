@@ -9,9 +9,9 @@ public class CrossCollectionIteration {
   public static void display(Iterator<Pet> it) {
     while(it.hasNext()) {
       Pet p = it.next();
-      System.out.print(p.id() + ":" + p + " ");
+      System.err.print(p.id() + ":" + p + " ");
     }
-    System.out.println();
+    System.err.println();
   }
   public static void main(String[] args) {
     List<Pet> pets = Pets.list(8);

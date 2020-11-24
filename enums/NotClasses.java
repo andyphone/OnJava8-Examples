@@ -9,19 +9,19 @@ enum LikeClasses {
   WINKEN {
     @Override
     void behavior() {
-      System.out.println("Behavior1");
+      System.err.println("Behavior1");
     }
   },
   BLINKEN {
     @Override
     void behavior() {
-      System.out.println("Behavior2");
+      System.err.println("Behavior2");
     }
   },
   NOD {
     @Override
     void behavior() {
-      System.out.println("Behavior3");
+      System.err.println("Behavior3");
     }
   };
   abstract void behavior();

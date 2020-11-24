@@ -14,7 +14,7 @@ public class ThawAlien {
     ObjectInputStream in = new ObjectInputStream(
       new FileInputStream(new File("X.file")));
     Object mystery = in.readObject();
-    System.out.println(mystery.getClass());
+    System.err.println(mystery.getClass());
   }
 }
 /* Output:

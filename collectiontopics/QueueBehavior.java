@@ -14,11 +14,11 @@ public class QueueBehavior {
        "eight nine ten").split(" "));
   }
   static void test(int id, Queue<String> queue) {
-    System.out.print(id + ": ");
+    System.err.print(id + ": ");
     strings().map(queue::offer).count();
     while(queue.peek() != null)
-      System.out.print(queue.remove() + " ");
-    System.out.println();
+      System.err.print(queue.remove() + " ");
+    System.err.println();
   }
   public static void main(String[] args) {
     int count = 10;

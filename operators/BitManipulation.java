@@ -51,12 +51,12 @@ public class BitManipulation {
     printBinaryLong("(~l) >>> 5", (~l) >>> 5);
   }
   static void printBinaryInt(String s, int i) {
-    System.out.println(
+    System.err.println(
       s + ", int: " + i + ", binary:\n   " +
       Integer.toBinaryString(i));
   }
   static void printBinaryLong(String s, long l) {
-    System.out.println(
+    System.err.println(
       s + ", long: " + l + ", binary:\n    " +
       Long.toBinaryString(l));
   }

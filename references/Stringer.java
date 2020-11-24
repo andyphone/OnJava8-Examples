@@ -9,10 +9,10 @@ public class Stringer {
   }
   public static void main(String[] args) {
     String q = new String("howdy");
-    System.out.println(q); // howdy
+    System.err.println(q); // howdy
     String qq = upcase(q);
-    System.out.println(qq); // HOWDY
-    System.out.println(q); // howdy
+    System.err.println(qq); // HOWDY
+    System.err.println(q); // howdy
   }
 }
 /* Output:

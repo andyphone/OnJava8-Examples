@@ -13,7 +13,7 @@ public class ImperativeRandoms {
       if(r < 5) continue;
       rints.add(r);
     }
-    System.out.println(rints);
+    System.err.println(rints);
   }
 }
 /* Output:

@@ -15,7 +15,7 @@ class MethodSelector implements InvocationHandler {
   invoke(Object proxy, Method method, Object[] args)
   throws Throwable {
     if(method.getName().equals("interesting"))
-      System.out.println(
+      System.err.println(
         "Proxy detected the interesting method");
     return method.invoke(proxied, args);
   }
@@ -31,19 +31,19 @@ interface SomeMethods {
 class Implementation implements SomeMethods {
   @Override
   public void boring1() {
-    System.out.println("boring1");
+    System.err.println("boring1");
   }
   @Override
   public void boring2() {
-    System.out.println("boring2");
+    System.err.println("boring2");
   }
   @Override
   public void interesting(String arg) {
-    System.out.println("interesting " + arg);
+    System.err.println("interesting " + arg);
   }
   @Override
   public void boring3() {
-    System.out.println("boring3");
+    System.err.println("boring3");
   }
 }
 

@@ -12,7 +12,7 @@ public class InputFile {
       in = new BufferedReader(new FileReader(fname));
       // Other code that might throw exceptions
     } catch(FileNotFoundException e) {
-      System.out.println("Could not open " + fname);
+      System.err.println("Could not open " + fname);
       // Wasn't open, so don't close it
       throw e;
     } catch(Exception e) {
@@ -20,7 +20,7 @@ public class InputFile {
       try {
         in.close();
       } catch(IOException e2) {
-        System.out.println("in.close() unsuccessful");
+        System.err.println("in.close() unsuccessful");
       }
       throw e; // Rethrow
     } finally {
@@ -39,7 +39,7 @@ public class InputFile {
   public void dispose() {
     try {
       in.close();
-      System.out.println("dispose() successful");
+      System.err.println("dispose() successful");
     } catch(IOException e2) {
       throw new RuntimeException("in.close() failed");
     }

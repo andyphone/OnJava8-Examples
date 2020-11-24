@@ -64,7 +64,7 @@ public class ArrayCopying {
       Sub[] d3 = Arrays.copyOf(
         b2, b2.length, Sub[].class); // [6]
     } catch(Exception e) {
-      System.out.println(e);
+      System.err.println(e);
     }
   }
 }

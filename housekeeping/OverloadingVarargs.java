@@ -5,19 +5,19 @@
 
 public class OverloadingVarargs {
   static void f(Character... args) {
-    System.out.print("first");
+    System.err.print("first");
     for(Character c : args)
-      System.out.print(" " + c);
-    System.out.println();
+      System.err.print(" " + c);
+    System.err.println();
   }
   static void f(Integer... args) {
-    System.out.print("second");
+    System.err.print("second");
     for(Integer i : args)
-      System.out.print(" " + i);
-    System.out.println();
+      System.err.print(" " + i);
+    System.err.println();
   }
   static void f(Long... args) {
-    System.out.println("third");
+    System.err.println("third");
   }
   public static void main(String[] args) {
     f('a', 'b', 'c');

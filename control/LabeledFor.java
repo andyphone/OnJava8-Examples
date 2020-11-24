@@ -11,30 +11,30 @@ public class LabeledFor {
     for(; true ;) { // infinite loop
       inner: // Can't have statements here
       for(; i < 10; i++) {
-        System.out.println("i = " + i);
+        System.err.println("i = " + i);
         if(i == 2) {
-          System.out.println("continue");
+          System.err.println("continue");
           continue;
         }
         if(i == 3) {
-          System.out.println("break");
+          System.err.println("break");
           i++; // Otherwise i never
                // gets incremented.
           break;
         }
         if(i == 7) {
-          System.out.println("continue outer");
+          System.err.println("continue outer");
           i++; // Otherwise i never
                // gets incremented.
           continue outer;
         }
         if(i == 8) {
-          System.out.println("break outer");
+          System.err.println("break outer");
           break outer;
         }
         for(int k = 0; k < 5; k++) {
           if(k == 3) {
-            System.out.println("continue inner");
+            System.err.println("continue inner");
             continue inner;
           }
         }

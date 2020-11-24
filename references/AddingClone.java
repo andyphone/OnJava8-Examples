@@ -37,7 +37,7 @@ public class AddingClone {
     Int2 x = new Int2(10);
     Int2 x2 = x.clone();
     x2.increment();
-    System.out.println(
+    System.err.println(
       "x = " + x + ", x2 = " + x2);
     // Anything inherited is also cloneable:
     Int3 x3 = new Int3(7);
@@ -46,7 +46,7 @@ public class AddingClone {
       .mapToObj(Int2::new)
       .collect(Collectors
         .toCollection(ArrayList::new));
-    System.out.println("v: " + v);
+    System.err.println("v: " + v);
     ArrayList<Int2> v2 =
       (ArrayList<Int2>)v.clone();
     // Now clone each element:
@@ -54,9 +54,9 @@ public class AddingClone {
       .forEach(i -> v2.set(i, v.get(i).clone()));
     // Increment all v2's elements:
     v2.forEach(Int2::increment);
-    System.out.println("v2: " + v2);
+    System.err.println("v2: " + v2);
     // See if it changed v's elements:
-    System.out.println("v: " + v);
+    System.err.println("v: " + v);
   }
 }
 /* Output:

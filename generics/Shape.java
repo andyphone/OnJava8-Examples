@@ -11,9 +11,9 @@ public class Shape {
     return getClass().getSimpleName() + " " + id;
   }
   public void rotate() {
-    System.out.println(this + " rotate");
+    System.err.println(this + " rotate");
   }
   public void resize(int newSize) {
-    System.out.println(this + " resize " + newSize);
+    System.err.println(this + " resize " + newSize);
   }
 }

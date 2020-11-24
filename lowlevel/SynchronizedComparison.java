@@ -52,7 +52,7 @@ class Caller implements Runnable {
       g.method();
       successfulCalls.getAndIncrement();
     }
-    System.out.println(
+    System.err.println(
       "-> " + successfulCalls.get());
   }
 }
@@ -68,7 +68,7 @@ public class SynchronizedComparison {
         .map(CompletableFuture::runAsync)
         .collect(Collectors.toList());
     callers.forEach(CompletableFuture::join);
-    System.out.println(g);
+    System.err.println(g);
   }
   public static void main(String[] args) {
     test(new CriticalSection());

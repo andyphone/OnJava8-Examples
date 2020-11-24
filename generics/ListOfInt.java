@@ -12,7 +12,7 @@ public class ListOfInt {
     List<Integer> li = IntStream.range(38, 48)
       .boxed() // Converts ints to Integers
       .collect(Collectors.toList());
-    System.out.println(li);
+    System.err.println(li);
   }
 }
 /* Output:

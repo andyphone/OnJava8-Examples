@@ -32,7 +32,7 @@ public class IDChecker {
       groupB = CompletableFuture
         .supplyAsync(new MakeObjects(gen));
     groupA.thenAcceptBoth(groupB, (a, b) -> {
-      System.out.println(
+      System.err.println(
         Sets.intersection(
           Sets.newHashSet(a),
           Sets.newHashSet(b)).size());

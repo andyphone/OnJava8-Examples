@@ -8,14 +8,14 @@ import java.util.*;
 
 class Dog {
   public void talk() {
-    System.out.println("Woof!");
+    System.err.println("Woof!");
   }
   public void reproduce() { }
 }
 
 class Robot {
   public void talk() {
-    System.out.println("Click!");
+    System.err.println("Click!");
   }
   public void oilChange() { }
 }

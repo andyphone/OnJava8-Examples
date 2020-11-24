@@ -10,7 +10,7 @@ public class Rudolph {
       "[rR]udolph",
       "[rR][aeiou][a-z]ol.*",
       "R.*" })
-      System.out.println("Rudolph".matches(pattern));
+      System.err.println("Rudolph".matches(pattern));
   }
 }
 /* Output:

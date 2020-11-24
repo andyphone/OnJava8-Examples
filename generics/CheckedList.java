@@ -19,7 +19,7 @@ public class CheckedList {
     try {
       oldStyleMethod(dogs2); // Throws an exception
     } catch(Exception e) {
-      System.out.println("Expected: " + e);
+      System.err.println("Expected: " + e);
     }
     // Derived types work fine:
     List<Pet> pets = Collections.checkedList(

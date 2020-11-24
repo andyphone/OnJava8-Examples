@@ -15,7 +15,7 @@ class Product {
     id = idNumber;
     description = descr;
     this.price = price;
-    System.out.println(toString());
+    System.err.println(toString());
   }
   @Override
   public String toString() {
@@ -74,7 +74,7 @@ public class Store extends ArrayList<Aisle> {
     return result.toString();
   }
   public static void main(String[] args) {
-    System.out.println(new Store(5, 4, 3));
+    System.err.println(new Store(5, 4, 3));
   }
 }
 /* Output: (First 8 Lines)

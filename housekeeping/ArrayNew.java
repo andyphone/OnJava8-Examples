@@ -10,8 +10,8 @@ public class ArrayNew {
     int[] a;
     Random rand = new Random(47);
     a = new int[rand.nextInt(20)];
-    System.out.println("length of a = " + a.length);
-    System.out.println(Arrays.toString(a));
+    System.err.println("length of a = " + a.length);
+    System.err.println(Arrays.toString(a));
   }
 }
 /* Output:

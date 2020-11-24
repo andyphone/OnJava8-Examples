@@ -16,9 +16,9 @@ public class Burrito2 {
     return "Burrito is "+ degree;
   }
   public static void main(String[] args) {
-    System.out.println(new Burrito2(NOT));
-    System.out.println(new Burrito2(MEDIUM));
-    System.out.println(new Burrito2(HOT));
+    System.err.println(new Burrito2(NOT));
+    System.err.println(new Burrito2(MEDIUM));
+    System.err.println(new Burrito2(HOT));
   }
 }
 /* Output:

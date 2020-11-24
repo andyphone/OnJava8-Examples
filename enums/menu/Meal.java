@@ -10,9 +10,9 @@ public class Meal {
     for(int i = 0; i < 5; i++) {
       for(Course course : Course.values()) {
         Food food = course.randomSelection();
-        System.out.println(food);
+        System.err.println(food);
       }
-      System.out.println("***");
+      System.err.println("***");
     }
   }
 }

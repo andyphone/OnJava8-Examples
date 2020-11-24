@@ -9,12 +9,12 @@ class Shared {
   private static long counter = 0;
   private final long id = counter++;
   Shared() {
-    System.out.println("Creating " + this);
+    System.err.println("Creating " + this);
   }
   public void addRef() { refcount++; }
   protected void dispose() {
     if(--refcount == 0)
-      System.out.println("Disposing " + this);
+      System.err.println("Disposing " + this);
   }
   @Override
   public String toString() {
@@ -27,12 +27,12 @@ class Composing {
   private static long counter = 0;
   private final long id = counter++;
   Composing(Shared shared) {
-    System.out.println("Creating " + this);
+    System.err.println("Creating " + this);
     this.shared = shared;
     this.shared.addRef();
   }
   protected void dispose() {
-    System.out.println("disposing " + this);
+    System.err.println("disposing " + this);
     shared.dispose();
   }
   @Override

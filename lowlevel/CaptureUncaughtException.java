@@ -8,8 +8,8 @@ class ExceptionThread2 implements Runnable {
   @Override
   public void run() {
     Thread t = Thread.currentThread();
-    System.out.println("run() by " + t.getName());
-    System.out.println(
+    System.err.println("run() by " + t.getName());
+    System.err.println(
       "eh = " + t.getUncaughtExceptionHandler());
     throw new RuntimeException();
   }
@@ -19,19 +19,19 @@ class MyUncaughtExceptionHandler implements
 Thread.UncaughtExceptionHandler {
   @Override
   public void uncaughtException(Thread t, Throwable e) {
-    System.out.println("caught " + e);
+    System.err.println("caught " + e);
   }
 }
 
 class HandlerThreadFactory implements ThreadFactory {
   @Override
   public Thread newThread(Runnable r) {
-    System.out.println(this + " creating new Thread");
+    System.err.println(this + " creating new Thread");
     Thread t = new Thread(r);
-    System.out.println("created " + t);
+    System.err.println("created " + t);
     t.setUncaughtExceptionHandler(
       new MyUncaughtExceptionHandler());
-    System.out.println(
+    System.err.println(
       "eh = " + t.getUncaughtExceptionHandler());
     return t;
   }

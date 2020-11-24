@@ -9,7 +9,7 @@ import java.util.stream.*;
 
 public class CountingStream {
   public static void main(String[] args) {
-    System.out.println(
+    System.err.println(
       IntStream.range(0, 10)
         .parallel()
         .mapToObj(CountingTask::new)

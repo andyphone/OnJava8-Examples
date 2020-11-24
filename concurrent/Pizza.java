@@ -22,7 +22,7 @@ public class Pizza {
   public Pizza(int id) { this.id = id; }
   public Pizza next() {
     step = step.forward();
-    System.out.println("Pizza " + id + ": " + step);
+    System.err.println("Pizza " + id + ": " + step);
     return this;
   }
   public Pizza next(Step previousStep) {

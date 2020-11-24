@@ -6,6 +6,6 @@
 
 class Lisa extends Homer {
   @Override void doh(Milhouse m) {
-    System.out.println("doh(Milhouse)");
+    System.err.println("doh(Milhouse)");
   }
 }

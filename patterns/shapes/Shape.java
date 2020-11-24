@@ -13,9 +13,9 @@ public class Shape {
       getClass().getSimpleName() + "[" + id + "]";
   }
   public void draw() {
-    System.out.println(this + " draw");
+    System.err.println(this + " draw");
   }
   public void erase() {
-    System.out.println(this + " erase");
+    System.err.println(this + " erase");
   }
 }

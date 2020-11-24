@@ -12,7 +12,7 @@ public class ImmutableInteger {
     List<Integer> v = IntStream.range(0, 10)
       .mapToObj(Integer::new)
       .collect(Collectors.toList());
-    System.out.println(v);
+    System.err.println(v);
     // But how do you change the int
     // inside the Integer?
   }

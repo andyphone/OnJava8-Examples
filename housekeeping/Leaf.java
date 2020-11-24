@@ -11,7 +11,7 @@ public class Leaf {
     return this;
   }
   void print() {
-    System.out.println("i = " + i);
+    System.err.println("i = " + i);
   }
   public static void main(String[] args) {
     Leaf x = new Leaf();

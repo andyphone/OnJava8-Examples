@@ -17,7 +17,7 @@ public class SortedSetOfString {
       colors.add("Blue");
       colors.add("Purple");
     }
-    System.out.println(colors);
+    System.err.println(colors);
   }
 }
 /* Output:

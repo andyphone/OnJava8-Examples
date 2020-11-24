@@ -21,7 +21,7 @@ public class SetOrder {
   public static void
   main(String[] args) throws Exception {
     for(String type: sets) {
-      System.out.format("[-> %s <-]%n",
+      System.err.format("[-> %s <-]%n",
         type.substring(type.lastIndexOf('.') + 1));
       @SuppressWarnings({"unchecked", "deprecation"})
       Set<String> set = (Set<String>)

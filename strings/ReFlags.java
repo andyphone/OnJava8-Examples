@@ -13,7 +13,7 @@ public class ReFlags {
       "JAVA has pretty good regular expressions\n" +
       "Regular expressions are in Java");
     while(m.find())
-      System.out.println(m.group());
+      System.err.println(m.group());
   }
 }
 /* Output:

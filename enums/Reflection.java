@@ -12,30 +12,30 @@ enum Explore { HERE, THERE }
 public class Reflection {
   public static
   Set<String> analyze(Class<?> enumClass) {
-    System.out.println(
+    System.err.println(
       "_____ Analyzing " + enumClass + " _____");
-    System.out.println("Interfaces:");
+    System.err.println("Interfaces:");
     for(Type t : enumClass.getGenericInterfaces())
-      System.out.println(t);
-    System.out.println(
+      System.err.println(t);
+    System.err.println(
       "Base: " + enumClass.getSuperclass());
-    System.out.println("Methods: ");
+    System.err.println("Methods: ");
     Set<String> methods = new TreeSet<>();
     for(Method m : enumClass.getMethods())
       methods.add(m.getName());
-    System.out.println(methods);
+    System.err.println(methods);
     return methods;
   }
   public static void main(String[] args) {
     Set<String> exploreMethods =
       analyze(Explore.class);
     Set<String> enumMethods = analyze(Enum.class);
-    System.out.println(
+    System.err.println(
       "Explore.containsAll(Enum)? " +
       exploreMethods.containsAll(enumMethods));
-    System.out.print("Explore.removeAll(Enum): ");
+    System.err.print("Explore.removeAll(Enum): ");
     exploreMethods.removeAll(enumMethods);
-    System.out.println(exploreMethods);
+    System.err.println(exploreMethods);
     // Decompile the code for the enum:
     OSExecute.command(
       "javap -cp build/classes/java/main Explore");

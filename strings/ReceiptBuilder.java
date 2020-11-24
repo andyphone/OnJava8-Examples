@@ -33,7 +33,7 @@ public class ReceiptBuilder {
     receiptBuilder.add("Princess Peas", 3, 5.1);
     receiptBuilder.add(
       "Three Bears Porridge", 1, 14.29);
-    System.out.println(receiptBuilder.build());
+    System.err.println(receiptBuilder.build());
   }
 }
 /* Output:

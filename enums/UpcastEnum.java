@@ -12,7 +12,7 @@ public class UpcastEnum {
     Enum e = Search.HITHER; // Upcast
     // e.values(); // No values() in Enum
     for(Enum en : e.getClass().getEnumConstants())
-      System.out.println(en);
+      System.err.println(en);
   }
 }
 /* Output:

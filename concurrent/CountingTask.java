@@ -12,7 +12,7 @@ public class CountingTask implements Callable<Integer> {
     Integer val = 0;
     for(int i = 0; i < 100; i++)
       val++;
-    System.out.println(id + " " +
+    System.err.println(id + " " +
       Thread.currentThread().getName() + " " + val);
     return val;
   }

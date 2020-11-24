@@ -10,7 +10,7 @@ public class RandomGenerators {
       stream
         .limit(4)
         .forEach(System.out::println);
-      System.out.println("++++++++");
+      System.err.println("++++++++");
   }
   public static void main(String[] args) {
     Random rand = new Random(47);

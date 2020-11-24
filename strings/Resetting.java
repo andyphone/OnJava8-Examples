@@ -10,11 +10,11 @@ public class Resetting {
     Matcher m = Pattern.compile("[frb][aiu][gx]")
       .matcher("fix the rug with bags");
     while(m.find())
-      System.out.print(m.group() + " ");
-    System.out.println();
+      System.err.print(m.group() + " ");
+    System.err.println();
     m.reset("fix the rig with rags");
     while(m.find())
-      System.out.print(m.group() + " ");
+      System.err.print(m.group() + " ");
   }
 }
 /* Output:

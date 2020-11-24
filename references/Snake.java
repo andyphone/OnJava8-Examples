@@ -36,11 +36,11 @@ public class Snake implements Cloneable {
   }
   public static void main(String[] args) {
     Snake s = new Snake(5, 'a');
-    System.out.println("s = " + s);
+    System.err.println("s = " + s);
     Snake s2 = s.clone();
-    System.out.println("s2 = " + s2);
+    System.err.println("s2 = " + s2);
     s.increment();
-    System.out.println(
+    System.err.println(
       "after s.increment, s2 = " + s2);
   }
 }

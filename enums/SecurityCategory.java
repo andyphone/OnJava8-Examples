@@ -27,7 +27,7 @@ enum SecurityCategory {
     for(int i = 0; i < 10; i++) {
       SecurityCategory category =
         Enums.random(SecurityCategory.class);
-      System.out.println(category + ": " +
+      System.err.println(category + ": " +
         category.randomSelection());
     }
   }

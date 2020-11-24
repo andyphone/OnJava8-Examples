@@ -14,11 +14,11 @@ public class FinallyWorks {
         // Post-increment is zero first time:
         if(count++ == 0)
           throw new ThreeException();
-        System.out.println("No exception");
+        System.err.println("No exception");
       } catch(ThreeException e) {
-        System.out.println("ThreeException");
+        System.err.println("ThreeException");
       } finally {
-        System.out.println("In finally clause");
+        System.err.println("In finally clause");
         if(count == 2) break; // out of "while"
       }
     }

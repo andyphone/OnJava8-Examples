@@ -7,7 +7,7 @@
 class WaterSource {
   private String s;
   WaterSource() {
-    System.out.println("WaterSource()");
+    System.err.println("WaterSource()");
     s = "Constructed";
   }
   @Override
@@ -31,7 +31,7 @@ public class SprinklerSystem {
   }
   public static void main(String[] args) {
     SprinklerSystem sprinklers = new SprinklerSystem();
-    System.out.println(sprinklers);
+    System.err.println(sprinklers);
   }
 }
 /* Output:

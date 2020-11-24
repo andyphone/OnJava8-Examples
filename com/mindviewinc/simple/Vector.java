@@ -7,6 +7,6 @@ package com.mindviewinc.simple;
 
 public class Vector {
   public Vector() {
-    System.out.println("com.mindviewinc.simple.Vector");
+    System.err.println("com.mindviewinc.simple.Vector");
   }
 }

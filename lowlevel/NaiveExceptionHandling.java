@@ -13,7 +13,7 @@ public class NaiveExceptionHandling {
       es.execute(new ExceptionThread());
     } catch(RuntimeException ue) {
       // This statement will NOT execute!
-      System.out.println("Exception was handled!");
+      System.err.println("Exception was handled!");
     } finally {
       es.shutdown();
     }

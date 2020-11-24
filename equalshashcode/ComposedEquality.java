@@ -24,7 +24,7 @@ public class ComposedEquality extends SuccinctEquality {
   public ComposedEquality(int i, String s, double d) {
     super(i, s, d);
     part = new Part(s, d);
-    System.out.println("made 'ComposedEquality'");
+    System.err.println("made 'ComposedEquality'");
   }
   @Override
   public boolean equals(Object rval) {

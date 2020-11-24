@@ -7,6 +7,6 @@ package com.mindviewinc.simple;
 
 public class List {
   public List() {
-    System.out.println("com.mindviewinc.simple.List");
+    System.err.println("com.mindviewinc.simple.List");
   }
 }

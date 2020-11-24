@@ -15,7 +15,7 @@ public class BigEnumSet {
     A70, A71, A72, A73, A74, A75 }
   public static void main(String[] args) {
     EnumSet<Big> bigEnumSet = EnumSet.allOf(Big.class);
-    System.out.println(bigEnumSet);
+    System.err.println(bigEnumSet);
   }
 }
 /* Output:

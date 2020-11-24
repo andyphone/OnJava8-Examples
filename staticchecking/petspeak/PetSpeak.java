@@ -12,13 +12,13 @@ interface Pet {
 
 class Cat implements Pet {
   public void speak() {
-    System.out.println("meow!");
+    System.err.println("meow!");
   }
 }
 
 class Dog implements Pet {
   public void speak() {
-    System.out.println("woof!");
+    System.err.println("woof!");
   }
 }
 

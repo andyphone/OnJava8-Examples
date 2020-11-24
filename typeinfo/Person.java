@@ -34,10 +34,10 @@ class Person {
       " " + address.orElse("")).trim();
   }
   public static void main(String[] args) {
-    System.out.println(new Person());
-    System.out.println(new Person("Smith"));
-    System.out.println(new Person("Bob", "Smith"));
-    System.out.println(new Person("Bob", "Smith",
+    System.err.println(new Person());
+    System.err.println(new Person("Smith"));
+    System.err.println(new Person("Bob", "Smith"));
+    System.err.println(new Person("Bob", "Smith",
       "11 Degree Lane, Frostbite Falls, MN"));
   }
 }

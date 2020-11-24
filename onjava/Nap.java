@@ -15,6 +15,6 @@ public class Nap {
   }
   public Nap(double t, String msg) {
     this(t);
-    System.out.println(msg);
+    System.err.println(msg);
   }
 }

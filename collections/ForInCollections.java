@@ -11,7 +11,7 @@ public class ForInCollections {
     Collections.addAll(cs,
       "Take the long way home".split(" "));
     for(String s : cs)
-      System.out.print("'" + s + "' ");
+      System.err.print("'" + s + "' ");
   }
 }
 /* Output:

@@ -14,17 +14,17 @@ public class CurryingAndPartials {
       Function<String, Function<String, String>> sum =
          a -> b -> a + b; // [1]
 
-      System.out.println(uncurried("Hi ", "Ho"));
+      System.err.println(uncurried("Hi ", "Ho"));
 
       Function<String, String>
         hi = sum.apply("Hi "); // [2]
-      System.out.println(hi.apply("Ho"));
+      System.err.println(hi.apply("Ho"));
 
       // Partial application:
       Function<String, String> sumHi =
         sum.apply("Hup ");
-      System.out.println(sumHi.apply("Ho"));
-      System.out.println(sumHi.apply("Hey"));
+      System.err.println(sumHi.apply("Ho"));
+      System.err.println(sumHi.apply("Hey"));
    }
 }
 /* Output:

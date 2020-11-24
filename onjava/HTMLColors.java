@@ -188,7 +188,7 @@ public class HTMLColors {
       .collect(Collectors.toList());
   public static
   void show(Map.Entry<Integer,String> e) {
-    System.out.format(
+    System.err.format(
       "0x%06X: %s%n", e.getKey(), e.getValue());
   }
   public static void
@@ -213,7 +213,7 @@ public class HTMLColors {
   void showrgb(Collection<Integer> lst, int count) {
     lst.stream()
       .limit(count)
-      .forEach(n -> System.out.format("0x%06X%n", n));
+      .forEach(n -> System.err.format("0x%06X%n", n));
   }
   public static void showrgb(Collection<Integer> lst) {
     showrgb(lst, lst.size());
@@ -223,14 +223,14 @@ public class HTMLColors {
     m.entrySet().stream()
       .limit(count)
       .forEach(e ->
-        System.out.format(
+        System.err.format(
           "%-20s  0x%06X%n", e.getKey(), e.getValue()));
   }
   public static void showInv(Map<String,Integer> m) {
     showInv(m, m.size());
   }
   public static void border() {
-    System.out.println(
+    System.err.println(
       "******************************");
   }
 }

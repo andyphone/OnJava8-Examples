@@ -17,7 +17,7 @@ public class ArraySearching {
       int r = rand.getAsInt();
       int location = Arrays.binarySearch(a, r);
       if(location >= 0) {
-        System.out.println(
+        System.err.println(
           "Location of " + r + " is " + location +
           ", a[" + location + "] is " + a[location]);
         break; // Out of while loop

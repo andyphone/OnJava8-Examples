@@ -10,12 +10,12 @@ public class Alias1 {
   public static void main(String[] args) {
     Alias1 x = new Alias1(7);
     Alias1 y = x; // Assign the reference (1)
-    System.out.println("x: " + x.i);
-    System.out.println("y: " + y.i);
-    System.out.println("Incrementing x");
+    System.err.println("x: " + x.i);
+    System.err.println("y: " + y.i);
+    System.err.println("Incrementing x");
     x.i++; // [2]
-    System.out.println("x: " + x.i);
-    System.out.println("y: " + y.i);
+    System.err.println("x: " + x.i);
+    System.err.println("y: " + y.i);
   }
 }
 /* Output:

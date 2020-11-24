@@ -26,23 +26,23 @@ public class CompletableExceptions {
     try {
       test("F", 2).get(); // or join()
     } catch(Exception e) {
-      System.out.println(e.getMessage());
+      System.err.println(e.getMessage());
     }
     // Test for exceptions:
-    System.out.println(
+    System.err.println(
       test("G", 2).isCompletedExceptionally());
     // Counts as "done":
-    System.out.println(test("H", 2).isDone());
+    System.err.println(test("H", 2).isDone());
     // Force an exception:
     CompletableFuture<Integer> cfi =
       new CompletableFuture<>();
-    System.out.println("done? " + cfi.isDone());
+    System.err.println("done? " + cfi.isDone());
     cfi.completeExceptionally(
       new RuntimeException("forced"));
     try {
       cfi.get();
     } catch(Exception e) {
-      System.out.println(e.getMessage());
+      System.err.println(e.getMessage());
     }
   }
 }

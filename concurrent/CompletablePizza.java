@@ -24,7 +24,7 @@ public class CompletablePizza {
   public static void
   show(CompletableFuture<Pizza> cf) {
     try {
-      System.out.println(cf.get());
+      System.err.println(cf.get());
     } catch(Exception e) {
       throw new RuntimeException(e);
     }
@@ -36,9 +36,9 @@ public class CompletablePizza {
         .mapToObj(Pizza::new)
         .map(CompletablePizza::makeCF)
         .collect(Collectors.toList());
-    System.out.println(timer.duration());
+    System.err.println(timer.duration());
     pizzas.forEach(CompletablePizza::show);
-    System.out.println(timer.duration());
+    System.err.println(timer.duration());
   }
 }
 /* Output:

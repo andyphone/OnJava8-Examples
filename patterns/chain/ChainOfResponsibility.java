@@ -29,7 +29,7 @@ interface Algorithm {
 
 class FindMinima {
   public static Result leastSquares(List<Double> line) {
-    System.out.println("LeastSquares.algorithm");
+    System.err.println("LeastSquares.algorithm");
     boolean weSucceed = false;
     if(weSucceed) // Actual test/calculation here
       return new Result(Arrays.asList(1.1, 2.2));
@@ -37,7 +37,7 @@ class FindMinima {
       return new Fail();
   }
   public static Result perturbation(List<Double> line) {
-    System.out.println("Perturbation.algorithm");
+    System.err.println("Perturbation.algorithm");
     boolean weSucceed = false;
     if(weSucceed) // Actual test/calculation here
       return new Result(Arrays.asList(3.3, 4.4));
@@ -45,7 +45,7 @@ class FindMinima {
       return new Fail();
   }
   public static Result bisection(List<Double> line) {
-    System.out.println("Bisection.algorithm");
+    System.err.println("Bisection.algorithm");
     boolean weSucceed = true;
     if(weSucceed) // Actual test/calculation here
       return new Result(Arrays.asList(5.5, 6.6));
@@ -77,9 +77,9 @@ public class ChainOfResponsibility {
       3.0, 4.0, 5.0, 4.0);
     Result result = solver.minima(line);
     if(result.success)
-      System.out.println(result.line);
+      System.err.println(result.line);
     else
-      System.out.println("No algorithm found");
+      System.err.println("No algorithm found");
   }
 }
 /* Output:

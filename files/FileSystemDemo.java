@@ -6,10 +6,10 @@ import java.nio.file.*;
 
 public class FileSystemDemo {
   static void show(String id, Object o) {
-    System.out.println(id + ": " + o);
+    System.err.println(id + ": " + o);
   }
   public static void main(String[] args) {
-    System.out.println(System.getProperty("os.name"));
+    System.err.println(System.getProperty("os.name"));
     FileSystem fsys = FileSystems.getDefault();
     for(FileStore fs : fsys.getFileStores())
       show("File Store", fs);

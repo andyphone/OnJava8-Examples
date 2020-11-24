@@ -35,7 +35,7 @@ public class GenericCast {
       new FixedSizeStack<>(letters.length);
     Arrays.stream("ABCDEFGHIJKLMNOPQRS".split(""))
       .forEach(strings::push);
-    System.out.println(strings.pop());
+    System.err.println(strings.pop());
     strings.stream()
       .map(s -> s + " ")
       .forEach(System.out::print);

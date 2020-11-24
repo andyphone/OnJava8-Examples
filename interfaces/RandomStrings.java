@@ -33,7 +33,7 @@ public class RandomStrings implements Readable {
   public static void main(String[] args) {
     Scanner s = new Scanner(new RandomStrings(10));
     while(s.hasNext())
-      System.out.println(s.next());
+      System.err.println(s.next());
   }
 }
 /* Output:

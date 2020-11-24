@@ -60,9 +60,9 @@ public class ThrowGenericException {
     for(int i = 0; i < 3; i++)
       runner.add(new Processor1());
     try {
-      System.out.println(runner.processAll());
+      System.err.println(runner.processAll());
     } catch(Failure1 e) {
-      System.out.println(e);
+      System.err.println(e);
     }
 
     ProcessRunner<Integer, Failure2> runner2 =
@@ -70,9 +70,9 @@ public class ThrowGenericException {
     for(int i = 0; i < 3; i++)
       runner2.add(new Processor2());
     try {
-      System.out.println(runner2.processAll());
+      System.err.println(runner2.processAll());
     } catch(Failure2 e) {
-      System.out.println(e);
+      System.err.println(e);
     }
   }
 }

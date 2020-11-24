@@ -17,7 +17,7 @@ public class RandomList<T> extends ArrayList<T> {
       "the lazy brown dog").split(" "))
       .forEach(rs::add);
     IntStream.range(0, 11).forEach(i ->
-      System.out.print(rs.select() + " "));
+      System.err.print(rs.select() + " "));
   }
 }
 /* Output:

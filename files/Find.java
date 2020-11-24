@@ -19,7 +19,7 @@ public class Find {
     Files.walk(test)
       .filter(matcher::matches)
       .forEach(System.out::println);
-    System.out.println("***************");
+    System.err.println("***************");
 
     PathMatcher matcher2 = FileSystems.getDefault()
       .getPathMatcher("glob:*.tmp");
@@ -27,7 +27,7 @@ public class Find {
       .map(Path::getFileName)
       .filter(matcher2::matches)
       .forEach(System.out::println);
-    System.out.println("***************");
+    System.err.println("***************");
 
     Files.walk(test) // Only look for files
       .filter(Files::isRegularFile)

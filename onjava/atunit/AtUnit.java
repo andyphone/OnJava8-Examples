@@ -23,14 +23,14 @@ public class AtUnit implements ProcessFiles.Strategy {
       .setDefaultAssertionStatus(true); // Enable assert
     new ProcessFiles(new AtUnit(), "class").start(args);
     if(failures == 0)
-      System.out.println("OK (" + testsRun + " tests)");
+      System.err.println("OK (" + testsRun + " tests)");
     else {
-      System.out.println("(" + testsRun + " tests)");
-      System.out.println(
+      System.err.println("(" + testsRun + " tests)");
+      System.err.println(
         "\n>>> " + failures + " FAILURE" +
         (failures > 1 ? "S" : "") + " <<<");
       for(String failed : failedTests)
-        System.out.println("  " + failed);
+        System.err.println("  " + failed);
     }
   }
   @Override
@@ -63,17 +63,17 @@ public class AtUnit implements ProcessFiles.Strategy {
           if(!Modifier.isPublic(testClass
              .getDeclaredConstructor()
              .getModifiers())) {
-            System.out.println("Error: " + testClass +
+            System.err.println("Error: " + testClass +
               " no-arg constructor must be public");
             System.exit(1);
           }
         } catch(NoSuchMethodException e) {
           // Synthesized no-arg constructor; OK
         }
-      System.out.println(testClass.getName());
+      System.err.println(testClass.getName());
     }
     for(Method m : testMethods) {
-      System.out.print("  . " + m.getName() + " ");
+      System.err.print("  . " + m.getName() + " ");
       try {
         Object testObject = createTestObject(creator);
         boolean success = false;
@@ -86,9 +86,9 @@ public class AtUnit implements ProcessFiles.Strategy {
           }
         } catch(InvocationTargetException e) {
           // Actual exception is inside e:
-          System.out.println(e.getCause());
+          System.err.println(e.getCause());
         }
-        System.out.println(success ? "" : "(failed)");
+        System.err.println(success ? "" : "(failed)");
         testsRun++;
         if(!success) {
           failures++;

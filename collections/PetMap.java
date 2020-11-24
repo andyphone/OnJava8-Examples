@@ -11,11 +11,11 @@ public class PetMap {
     petMap.put("My Cat", new Cat("Molly"));
     petMap.put("My Dog", new Dog("Ginger"));
     petMap.put("My Hamster", new Hamster("Bosco"));
-    System.out.println(petMap);
+    System.err.println(petMap);
     Pet dog = petMap.get("My Dog");
-    System.out.println(dog);
-    System.out.println(petMap.containsKey("My Dog"));
-    System.out.println(petMap.containsValue(dog));
+    System.err.println(dog);
+    System.err.println(petMap.containsKey("My Dog"));
+    System.err.println(petMap.containsValue(dog));
   }
 }
 /* Output:

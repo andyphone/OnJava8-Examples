@@ -55,7 +55,7 @@ implements Supplier<Coffee>, Iterable<Coffee> {
       .limit(5)
       .forEach(System.out::println);
     for(Coffee c : new CoffeeSupplier(5))
-      System.out.println(c);
+      System.err.println(c);
   }
 }
 /* Output:

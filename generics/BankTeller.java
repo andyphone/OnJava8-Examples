@@ -34,7 +34,7 @@ class Bank {
 
 public class BankTeller {
   public static void serve(Teller t, Customer c) {
-    System.out.println(t + " serves " + c);
+    System.err.println(t + " serves " + c);
   }
   public static void main(String[] args) {
     // Demonstrate create():

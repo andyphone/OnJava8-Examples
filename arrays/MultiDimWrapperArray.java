@@ -21,11 +21,11 @@ public class MultiDimWrapperArray {
       { "Jumped", "Over" },
       { "The", "Lazy", "Brown", "Dog", "&", "friend" },
     };
-    System.out.println(
+    System.err.println(
       "a1: " + Arrays.deepToString(a1));
-    System.out.println(
+    System.err.println(
       "a2: " + Arrays.deepToString(a2));
-    System.out.println(
+    System.err.println(
       "a3: " + Arrays.deepToString(a3));
   }
 }

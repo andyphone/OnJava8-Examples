@@ -30,12 +30,12 @@ public class MapOfList {
       Arrays.asList(new Rat("Freckly")));
   }
   public static void main(String[] args) {
-    System.out.println("People: " + petPeople.keySet());
-    System.out.println("Pets: " + petPeople.values());
+    System.err.println("People: " + petPeople.keySet());
+    System.err.println("Pets: " + petPeople.values());
     for(Person person : petPeople.keySet()) {
-      System.out.println(person + " has:");
+      System.err.println(person + " has:");
       for(Pet pet : petPeople.get(person))
-        System.out.println("    " + pet);
+        System.err.println("    " + pet);
     }
   }
 }

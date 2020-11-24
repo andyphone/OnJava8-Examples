@@ -22,7 +22,7 @@ public class ThreatAnalyzer {
       MatchResult match = scanner.match();
       String ip = match.group(1);
       String date = match.group(2);
-      System.out.format(
+      System.err.format(
         "Threat on %s from %s%n", date,ip);
     }
   }

@@ -53,7 +53,7 @@ public class TypesForSets {
     fill(set, type);
     fill(set, type); // Try to add duplicates
     fill(set, type);
-    System.out.println(set);
+    System.err.println(set);
   }
   public static void main(String[] args) {
     test(new HashSet<>(), HashType::new);
@@ -67,12 +67,12 @@ public class TypesForSets {
     try {
       test(new TreeSet<>(), SetType::new);
     } catch(Exception e) {
-      System.out.println(e.getMessage());
+      System.err.println(e.getMessage());
     }
     try {
       test(new TreeSet<>(), HashType::new);
     } catch(Exception e) {
-      System.out.println(e.getMessage());
+      System.err.println(e.getMessage());
     }
   }
 }

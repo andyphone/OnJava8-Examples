@@ -15,7 +15,7 @@ class Cleanser {
   public static void main(String[] args) {
     Cleanser x = new Cleanser();
     x.dilute(); x.apply(); x.scrub();
-    System.out.println(x);
+    System.err.println(x);
   }
 }
 
@@ -35,8 +35,8 @@ public class Detergent extends Cleanser {
     x.apply();
     x.scrub();
     x.foam();
-    System.out.println(x);
-    System.out.println("Testing base class:");
+    System.err.println(x);
+    System.err.println("Testing base class:");
     Cleanser.main(args);
   }
 }

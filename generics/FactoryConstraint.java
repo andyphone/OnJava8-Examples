@@ -47,11 +47,11 @@ class Foo2<T> {
 
 public class FactoryConstraint {
   public static void main(String[] args) {
-    System.out.println(
+    System.err.println(
       new Foo2<>(new IntegerFactory()));
-    System.out.println(
+    System.err.println(
       new Foo2<>(new Widget.Factory()));
-    System.out.println(
+    System.err.println(
       new Foo2<>(Fudge::new));
   }
 }

@@ -46,10 +46,10 @@ public class AssociativeArray<K, V> {
     try {
       map.put("extra", "object"); // Past the end
     } catch(ArrayIndexOutOfBoundsException e) {
-      System.out.println("Too many objects!");
+      System.err.println("Too many objects!");
     }
-    System.out.println(map);
-    System.out.println(map.get("ocean"));
+    System.err.println(map);
+    System.err.println(map.get("ocean"));
   }
 }
 /* Output:

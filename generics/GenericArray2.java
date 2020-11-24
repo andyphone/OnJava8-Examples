@@ -23,12 +23,12 @@ public class GenericArray2<T> {
     for(int i = 0; i < 10; i ++)
       gai.put(i, i);
     for(int i = 0; i < 10; i ++)
-      System.out.print(gai.get(i) + " ");
-    System.out.println();
+      System.err.print(gai.get(i) + " ");
+    System.err.println();
     try {
       Integer[] ia = gai.rep();
     } catch(Exception e) {
-      System.out.println(e);
+      System.err.println(e);
     }
   }
 }

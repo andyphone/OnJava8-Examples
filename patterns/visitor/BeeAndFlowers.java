@@ -58,15 +58,15 @@ class StringVal implements Visitor {
 class Bee implements Visitor {
   @Override
   public void visit(Gladiolus g) {
-    System.out.println("Bee and Gladiolus");
+    System.err.println("Bee and Gladiolus");
   }
   @Override
   public void visit(Renuculus r) {
-    System.out.println("Bee and Renuculus");
+    System.err.println("Bee and Renuculus");
   }
   @Override
   public void visit(Chrysanthemum c) {
-    System.out.println("Bee and Chrysanthemum");
+    System.err.println("Bee and Chrysanthemum");
   }
 }
 
@@ -91,7 +91,7 @@ public class BeeAndFlowers {
     StringVal sval = new StringVal();
     flowers.forEach(f -> {
       f.accept(sval);
-      System.out.println(sval);
+      System.err.println(sval);
     });
     // Perform "Bee" operation on all Flowers:
     Bee bee = new Bee();

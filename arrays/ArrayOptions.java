@@ -33,12 +33,12 @@ public class ArrayOptions {
     };
     // (Trailing comma is optional)
 
-    System.out.println("a.length = " + a.length);
-    System.out.println("b.length = " + b.length);
-    System.out.println("c.length = " + c.length);
-    System.out.println("d.length = " + d.length);
+    System.err.println("a.length = " + a.length);
+    System.err.println("b.length = " + b.length);
+    System.err.println("c.length = " + c.length);
+    System.err.println("d.length = " + d.length);
     a = d;
-    System.out.println("a.length = " + a.length);
+    System.err.println("a.length = " + a.length);
 
     // Arrays of primitives:
     int[] e; // Null reference
@@ -53,14 +53,14 @@ public class ArrayOptions {
     int[] h = { 11, 47, 93 };
 
     //  Compile error: variable e not initialized:
-    //- System.out.println("e.length = " + e.length);
-    System.out.println("f.length = " + f.length);
-    System.out.println("g.length = " + g.length);
-    System.out.println("h.length = " + h.length);
+    //- System.err.println("e.length = " + e.length);
+    System.err.println("f.length = " + f.length);
+    System.err.println("g.length = " + g.length);
+    System.err.println("h.length = " + h.length);
     e = h;
-    System.out.println("e.length = " + e.length);
+    System.err.println("e.length = " + e.length);
     e = new int[]{ 1, 2 };
-    System.out.println("e.length = " + e.length);
+    System.err.println("e.length = " + e.length);
   }
 }
 /* Output:

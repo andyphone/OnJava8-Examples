@@ -20,14 +20,14 @@ abstract class Trash {
     bin.forEach( t -> {
       // Polymorphism in action:
       val += t.weight * t.value();
-      System.out.println(
+      System.err.println(
         "weight of " +
         // Using RTTI to get type
         // information about the class:
         t.getClass().getSimpleName() +
         " = " + t.weight);
     });
-    System.out.println("Total value = " + val);
+    System.err.println("Total value = " + val);
   }
 }
 

@@ -13,7 +13,7 @@ public class ProduceFunction {
   }
   public static void main(String[] args) {
     FuncSS f = produce();
-    System.out.println(f.apply("YELLING"));
+    System.err.println(f.apply("YELLING"));
   }
 }
 /* Output:

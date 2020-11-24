@@ -310,19 +310,19 @@ public class Countries {
     return new ArrayList<>(select(size).keySet());
   }
   public static void main(String[] args) {
-    System.out.println(capitals(10));
-    System.out.println(names(10));
-    System.out.println(new HashMap<>(capitals(3)));
-    System.out.println(
+    System.err.println(capitals(10));
+    System.err.println(names(10));
+    System.err.println(new HashMap<>(capitals(3)));
+    System.err.println(
       new LinkedHashMap<>(capitals(3)));
-    System.out.println(new TreeMap<>(capitals(3)));
-    System.out.println(new Hashtable<>(capitals(3)));
-    System.out.println(new HashSet<>(names(6)));
-    System.out.println(new LinkedHashSet<>(names(6)));
-    System.out.println(new TreeSet<>(names(6)));
-    System.out.println(new ArrayList<>(names(6)));
-    System.out.println(new LinkedList<>(names(6)));
-    System.out.println(capitals().get("BRAZIL"));
+    System.err.println(new TreeMap<>(capitals(3)));
+    System.err.println(new Hashtable<>(capitals(3)));
+    System.err.println(new HashSet<>(names(6)));
+    System.err.println(new LinkedHashSet<>(names(6)));
+    System.err.println(new TreeSet<>(names(6)));
+    System.err.println(new ArrayList<>(names(6)));
+    System.err.println(new LinkedList<>(names(6)));
+    System.err.println(capitals().get("BRAZIL"));
   }
 }
 /* Output:

@@ -34,13 +34,13 @@ class Position {
       ", Employee: " + person;
   }
   public static void main(String[] args) {
-    System.out.println(new Position("CEO"));
-    System.out.println(new Position("Programmer",
+    System.err.println(new Position("CEO"));
+    System.err.println(new Position("Programmer",
       new Person("Arthur", "Fonzarelli")));
     try {
       new Position(null);
     } catch(Exception e) {
-      System.out.println("caught " + e);
+      System.err.println("caught " + e);
     }
   }
 }

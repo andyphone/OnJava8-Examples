@@ -7,7 +7,7 @@ import java.util.*;
 
 public class Summing4 {
   public static void main(String[] args) {
-    System.out.println(Summing3.CHECK);
+    System.err.println(Summing3.CHECK);
     Long[] aL = new Long[Summing3.SZ+1];
     Arrays.parallelSetAll(aL, i -> (long)i);
     Summing.timeTest("Long Parallel",

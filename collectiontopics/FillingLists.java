@@ -19,10 +19,10 @@ public class FillingLists {
     List<StringAddress> list = new ArrayList<>(
       Collections.nCopies(4,
         new StringAddress("Hello")));
-    System.out.println(list);
+    System.err.println(list);
     Collections.fill(list,
       new StringAddress("World!"));
-    System.out.println(list);
+    System.err.println(list);
   }
 }
 /* Output:

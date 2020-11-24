@@ -17,11 +17,11 @@ public class SimplerMutableInteger {
       .mapToObj(IntValue2::new)
       .collect(Collectors.toList());
     v.forEach(iv2 ->
-      System.out.print(iv2.n + " "));
-    System.out.println();
+      System.err.print(iv2.n + " "));
+    System.err.println();
     v.forEach(iv2 -> iv2.n += 1);
     v.forEach(iv2 ->
-      System.out.print(iv2.n + " "));
+      System.err.print(iv2.n + " "));
   }
 }
 /* Output:

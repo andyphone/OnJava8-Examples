@@ -9,13 +9,13 @@ public class ExceptionMethods {
     try {
       throw new Exception("My Exception");
     } catch(Exception e) {
-      System.out.println("Caught Exception");
-      System.out.println(
+      System.err.println("Caught Exception");
+      System.err.println(
         "getMessage():" + e.getMessage());
-      System.out.println("getLocalizedMessage():" +
+      System.err.println("getLocalizedMessage():" +
         e.getLocalizedMessage());
-      System.out.println("toString():" + e);
-      System.out.println("printStackTrace():");
+      System.err.println("toString():" + e);
+      System.err.println("printStackTrace():");
       e.printStackTrace(System.out);
     }
   }

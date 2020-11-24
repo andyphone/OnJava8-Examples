@@ -25,11 +25,11 @@ implements HasBatteries, Waterproof, Shoots {
 
 public class ToyTest {
   static void printInfo(Class cc) {
-    System.out.println("Class name: " + cc.getName() +
+    System.err.println("Class name: " + cc.getName() +
       " is interface? [" + cc.isInterface() + "]");
-    System.out.println(
+    System.err.println(
       "Simple name: " + cc.getSimpleName());
-    System.out.println(
+    System.err.println(
       "Canonical name : " + cc.getCanonicalName());
   }
   @SuppressWarnings("deprecation")
@@ -38,7 +38,7 @@ public class ToyTest {
     try {
       c = Class.forName("typeinfo.toys.FancyToy");
     } catch(ClassNotFoundException e) {
-      System.out.println("Can't find FancyToy");
+      System.err.println("Can't find FancyToy");
       System.exit(1);
     }
     printInfo(c);

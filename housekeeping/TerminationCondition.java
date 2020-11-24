@@ -18,7 +18,7 @@ class Book {
   @Override
   public void finalize() {
     if(checkedOut)
-      System.out.println("Error: checked out");
+      System.err.println("Error: checked out");
     // Normally, you'll also do this:
     // super.finalize(); // Call the base-class version
   }

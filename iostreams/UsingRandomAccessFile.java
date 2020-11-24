@@ -12,9 +12,9 @@ public class UsingRandomAccessFile {
         new RandomAccessFile(file, "r")
     ) {
       for(int i = 0; i < 7; i++)
-        System.out.println(
+        System.err.println(
           "Value " + i + ": " + rf.readDouble());
-      System.out.println(rf.readUTF());
+      System.err.println(rf.readUTF());
     } catch(IOException e) {
       throw new RuntimeException(e);
     }

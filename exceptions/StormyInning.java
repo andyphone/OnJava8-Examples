@@ -57,11 +57,11 @@ class StormyInning extends Inning implements Storm {
       StormyInning si = new StormyInning();
       si.atBat();
     } catch(PopFoul e) {
-      System.out.println("Pop foul");
+      System.err.println("Pop foul");
     } catch(RainedOut e) {
-      System.out.println("Rained out");
+      System.err.println("Rained out");
     } catch(BaseballException e) {
-      System.out.println("Generic baseball exception");
+      System.err.println("Generic baseball exception");
     }
     // Strike not thrown in derived version.
     try {
@@ -71,13 +71,13 @@ class StormyInning extends Inning implements Storm {
       // You must catch the exceptions from the
       // base-class version of the method:
     } catch(Strike e) {
-      System.out.println("Strike");
+      System.err.println("Strike");
     } catch(Foul e) {
-      System.out.println("Foul");
+      System.err.println("Foul");
     } catch(RainedOut e) {
-      System.out.println("Rained out");
+      System.err.println("Rained out");
     } catch(BaseballException e) {
-      System.out.println("Generic baseball exception");
+      System.err.println("Generic baseball exception");
     }
   }
 }

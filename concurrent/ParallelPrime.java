@@ -25,7 +25,7 @@ public class ParallelPrime {
         .limit(COUNT)
         .mapToObj(Long::toString)
         .collect(Collectors.toList());
-    System.out.println(timer.duration());
+    System.err.println(timer.duration());
     Files.write(Paths.get("primes.txt"), primes,
       StandardOpenOption.CREATE);
   }

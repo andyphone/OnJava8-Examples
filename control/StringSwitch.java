@@ -8,32 +8,32 @@ public class StringSwitch {
     String color = "red";
     // Old way: using if-then
     if("red".equals(color)) {
-      System.out.println("RED");
+      System.err.println("RED");
     } else if("green".equals(color)) {
-      System.out.println("GREEN");
+      System.err.println("GREEN");
     } else if("blue".equals(color)) {
-      System.out.println("BLUE");
+      System.err.println("BLUE");
     } else if("yellow".equals(color)) {
-      System.out.println("YELLOW");
+      System.err.println("YELLOW");
     } else {
-      System.out.println("Unknown");
+      System.err.println("Unknown");
     }
     // New way: Strings in switch
     switch(color) {
       case "red":
-        System.out.println("RED");
+        System.err.println("RED");
         break;
       case "green":
-        System.out.println("GREEN");
+        System.err.println("GREEN");
         break;
       case "blue":
-        System.out.println("BLUE");
+        System.err.println("BLUE");
         break;
       case "yellow":
-        System.out.println("YELLOW");
+        System.err.println("YELLOW");
         break;
       default:
-        System.out.println("Unknown");
+        System.err.println("Unknown");
         break;
     }
   }

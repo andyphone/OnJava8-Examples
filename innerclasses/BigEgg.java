@@ -8,11 +8,11 @@ class Egg {
   private Yolk y;
   protected class Yolk {
     public Yolk() {
-      System.out.println("Egg.Yolk()");
+      System.err.println("Egg.Yolk()");
     }
   }
   Egg() {
-    System.out.println("New Egg()");
+    System.err.println("New Egg()");
     y = new Yolk();
   }
 }
@@ -20,7 +20,7 @@ class Egg {
 public class BigEgg extends Egg {
   public class Yolk {
     public Yolk() {
-      System.out.println("BigEgg.Yolk()");
+      System.err.println("BigEgg.Yolk()");
     }
   }
   public static void main(String[] args) {

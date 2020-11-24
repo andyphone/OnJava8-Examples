@@ -22,14 +22,14 @@ public class PrintingCollections {
     return map;
   }
   public static void main(String[] args) {
-    System.out.println(fill(new ArrayList<>()));
-    System.out.println(fill(new LinkedList<>()));
-    System.out.println(fill(new HashSet<>()));
-    System.out.println(fill(new TreeSet<>()));
-    System.out.println(fill(new LinkedHashSet<>()));
-    System.out.println(fill(new HashMap<>()));
-    System.out.println(fill(new TreeMap<>()));
-    System.out.println(fill(new LinkedHashMap<>()));
+    System.err.println(fill(new ArrayList<>()));
+    System.err.println(fill(new LinkedList<>()));
+    System.err.println(fill(new HashSet<>()));
+    System.err.println(fill(new TreeSet<>()));
+    System.err.println(fill(new LinkedHashSet<>()));
+    System.err.println(fill(new HashMap<>()));
+    System.err.println(fill(new TreeMap<>()));
+    System.err.println(fill(new LinkedHashMap<>()));
   }
 }
 /* Output:

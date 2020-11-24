@@ -33,7 +33,7 @@ public class LinkedStack<T> {
       lss.push(s);
     String s;
     while((s = lss.pop()) != null)
-      System.out.println(s);
+      System.err.println(s);
   }
 }
 /* Output:

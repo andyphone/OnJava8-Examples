@@ -12,7 +12,7 @@ public class Equality {
     this.i = i;
     this.s = s;
     this.d = d;
-    System.out.println("made 'Equality'");
+    System.err.println("made 'Equality'");
   }
   @Override
   public boolean equals(Object rval) {
@@ -33,7 +33,7 @@ public class Equality {
   }
   public void
   test(String descr, String expected, Object rval) {
-    System.out.format("-- Testing %s --%n" +
+    System.err.format("-- Testing %s --%n" +
       "%s instanceof Equality: %s%n" +
       "Expected %s, got %s%n",
       descr, descr, rval instanceof Equality,

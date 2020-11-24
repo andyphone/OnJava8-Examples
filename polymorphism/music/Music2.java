@@ -9,14 +9,14 @@ package polymorphism.music;
 class Stringed extends Instrument {
   @Override
   public void play(Note n) {
-    System.out.println("Stringed.play() " + n);
+    System.err.println("Stringed.play() " + n);
   }
 }
 
 class Brass extends Instrument {
   @Override
   public void play(Note n) {
-    System.out.println("Brass.play() " + n);
+    System.err.println("Brass.play() " + n);
   }
 }
 

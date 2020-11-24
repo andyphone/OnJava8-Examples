@@ -69,7 +69,7 @@ public class Compete {
           c[i] = (Thing2)in.readObject();
       }
     }
-    System.out.println(
+    System.err.println(
       "Duplication via serialization: " +
       timer.duration() + " Milliseconds");
 
@@ -78,7 +78,7 @@ public class Compete {
     Thing4[] d = new Thing4[SIZE];
     for(int i = 0; i < SIZE; i++)
       d[i] = b[i].clone();
-    System.out.println(
+    System.err.println(
       "Duplication via cloning: " +
       timer.duration() + " Milliseconds");
   }

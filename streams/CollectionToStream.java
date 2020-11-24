@@ -9,7 +9,7 @@ public class CollectionToStream {
   public static void main(String[] args) {
     List<Bubble> bubbles = Arrays.asList(
       new Bubble(1), new Bubble(2), new Bubble(3));
-    System.out.println(
+    System.err.println(
       bubbles.stream()
         .mapToInt(b -> b.i)
         .sum());
@@ -19,7 +19,7 @@ public class CollectionToStream {
     w.stream()
       .map(x -> x + " ")
       .forEach(System.out::print);
-    System.out.println();
+    System.err.println();
 
     Map<String, Double> m = new HashMap<>();
     m.put("pi", 3.14159);

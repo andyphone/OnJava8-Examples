@@ -19,10 +19,10 @@ public class Philosopher implements Runnable {
   @Override
   public void run() {
     while(true) {
-      // System.out.println("Thinking");   // [1]
+      // System.err.println("Thinking");   // [1]
       right.pickUp();
       left.pickUp();
-      System.out.println(this + " eating");
+      System.err.println(this + " eating");
       right.putDown();
       left.putDown();
     }

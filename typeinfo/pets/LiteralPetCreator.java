@@ -27,7 +27,7 @@ public class LiteralPetCreator extends PetCreator {
     return TYPES;
   }
   public static void main(String[] args) {
-    System.out.println(TYPES);
+    System.err.println(TYPES);
   }
 }
 /* Output:

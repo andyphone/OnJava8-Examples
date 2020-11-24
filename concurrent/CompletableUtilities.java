@@ -9,7 +9,7 @@ public class CompletableUtilities {
   // Get and show value stored in a CF:
   public static void showr(CompletableFuture<?> c) {
     try {
-      System.out.println(c.get());
+      System.err.println(c.get());
     } catch(InterruptedException
             | ExecutionException e) {
       throw new RuntimeException(e);

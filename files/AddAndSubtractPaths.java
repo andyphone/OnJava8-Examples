@@ -11,20 +11,20 @@ public class AddAndSubtractPaths {
     .normalize();
   static void show(int id, Path result) {
     if(result.isAbsolute())
-      System.out.println("(" + id + ")r " +
+      System.err.println("(" + id + ")r " +
         base.relativize(result));
     else
-      System.out.println("(" + id + ")  " + result);
+      System.err.println("(" + id + ")  " + result);
     try {
-      System.out.println("RealPath: "
+      System.err.println("RealPath: "
         + result.toRealPath());
     } catch(IOException e) {
-      System.out.println(e);
+      System.err.println(e);
     }
   }
   public static void main(String[] args) {
-    System.out.println(System.getProperty("os.name"));
-    System.out.println(base);
+    System.err.println(System.getProperty("os.name"));
+    System.err.println(base);
     Path p = Paths.get("AddAndSubtractPaths.java")
       .toAbsolutePath();
     show(1, p);

@@ -12,9 +12,9 @@ public class TestWithReturn {
     return 0; // Match
   }
   public static void main(String[] args) {
-    System.out.println(test(10, 5));
-    System.out.println(test(5, 10));
-    System.out.println(test(5, 5));
+    System.err.println(test(10, 5));
+    System.err.println(test(5, 10));
+    System.err.println(test(5, 5));
   }
 }
 /* Output:

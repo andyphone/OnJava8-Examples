@@ -11,11 +11,11 @@ interface Interface {
 class RealObject implements Interface {
   @Override
   public void doSomething() {
-    System.out.println("doSomething");
+    System.err.println("doSomething");
   }
   @Override
   public void somethingElse(String arg) {
-    System.out.println("somethingElse " + arg);
+    System.err.println("somethingElse " + arg);
   }
 }
 
@@ -26,12 +26,12 @@ class SimpleProxy implements Interface {
   }
   @Override
   public void doSomething() {
-    System.out.println("SimpleProxy doSomething");
+    System.err.println("SimpleProxy doSomething");
     proxied.doSomething();
   }
   @Override
   public void somethingElse(String arg) {
-    System.out.println(
+    System.err.println(
       "SimpleProxy somethingElse " + arg);
     proxied.somethingElse(arg);
   }

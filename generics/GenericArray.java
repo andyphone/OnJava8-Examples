@@ -20,7 +20,7 @@ public class GenericArray<T> {
     try {
       Integer[] ia = gai.rep();
     } catch(ClassCastException e) {
-      System.out.println(e.getMessage());
+      System.err.println(e.getMessage());
     }
     // This is OK:
     Object[] oa = gai.rep();

@@ -8,11 +8,11 @@ public class Switch {
   public boolean read() { return state; }
   public void on() {
     state = true;
-    System.out.println(this);
+    System.err.println(this);
   }
   public void off() {
     state = false;
-    System.out.println(this);
+    System.err.println(this);
   }
   @Override
   public String toString() {

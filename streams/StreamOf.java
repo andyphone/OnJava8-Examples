@@ -12,7 +12,7 @@ public class StreamOf {
     Stream.of("It's ", "a ", "wonderful ",
       "day ", "for ", "pie!")
       .forEach(System.out::print);
-    System.out.println();
+    System.err.println();
     Stream.of(3.14159, 2.718, 1.618)
       .forEach(System.out::println);
   }

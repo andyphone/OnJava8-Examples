@@ -18,7 +18,7 @@ interface Player {
 class Kitty implements Player {
   @Override
   public void interactWith(Obstacle ob) {
-    System.out.print("Kitty has encountered a ");
+    System.err.print("Kitty has encountered a ");
     ob.action();
   }
 }
@@ -26,7 +26,7 @@ class Kitty implements Player {
 class KungFuGuy implements Player {
   @Override
   public void interactWith(Obstacle ob) {
-    System.out.print("KungFuGuy now battles a ");
+    System.err.print("KungFuGuy now battles a ");
     ob.action();
   }
 }
@@ -34,14 +34,14 @@ class KungFuGuy implements Player {
 class Puzzle implements Obstacle {
   @Override
   public void action() {
-    System.out.println("Puzzle");
+    System.err.println("Puzzle");
   }
 }
 
 class NastyWeapon implements Obstacle {
   @Override
   public void action() {
-    System.out.println("NastyWeapon");
+    System.err.println("NastyWeapon");
   }
 }
 

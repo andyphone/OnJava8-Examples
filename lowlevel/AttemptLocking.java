@@ -13,7 +13,7 @@ public class AttemptLocking {
   public void untimed() {
     boolean captured = lock.tryLock();
     try {
-      System.out.println("tryLock(): " + captured);
+      System.err.println("tryLock(): " + captured);
     } finally {
       if(captured)
         lock.unlock();
@@ -27,7 +27,7 @@ public class AttemptLocking {
       throw new RuntimeException(e);
     }
     try {
-      System.out.println(
+      System.err.println(
         "tryLock(2, TimeUnit.SECONDS): " + captured);
     } finally {
       if(captured)
@@ -41,7 +41,7 @@ public class AttemptLocking {
     // Now create a second task to grab the lock:
     CompletableFuture.runAsync( () -> {
         al.lock.lock();
-        System.out.println("acquired");
+        System.err.println("acquired");
     });
     new Nap(0.1);  // Give the second task a chance
     al.untimed(); // False -- lock grabbed by task

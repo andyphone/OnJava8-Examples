@@ -18,7 +18,7 @@ public class CollectionIntoStream {
       .map(String::toUpperCase)
       .map(s -> s.substring(2))
       .reduce(":", (s1, s2) -> s1 + s2);
-    System.out.println(result);
+    System.err.println(result);
   }
 }
 /* Output:

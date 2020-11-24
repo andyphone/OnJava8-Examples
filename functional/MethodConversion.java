@@ -9,10 +9,10 @@ class In2 {}
 
 public class MethodConversion {
   static void accept(In1 i1, In2 i2) {
-    System.out.println("accept()");
+    System.err.println("accept()");
   }
   static void someOtherName(In1 i1, In2 i2) {
-    System.out.println("someOtherName()");
+    System.err.println("someOtherName()");
   }
   public static void main(String[] args) {
     BiConsumer<In1,In2> bic;

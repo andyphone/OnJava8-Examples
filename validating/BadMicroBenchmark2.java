@@ -12,17 +12,17 @@ public class BadMicroBenchmark2 {
   public static void main(String[] args) {
     long[] la = new long[SIZE];
     Random r = new Random();
-    System.out.println("parallelSetAll: " +
+    System.err.println("parallelSetAll: " +
       Timer.duration(() ->
         Arrays.parallelSetAll(la, n -> r.nextLong())));
-    System.out.println("setAll: " +
+    System.err.println("setAll: " +
       Timer.duration(() ->
         Arrays.setAll(la, n -> r.nextLong())));
     SplittableRandom sr = new SplittableRandom();
-    System.out.println("parallelSetAll: " +
+    System.err.println("parallelSetAll: " +
       Timer.duration(() ->
         Arrays.parallelSetAll(la, n -> sr.nextLong())));
-    System.out.println("setAll: " +
+    System.err.println("setAll: " +
       Timer.duration(() ->
         Arrays.setAll(la, n -> sr.nextLong())));
   }

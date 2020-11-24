@@ -9,31 +9,31 @@ import java.util.function.*;
 public class Optionals {
   static void basics(Optional<String> optString) {
     if(optString.isPresent())
-      System.out.println(optString.get());
+      System.err.println(optString.get());
     else
-      System.out.println("Nothing inside!");
+      System.err.println("Nothing inside!");
   }
   static void ifPresent(Optional<String> optString) {
     optString.ifPresent(System.out::println);
   }
   static void orElse(Optional<String> optString) {
-    System.out.println(optString.orElse("Nada"));
+    System.err.println(optString.orElse("Nada"));
   }
   static void orElseGet(Optional<String> optString) {
-    System.out.println(
+    System.err.println(
       optString.orElseGet(() -> "Generated"));
   }
   static void orElseThrow(Optional<String> optString) {
     try {
-      System.out.println(optString.orElseThrow(
+      System.err.println(optString.orElseThrow(
         () -> new Exception("Supplied")));
     } catch(Exception e) {
-      System.out.println("Caught " + e);
+      System.err.println("Caught " + e);
     }
   }
   static void test(String testName,
     Consumer<Optional<String>> cos) {
-    System.out.println(" === " + testName + " === ");
+    System.err.println(" === " + testName + " === ");
     cos.accept(Stream.of("Epithets").findFirst());
     cos.accept(Stream.<String>empty().findFirst());
   }

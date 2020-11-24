@@ -31,7 +31,7 @@ public class MyWorld {
       new Animal("Ralph the hamster", house));
     animals.add(
       new Animal("Molly the cat", house));
-    System.out.println("animals: " + animals);
+    System.err.println("animals: " + animals);
     try(
       ByteArrayOutputStream buf1 =
         new ByteArrayOutputStream();
@@ -63,11 +63,11 @@ public class MyWorld {
             animals1 = (List)in1.readObject(),
             animals2 = (List)in1.readObject(),
             animals3 = (List)in2.readObject();
-          System.out.println(
+          System.err.println(
             "animals1: " + animals1);
-          System.out.println(
+          System.err.println(
             "animals2: " + animals2);
-          System.out.println(
+          System.err.println(
             "animals3: " + animals3);
         }
       }

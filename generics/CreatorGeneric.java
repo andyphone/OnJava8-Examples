@@ -15,7 +15,7 @@ class XCreator extends GenericWithCreate<X> {
   @Override
   X create() { return new X(); }
   void f() {
-    System.out.println(
+    System.err.println(
       element.getClass().getSimpleName());
   }
 }

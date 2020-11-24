@@ -23,13 +23,13 @@ public class CloneArrayList {
       .mapToObj(Int::new)
       .collect(Collectors
         .toCollection(ArrayList::new));
-    System.out.println("v: " + v);
+    System.err.println("v: " + v);
     @SuppressWarnings("unchecked")
     ArrayList<Int> v2 = (ArrayList<Int>)v.clone();
     // Increment all v2's elements:
     v2.forEach(Int::increment);
     // See if it changed v's elements:
-    System.out.println("v: " + v);
+    System.err.println("v: " + v);
   }
 }
 /* Output:

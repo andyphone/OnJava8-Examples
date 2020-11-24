@@ -42,11 +42,11 @@ public class FinalData {
     //- fd1.v2 = new Value(0); // Error: Can't
     //- fd1.VAL_3 = new Value(1); // change reference
     //- fd1.a = new int[3];
-    System.out.println(fd1);
-    System.out.println("Creating new FinalData");
+    System.err.println(fd1);
+    System.err.println("Creating new FinalData");
     FinalData fd2 = new FinalData("fd2");
-    System.out.println(fd1);
-    System.out.println(fd2);
+    System.err.println(fd1);
+    System.err.println(fd2);
   }
 }
 /* Output:

@@ -15,7 +15,7 @@ public class Curry3Args {
           sum.apply("Hi ");
       Function<String, String> ho =
         hi.apply("Ho ");
-      System.out.println(ho.apply("Hup"));
+      System.err.println(ho.apply("Hup"));
    }
 }
 /* Output:

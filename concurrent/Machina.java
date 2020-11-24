@@ -20,7 +20,7 @@ public class Machina {
       new Nap(0.1);
       m.state = m.state.step();
     }
-    System.out.println(m);
+    System.err.println(m);
     return m;
   }
   @Override

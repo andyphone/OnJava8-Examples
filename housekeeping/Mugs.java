@@ -6,7 +6,7 @@
 
 class Mug {
   Mug(int marker) {
-    System.out.println("Mug(" + marker + ")");
+    System.err.println("Mug(" + marker + ")");
   }
 }
 
@@ -16,20 +16,20 @@ public class Mugs {
   { // [1]
     mug1 = new Mug(1);
     mug2 = new Mug(2);
-    System.out.println("mug1 & mug2 initialized");
+    System.err.println("mug1 & mug2 initialized");
   }
   Mugs() {
-    System.out.println("Mugs()");
+    System.err.println("Mugs()");
   }
   Mugs(int i) {
-    System.out.println("Mugs(int)");
+    System.err.println("Mugs(int)");
   }
   public static void main(String[] args) {
-    System.out.println("Inside main()");
+    System.err.println("Inside main()");
     new Mugs();
-    System.out.println("new Mugs() completed");
+    System.err.println("new Mugs() completed");
     new Mugs(1);
-    System.out.println("new Mugs(1) completed");
+    System.err.println("new Mugs(1) completed");
   }
 }
 /* Output:

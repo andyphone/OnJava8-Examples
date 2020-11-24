@@ -14,8 +14,8 @@ class DefaultComparison {
     DefaultComparison
       a = new DefaultComparison(1, 2, 3),
       b = new DefaultComparison(1, 2, 3);
-    System.out.println(a == a);
-    System.out.println(a == b);
+    System.err.println(a == a);
+    System.err.println(a == b);
   }
 }
 /* Output:

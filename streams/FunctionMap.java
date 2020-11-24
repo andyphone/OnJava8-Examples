@@ -13,7 +13,7 @@ class FunctionMap {
   }
   static void
   test(String descr, Function<String, String> func) {
-    System.out.println(" ---( " + descr + " )---");
+    System.err.println(" ---( " + descr + " )---");
     testStream()
       .map(func)
       .forEach(System.out::println);

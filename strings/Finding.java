@@ -10,11 +10,11 @@ public class Finding {
       .matcher(
         "Evening is full of the linnet's wings");
     while(m.find())
-      System.out.print(m.group() + " ");
-    System.out.println();
+      System.err.print(m.group() + " ");
+    System.err.println();
     int i = 0;
     while(m.find(i)) {
-      System.out.print(m.group() + " ");
+      System.err.print(m.group() + " ");
       i++;
     }
   }

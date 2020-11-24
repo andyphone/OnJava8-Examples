@@ -64,8 +64,8 @@ class SimpleHashMap<K, V> extends AbstractMap<K, V> {
       new SimpleHashMap<>();
     m.putAll(Countries.capitals(8));
     m.forEach((k, v) ->
-      System.out.println(k + "=" + v));
-    System.out.println(m.get("BENIN"));
+      System.err.println(k + "=" + v));
+    System.err.println(m.get("BENIN"));
     m.entrySet().forEach(System.out::println);
   }
 }

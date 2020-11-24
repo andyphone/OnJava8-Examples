@@ -73,7 +73,7 @@ extends AbstractProcessor {
         signature += method.getSimpleName();
         signature += createArgList(
           method.getParameters());
-        System.out.println(signature);
+        System.err.println(signature);
         writer.write(signature + ";\n");
       }
       writer.write("}");

@@ -15,11 +15,11 @@ public class IfElse {
   }
   public static void main(String[] args) {
     test(10, 5);
-    System.out.println(result);
+    System.err.println(result);
     test(5, 10);
-    System.out.println(result);
+    System.err.println(result);
     test(5, 5);
-    System.out.println(result);
+    System.err.println(result);
   }
 }
 /* Output:

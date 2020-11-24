@@ -29,10 +29,10 @@ public class Holder<T> {
     d = (Apple)fruit.get(); // Returns 'Object'
     try {
       Orange c = (Orange)fruit.get(); // No warning
-    } catch(Exception e) { System.out.println(e); }
+    } catch(Exception e) { System.err.println(e); }
     // fruit.set(new Apple()); // Cannot call set()
     // fruit.set(new Fruit()); // Cannot call set()
-    System.out.println(fruit.equals(d)); // OK
+    System.err.println(fruit.equals(d)); // OK
   }
 }
 /* Output:

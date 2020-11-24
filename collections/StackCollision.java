@@ -9,14 +9,14 @@ public class StackCollision {
     for(String s : "My dog has fleas".split(" "))
       stack.push(s);
     while(!stack.isEmpty())
-      System.out.print(stack.pop() + " ");
-    System.out.println();
+      System.err.print(stack.pop() + " ");
+    System.err.println();
     java.util.Stack<String> stack2 =
       new java.util.Stack<>();
     for(String s : "My dog has fleas".split(" "))
       stack2.push(s);
     while(!stack2.empty())
-      System.out.print(stack2.pop() + " ");
+      System.err.print(stack2.pop() + " ");
   }
 }
 /* Output:

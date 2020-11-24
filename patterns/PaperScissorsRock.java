@@ -98,7 +98,7 @@ class ItemFactory {
 
 class Compete {
   public static Outcome match(Tuple2<Item,Item> p) {
-    System.out.print(p.a1 + " -> " + p.a2 + " : ");
+    System.err.print(p.a1 + " -> " + p.a2 + " : ");
     return p.a1.compete(p.a2);
   }
 }

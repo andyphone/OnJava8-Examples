@@ -15,7 +15,7 @@ public class Statistics {
       Integer freq = m.get(r); // [1]
       m.put(r, freq == null ? 1 : freq + 1);
     }
-    System.out.println(m);
+    System.err.println(m);
   }
 }
 /* Output:

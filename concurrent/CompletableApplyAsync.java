@@ -15,9 +15,9 @@ public class CompletableApplyAsync {
       .thenApplyAsync(Machina::work)
       .thenApplyAsync(Machina::work)
       .thenApplyAsync(Machina::work);
-    System.out.println(timer.duration());
-    System.out.println(cf.join());
-    System.out.println(timer.duration());
+    System.err.println(timer.duration());
+    System.err.println(cf.join());
+    System.err.println(timer.duration());
   }
 }
 /* Output:

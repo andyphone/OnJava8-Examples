@@ -6,13 +6,13 @@ import java.util.*;
 
 interface Jim1 {
   default void jim() {
-    System.out.println("Jim1::jim");
+    System.err.println("Jim1::jim");
   }
 }
 
 interface Jim2 {
   default void jim() {
-    System.out.println("Jim2::jim");
+    System.err.println("Jim2::jim");
   }
 }
 

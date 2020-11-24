@@ -14,13 +14,13 @@ public class Cleanup {
         while((s = in.getLine()) != null)
           ; // Perform line-by-line processing here...
       } catch(Exception e) {
-        System.out.println("Caught Exception in main");
+        System.err.println("Caught Exception in main");
         e.printStackTrace(System.out);
       } finally {
         in.dispose();
       }
     } catch(Exception e) {
-      System.out.println(
+      System.err.println(
         "InputFile construction failed");
     }
   }

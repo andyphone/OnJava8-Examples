@@ -23,9 +23,9 @@ public class MutableInteger {
     List<IntValue> v = IntStream.range(0, 10)
       .mapToObj(IntValue::new)
       .collect(Collectors.toList());
-    System.out.println(v);
+    System.err.println(v);
     v.forEach(IntValue::increment);
-    System.out.println(v);
+    System.err.println(v);
   }
 }
 /* Output:

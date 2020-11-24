@@ -7,28 +7,28 @@
 package polymorphism;
 
 class Meal {
-  Meal() { System.out.println("Meal()"); }
+  Meal() { System.err.println("Meal()"); }
 }
 
 class Bread {
-  Bread() { System.out.println("Bread()"); }
+  Bread() { System.err.println("Bread()"); }
 }
 
 class Cheese {
-  Cheese() { System.out.println("Cheese()"); }
+  Cheese() { System.err.println("Cheese()"); }
 }
 
 class Lettuce {
-  Lettuce() { System.out.println("Lettuce()"); }
+  Lettuce() { System.err.println("Lettuce()"); }
 }
 
 class Lunch extends Meal {
-  Lunch() { System.out.println("Lunch()"); }
+  Lunch() { System.err.println("Lunch()"); }
 }
 
 class PortableLunch extends Lunch {
   PortableLunch() {
-    System.out.println("PortableLunch()");
+    System.err.println("PortableLunch()");
   }
 }
 
@@ -37,7 +37,7 @@ public class Sandwich extends PortableLunch {
   private Cheese c = new Cheese();
   private Lettuce l = new Lettuce();
   public Sandwich() {
-    System.out.println("Sandwich()");
+    System.err.println("Sandwich()");
   }
   public static void main(String[] args) {
     new Sandwich();

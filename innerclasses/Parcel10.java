@@ -14,7 +14,7 @@ public class Parcel10 {
       {
         cost = Math.round(price);
         if(cost > 100)
-          System.out.println("Over budget!");
+          System.err.println("Over budget!");
       }
       private String label = dest;
       @Override

@@ -6,8 +6,8 @@
 public class AutoboxingVarargs {
   public static void f(Integer... args) {
     for(Integer i : args)
-      System.out.print(i + " ");
-    System.out.println();
+      System.err.print(i + " ");
+    System.err.println();
   }
   public static void main(String[] args) {
     f(1, 2);

@@ -47,10 +47,10 @@ public class CountedString {
       cs[i] = new CountedString("hi");
       map.put(cs[i], i); // Autobox int to Integer
     }
-    System.out.println(map);
+    System.err.println(map);
     for(CountedString cstring : cs) {
-      System.out.println("Looking up " + cstring);
-      System.out.println(map.get(cstring));
+      System.err.println("Looking up " + cstring);
+      System.err.println(map.get(cstring));
     }
   }
 }

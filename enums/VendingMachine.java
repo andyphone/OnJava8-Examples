@@ -60,7 +60,7 @@ public class VendingMachine {
           case ITEM_SELECTION:
             selection = input;
             if(amount < selection.amount())
-              System.out.println(
+              System.err.println(
                 "Insufficient money for " + selection);
             else state = DISPENSING;
             break;
@@ -76,7 +76,7 @@ public class VendingMachine {
     DISPENSING(StateDuration.TRANSIENT) {
       @Override
       void next() {
-        System.out.println("here is your " + selection);
+        System.err.println("here is your " + selection);
         amount -= selection.amount();
         state = GIVING_CHANGE;
       }
@@ -85,14 +85,14 @@ public class VendingMachine {
       @Override
       void next() {
         if(amount > 0) {
-          System.out.println("Your change: " + amount);
+          System.err.println("Your change: " + amount);
           amount = 0;
         }
         state = RESTING;
       }
     },
     TERMINAL {@Override
-    void output() { System.out.println("Halted"); } };
+    void output() { System.err.println("Halted"); } };
     private boolean isTransient = false;
     State() {}
     State(StateDuration trans) { isTransient = true; }
@@ -105,7 +105,7 @@ public class VendingMachine {
         "Only call next() for " +
         "StateDuration.TRANSIENT states");
     }
-    void output() { System.out.println(amount); }
+    void output() { System.err.println(amount); }
   }
   static void run(Supplier<Input> gen) {
     while(state != State.TERMINAL) {

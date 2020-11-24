@@ -9,31 +9,31 @@ public class LinkedListFeatures {
   public static void main(String[] args) {
     LinkedList<Pet> pets =
       new LinkedList<>(Pets.list(5));
-    System.out.println(pets);
+    System.err.println(pets);
     // Identical:
-    System.out.println(
+    System.err.println(
       "pets.getFirst(): " + pets.getFirst());
-    System.out.println(
+    System.err.println(
       "pets.element(): " + pets.element());
     // Only differs in empty-list behavior:
-    System.out.println("pets.peek(): " + pets.peek());
+    System.err.println("pets.peek(): " + pets.peek());
     // Identical; remove and return the first element:
-    System.out.println(
+    System.err.println(
       "pets.remove(): " + pets.remove());
-    System.out.println(
+    System.err.println(
       "pets.removeFirst(): " + pets.removeFirst());
     // Only differs in empty-list behavior:
-    System.out.println("pets.poll(): " + pets.poll());
-    System.out.println(pets);
+    System.err.println("pets.poll(): " + pets.poll());
+    System.err.println(pets);
     pets.addFirst(new Rat());
-    System.out.println("After addFirst(): " + pets);
+    System.err.println("After addFirst(): " + pets);
     pets.offer(Pets.get());
-    System.out.println("After offer(): " + pets);
+    System.err.println("After offer(): " + pets);
     pets.add(Pets.get());
-    System.out.println("After add(): " + pets);
+    System.err.println("After add(): " + pets);
     pets.addLast(new Hamster());
-    System.out.println("After addLast(): " + pets);
-    System.out.println(
+    System.err.println("After addLast(): " + pets);
+    System.err.println(
       "pets.removeLast(): " + pets.removeLast());
   }
 }

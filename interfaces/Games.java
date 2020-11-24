@@ -12,7 +12,7 @@ class Checkers implements Game {
   private static final int MOVES = 3;
   @Override
   public boolean move() {
-    System.out.println("Checkers move " + moves);
+    System.err.println("Checkers move " + moves);
     return ++moves != MOVES;
   }
 }
@@ -27,7 +27,7 @@ class Chess implements Game {
   private static final int MOVES = 4;
   @Override
   public boolean move() {
-    System.out.println("Chess move " + moves);
+    System.err.println("Chess move " + moves);
     return ++moves != MOVES;
   }
 }

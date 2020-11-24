@@ -6,7 +6,7 @@
 public class CaptureConversion {
   static <T> void f1(Holder<T> holder) {
     T t = holder.get();
-    System.out.println(t.getClass().getSimpleName());
+    System.err.println(t.getClass().getSimpleName());
   }
   static void f2(Holder<?> holder) {
     f1(holder); // Call with captured type

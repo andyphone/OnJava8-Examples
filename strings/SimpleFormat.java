@@ -8,11 +8,11 @@ public class SimpleFormat {
     int x = 5;
     double y = 5.332542;
     // The old way:
-    System.out.println("Row 1: [" + x + " " + y + "]");
+    System.err.println("Row 1: [" + x + " " + y + "]");
     // The new way:
-    System.out.format("Row 1: [%d %f]%n", x, y);
+    System.err.format("Row 1: [%d %f]%n", x, y);
     // or
-    System.out.printf("Row 1: [%d %f]%n", x, y);
+    System.err.printf("Row 1: [%d %f]%n", x, y);
   }
 }
 /* Output:

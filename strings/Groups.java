@@ -20,8 +20,8 @@ public class Groups {
       .matcher(POEM);
     while(m.find()) {
       for(int j = 0; j <= m.groupCount(); j++)
-        System.out.print("[" + m.group(j) + "]");
-      System.out.println();
+        System.err.print("[" + m.group(j) + "]");
+      System.err.println();
     }
   }
 }

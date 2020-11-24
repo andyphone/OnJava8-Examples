@@ -7,7 +7,7 @@
 class Soap {
   private String s;
   Soap() {
-    System.out.println("Soap()");
+    System.err.println("Soap()");
     s = "Constructed";
   }
   @Override
@@ -23,7 +23,7 @@ public class Bath {
   private int i;
   private float toy;
   public Bath() {
-    System.out.println("Inside Bath()");
+    System.err.println("Inside Bath()");
     s3 = "Joy";
     toy = 3.14f;
     castille = new Soap();
@@ -45,7 +45,7 @@ public class Bath {
   }
   public static void main(String[] args) {
     Bath b = new Bath();
-    System.out.println(b);
+    System.err.println(b);
   }
 }
 /* Output:

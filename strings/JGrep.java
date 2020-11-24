@@ -13,7 +13,7 @@ public class JGrep {
   public static void
   main(String[] args) throws Exception {
     if(args.length < 2) {
-      System.out.println(
+      System.err.println(
         "Usage: java JGrep file regex");
       System.exit(0);
     }
@@ -25,7 +25,7 @@ public class JGrep {
         Files.readAllLines(Paths.get(args[0]))) {
       m.reset(line);
       while(m.find())
-        System.out.println(index++ + ": " +
+        System.err.println(index++ + ": " +
           m.group() + ": " + m.start());
     }
   }

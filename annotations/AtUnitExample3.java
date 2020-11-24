@@ -16,7 +16,7 @@ public class AtUnitExample3 {
     return "This is methodOne";
   }
   public int methodTwo() {
-    System.out.println("This is methodTwo");
+    System.err.println("This is methodTwo");
     return 2;
   }
   @TestObjectCreate

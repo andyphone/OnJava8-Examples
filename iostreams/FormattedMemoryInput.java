@@ -15,9 +15,9 @@ public class FormattedMemoryInput {
               .getBytes()))
     ) {
       while(true)
-        System.out.write((char)in.readByte());
+        System.err.write((char)in.readByte());
     } catch(EOFException e) {
-      System.out.println("\nEnd of stream");
+      System.err.println("\nEnd of stream");
     } catch(IOException e) {
       throw new RuntimeException(e);
     }

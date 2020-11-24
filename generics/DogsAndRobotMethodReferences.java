@@ -7,14 +7,14 @@ import typeinfo.pets.*;
 import java.util.function.*;
 
 class PerformingDogA extends Dog {
-  public void speak() { System.out.println("Woof!"); }
-  public void sit() { System.out.println("Sitting"); }
+  public void speak() { System.err.println("Woof!"); }
+  public void sit() { System.err.println("Sitting"); }
   public void reproduce() {}
 }
 
 class RobotA {
-  public void speak() { System.out.println("Click!"); }
-  public void sit() { System.out.println("Clank!"); }
+  public void speak() { System.err.println("Click!"); }
+  public void sit() { System.err.println("Clank!"); }
   public void oilChange() {}
 }
 

@@ -14,7 +14,7 @@ public class TableCreator {
   public static void
   main(String[] args) throws Exception {
     if(args.length < 1) {
-      System.out.println(
+      System.err.println(
         "arguments: annotated classes");
       System.exit(0);
     }
@@ -22,7 +22,7 @@ public class TableCreator {
       Class<?> cl = Class.forName(className);
       DBTable dbTable = cl.getAnnotation(DBTable.class);
       if(dbTable == null) {
-        System.out.println(
+        System.err.println(
           "No DBTable annotations in class " +
           className);
         continue;
@@ -67,7 +67,7 @@ public class TableCreator {
         // Remove trailing comma
         String tableCreate = createCommand.substring(
           0, createCommand.length() - 1) + ");";
-        System.out.println("Table Creation SQL for " +
+        System.err.println("Table Creation SQL for " +
           className + " is:\n" + tableCreate);
       }
     }

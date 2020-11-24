@@ -40,18 +40,18 @@ public class TurnOffChecking {
         else
           throw new SomeOtherException();
       } catch(SomeOtherException e) {
-          System.out.println(
+          System.err.println(
             "SomeOtherException: " + e);
       } catch(RuntimeException re) {
         try {
           throw re.getCause();
         } catch(FileNotFoundException e) {
-          System.out.println(
+          System.err.println(
             "FileNotFoundException: " + e);
         } catch(IOException e) {
-          System.out.println("IOException: " + e);
+          System.err.println("IOException: " + e);
         } catch(Throwable e) {
-          System.out.println("Throwable: " + e);
+          System.err.println("Throwable: " + e);
         }
       }
   }

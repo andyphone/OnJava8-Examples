@@ -15,9 +15,9 @@ public class CollectionMethodDifferences {
       .collect(Collectors.toCollection(TreeSet::new));
   }
   static void interfaces(Class<?> type) {
-    System.out.print("Interfaces in " +
+    System.err.print("Interfaces in " +
       type.getSimpleName() + ": ");
-    System.out.println(
+    System.err.println(
       Arrays.stream(type.getInterfaces())
         .map(Class::getSimpleName)
         .collect(Collectors.toList()));
@@ -26,17 +26,17 @@ public class CollectionMethodDifferences {
   static { object.add("clone"); }
   static void
   difference(Class<?> superset, Class<?> subset) {
-    System.out.print(superset.getSimpleName() +
+    System.err.print(superset.getSimpleName() +
       " extends " + subset.getSimpleName() +
       ", adds: ");
     Set<String> comp = Sets.difference(
       methodSet(superset), methodSet(subset));
     comp.removeAll(object); // Ignore 'Object' methods
-    System.out.println(comp);
+    System.err.println(comp);
     interfaces(superset);
   }
   public static void main(String[] args) {
-    System.out.println("Collection: " +
+    System.err.println("Collection: " +
       methodSet(Collection.class));
     interfaces(Collection.class);
     difference(Set.class, Collection.class);
@@ -48,7 +48,7 @@ public class CollectionMethodDifferences {
     difference(LinkedList.class, List.class);
     difference(Queue.class, Collection.class);
     difference(PriorityQueue.class, Queue.class);
-    System.out.println("Map: " + methodSet(Map.class));
+    System.err.println("Map: " + methodSet(Map.class));
     difference(HashMap.class, Map.class);
     difference(LinkedHashMap.class, HashMap.class);
     difference(SortedMap.class, Map.class);

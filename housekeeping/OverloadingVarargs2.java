@@ -6,10 +6,10 @@
 
 public class OverloadingVarargs2 {
   static void f(float i, Character... args) {
-    System.out.println("first");
+    System.err.println("first");
   }
   static void f(Character... args) {
-    System.out.print("second");
+    System.err.print("second");
   }
   public static void main(String[] args) {
     f(1, 'a');

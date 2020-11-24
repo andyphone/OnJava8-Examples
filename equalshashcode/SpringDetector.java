@@ -27,14 +27,14 @@ public class SpringDetector {
           Function.identity(),
           gh -> new Prediction()));
       map.forEach((k, v) ->
-        System.out.println(k + ": " + v));
+        System.err.println(k + ": " + v));
       Groundhog gh = ghog.newInstance(3);
-      System.out.println(
+      System.err.println(
         "Looking up prediction for " + gh);
       if(map.containsKey(gh))
-        System.out.println(map.get(gh));
+        System.err.println(map.get(gh));
       else
-        System.out.println("Key not found: " + gh);
+        System.err.println("Key not found: " + gh);
     } catch(NoSuchMethodException |
             IllegalAccessException |
             InvocationTargetException |

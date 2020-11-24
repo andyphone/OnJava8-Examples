@@ -9,7 +9,7 @@ public class ScannerDelimiter {
     Scanner scanner = new Scanner("12, 42, 78, 99, 42");
     scanner.useDelimiter("\\s*,\\s*");
     while(scanner.hasNextInt())
-      System.out.println(scanner.nextInt());
+      System.err.println(scanner.nextInt());
   }
 }
 /* Output:

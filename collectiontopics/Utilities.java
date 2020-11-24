@@ -9,48 +9,48 @@ public class Utilities {
   static List<String> list = Arrays.asList(
     "one Two three Four five six one".split(" "));
   public static void main(String[] args) {
-    System.out.println(list);
-    System.out.println("'list' disjoint (Four)?: " +
+    System.err.println(list);
+    System.err.println("'list' disjoint (Four)?: " +
       Collections.disjoint(list,
         Collections.singletonList("Four")));
-    System.out.println(
+    System.err.println(
       "max: " + Collections.max(list));
-    System.out.println(
+    System.err.println(
       "min: " + Collections.min(list));
-    System.out.println(
+    System.err.println(
       "max w/ comparator: " + Collections.max(list,
       String.CASE_INSENSITIVE_ORDER));
-    System.out.println(
+    System.err.println(
       "min w/ comparator: " + Collections.min(list,
       String.CASE_INSENSITIVE_ORDER));
     List<String> sublist =
       Arrays.asList("Four five six".split(" "));
-    System.out.println("indexOfSubList: " +
+    System.err.println("indexOfSubList: " +
       Collections.indexOfSubList(list, sublist));
-    System.out.println("lastIndexOfSubList: " +
+    System.err.println("lastIndexOfSubList: " +
       Collections.lastIndexOfSubList(list, sublist));
     Collections.replaceAll(list, "one", "Yo");
-    System.out.println("replaceAll: " + list);
+    System.err.println("replaceAll: " + list);
     Collections.reverse(list);
-    System.out.println("reverse: " + list);
+    System.err.println("reverse: " + list);
     Collections.rotate(list, 3);
-    System.out.println("rotate: " + list);
+    System.err.println("rotate: " + list);
     List<String> source =
       Arrays.asList("in the matrix".split(" "));
     Collections.copy(list, source);
-    System.out.println("copy: " + list);
+    System.err.println("copy: " + list);
     Collections.swap(list, 0, list.size() - 1);
-    System.out.println("swap: " + list);
+    System.err.println("swap: " + list);
     Collections.shuffle(list, new Random(47));
-    System.out.println("shuffled: " + list);
+    System.err.println("shuffled: " + list);
     Collections.fill(list, "pop");
-    System.out.println("fill: " + list);
-    System.out.println("frequency of 'pop': " +
+    System.err.println("fill: " + list);
+    System.err.println("frequency of 'pop': " +
       Collections.frequency(list, "pop"));
     List<String> dups =
       Collections.nCopies(3, "snap");
-    System.out.println("dups: " + dups);
-    System.out.println("'list' disjoint 'dups'?: " +
+    System.err.println("dups: " + dups);
+    System.err.println("'list' disjoint 'dups'?: " +
       Collections.disjoint(list, dups));
     // Getting an old-style Enumeration:
     Enumeration<String> e =
@@ -62,7 +62,7 @@ public class Utilities {
     // to a List via an Enumeration:
     ArrayList<String> arrayList =
       Collections.list(v.elements());
-    System.out.println("arrayList: " + arrayList);
+    System.err.println("arrayList: " + arrayList);
   }
 }
 /* Output:

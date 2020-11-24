@@ -13,7 +13,7 @@ public class DatabaseException extends Exception {
     try {
       throw new DatabaseException(3, 7, "Write failed");
     } catch(Exception e) {
-      System.out.println(e);
+      System.err.println(e);
     }
   }
 }

@@ -17,7 +17,7 @@ public class TreeSetOfWords {
         .filter(s -> s.length() > 2)
         .limit(100)
         .collect(Collectors.toCollection(TreeSet::new));
-    System.out.println(words2);
+    System.err.println(words2);
   }
 }
 /* Output:

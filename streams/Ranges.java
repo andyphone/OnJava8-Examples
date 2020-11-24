@@ -10,16 +10,16 @@ public class Ranges {
     int result = 0;
     for(int i = 10; i < 20; i++)
       result += i;
-    System.out.println(result);
+    System.err.println(result);
 
     // for-in with a range:
     result = 0;
     for(int i : range(10, 20).toArray())
       result += i;
-    System.out.println(result);
+    System.err.println(result);
 
     // Use streams:
-    System.out.println(range(10, 20).sum());
+    System.err.println(range(10, 20).sum());
   }
 }
 /* Output:

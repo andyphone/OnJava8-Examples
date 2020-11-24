@@ -10,7 +10,7 @@ import java.io.*;
 public class GZIPcompress {
   public static void main(String[] args) {
     if(args.length == 0) {
-      System.out.println(
+      System.err.println(
         "Usage: \nGZIPcompress file\n" +
         "\tUses GZIP compression to compress " +
         "the file to test.gz");
@@ -24,14 +24,14 @@ public class GZIPcompress {
           new GZIPOutputStream(
             new FileOutputStream("test.gz")))
     ) {
-      System.out.println("Writing file");
+      System.err.println("Writing file");
       int c;
       while((c = in.read()) != -1)
         out.write(c);
     } catch(IOException e) {
       throw new RuntimeException(e);
     }
-    System.out.println("Reading file");
+    System.err.println("Reading file");
     try(
       BufferedReader in2 = new BufferedReader(
         new InputStreamReader(new GZIPInputStream(

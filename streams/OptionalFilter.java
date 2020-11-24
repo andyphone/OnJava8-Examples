@@ -15,9 +15,9 @@ class OptionalFilter {
   }
   static void
   test(String descr, Predicate<String> pred) {
-    System.out.println(" ---( " + descr + " )---");
+    System.err.println(" ---( " + descr + " )---");
     for(int i = 0; i <= elements.length; i++) {
-      System.out.println(
+      System.err.println(
         testStream()
           .skip(i)
           .findFirst()

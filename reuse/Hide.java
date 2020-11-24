@@ -7,11 +7,11 @@
 
 class Homer {
   char doh(char c) {
-    System.out.println("doh(char)");
+    System.err.println("doh(char)");
     return 'd';
   }
   float doh(float f) {
-    System.out.println("doh(float)");
+    System.err.println("doh(float)");
     return 1.0f;
   }
 }
@@ -20,7 +20,7 @@ class Milhouse {}
 
 class Bart extends Homer {
   void doh(Milhouse m) {
-    System.out.println("doh(Milhouse)");
+    System.err.println("doh(Milhouse)");
   }
 }
 

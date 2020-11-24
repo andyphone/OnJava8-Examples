@@ -27,11 +27,11 @@ public class TupleTest {
   }
   public static void main(String[] args) {
     Tuple2<String, Integer> ttsi = f();
-    System.out.println(ttsi);
+    System.err.println(ttsi);
     // ttsi.a1 = "there"; // Compile error: final
-    System.out.println(g());
-    System.out.println(h());
-    System.out.println(k());
+    System.err.println(g());
+    System.err.println(h());
+    System.err.println(k());
   }
 }
 /* Output:

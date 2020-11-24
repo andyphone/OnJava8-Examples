@@ -10,7 +10,7 @@ public class MultidimensionalPrimitiveArray {
       { 1, 2, 3, },
       { 4, 5, 6, },
     };
-    System.out.println(Arrays.deepToString(a));
+    System.err.println(Arrays.deepToString(a));
   }
 }
 /* Output:

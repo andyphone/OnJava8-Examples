@@ -14,11 +14,11 @@ public class SimpleTest {
   public SimpleTest() {}
   @Simple
   public void foo() {
-    System.out.println("SimpleTest.foo()");
+    System.err.println("SimpleTest.foo()");
   }
   @Simple
   public void bar(String s, int i, float f) {
-    System.out.println("SimpleTest.bar()");
+    System.err.println("SimpleTest.bar()");
   }
   @Simple
   public static void main(String[] args) {

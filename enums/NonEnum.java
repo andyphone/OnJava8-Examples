@@ -8,9 +8,9 @@ public class NonEnum {
     Class<Integer> intClass = Integer.class;
     try {
       for(Object en : intClass.getEnumConstants())
-        System.out.println(en);
+        System.err.println(en);
     } catch(Exception e) {
-      System.out.println("Expected: " + e);
+      System.err.println("Expected: " + e);
     }
   }
 }

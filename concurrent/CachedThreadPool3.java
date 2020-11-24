@@ -28,7 +28,7 @@ public class CachedThreadPool3 {
     Integer sum = futures.stream()
       .map(CachedThreadPool3::extractResult)
       .reduce(0, Integer::sum);
-    System.out.println("sum = " + sum);
+    System.err.println("sum = " + sum);
     exec.shutdown();
   }
 }

@@ -22,7 +22,7 @@ class Element {
   @SuppressWarnings("deprecation")
   @Override
   protected void finalize() {
-    System.out.println("Finalizing " +
+    System.err.println("Finalizing " +
       getClass().getSimpleName() + " " + ident);
   }
 }

@@ -18,7 +18,7 @@ public class TreeWatcher {
         try {
           WatchKey key = watcher.take();
           for(WatchEvent evt : key.pollEvents()) {
-            System.out.println(
+            System.err.println(
               "evt.context(): " + evt.context() +
               "\nevt.count(): " + evt.count() +
               "\nevt.kind(): " + evt.kind());

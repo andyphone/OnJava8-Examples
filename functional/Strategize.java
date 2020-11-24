@@ -27,7 +27,7 @@ public class Strategize {
     this.msg = msg;
   }
   void communicate() {
-    System.out.println(strategy.approach(msg));
+    System.err.println(strategy.approach(msg));
   }
   void changeStrategy(Strategy strategy) {
     this.strategy = strategy;

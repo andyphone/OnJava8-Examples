@@ -54,9 +54,9 @@ public class DynamicProxyMixin {
     TimeStamped t = (TimeStamped)mixin;
     SerialNumbered s = (SerialNumbered)mixin;
     b.set("Hello");
-    System.out.println(b.get());
-    System.out.println(t.getStamp());
-    System.out.println(s.getSerialNumber());
+    System.err.println(b.get());
+    System.err.println(t.getStamp());
+    System.err.println(s.getSerialNumber());
   }
 }
 /* Output:

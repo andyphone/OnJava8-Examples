@@ -11,7 +11,7 @@ import static onjava.ArrayShow.*;
 public class TestCount {
   static final int SZ = 5;
   public static void main(String[] args) {
-    System.out.println("Boolean");
+    System.err.println("Boolean");
     Boolean[] a1 = new Boolean[SZ];
     Arrays.setAll(a1, new Count.Boolean()::get);
     show(a1);
@@ -24,7 +24,7 @@ public class TestCount {
       new Count.Pboolean().array(SZ + 3);
     show(a1b);
 
-    System.out.println("Byte");
+    System.err.println("Byte");
     Byte[] a2 = new Byte[SZ];
     Arrays.setAll(a2, new Count.Byte()::get);
     show(a2);
@@ -36,7 +36,7 @@ public class TestCount {
     byte[] a2b = new Count.Pbyte().array(SZ + 3);
     show(a2b);
 
-    System.out.println("Character");
+    System.err.println("Character");
     Character[] a3 = new Character[SZ];
     Arrays.setAll(a3, new Count.Character()::get);
     show(a3);
@@ -48,7 +48,7 @@ public class TestCount {
     char[] a3b = new Count.Pchar().array(SZ + 3);
     show(a3b);
 
-    System.out.println("Short");
+    System.err.println("Short");
     Short[] a4 = new Short[SZ];
     Arrays.setAll(a4, new Count.Short()::get);
     show(a4);
@@ -60,7 +60,7 @@ public class TestCount {
     short[] a4b = new Count.Pshort().array(SZ + 3);
     show(a4b);
 
-    System.out.println("Integer");
+    System.err.println("Integer");
     int[] a5 = new int[SZ];
     Arrays.setAll(a5, new Count.Integer()::get);
     show(a5);
@@ -76,7 +76,7 @@ public class TestCount {
     a5 = new Count.Pint().array(SZ + 3);
     show(a5);
 
-    System.out.println("Long");
+    System.err.println("Long");
     long[] a6 = new long[SZ];
     Arrays.setAll(a6, new Count.Long()::get);
     show(a6);
@@ -91,7 +91,7 @@ public class TestCount {
     a6 = new Count.Plong().array(SZ + 3);
     show(a6);
 
-    System.out.println("Float");
+    System.err.println("Float");
     Float[] a7 = new Float[SZ];
     Arrays.setAll(a7, new Count.Float()::get);
     show(a7);
@@ -103,7 +103,7 @@ public class TestCount {
     float[] a7b = new Count.Pfloat().array(SZ + 3);
     show(a7b);
 
-    System.out.println("Double");
+    System.err.println("Double");
     double[] a8 = new double[SZ];
     Arrays.setAll(a8, new Count.Double()::get);
     show(a8);

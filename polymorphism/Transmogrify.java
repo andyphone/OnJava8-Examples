@@ -12,14 +12,14 @@ class Actor {
 class HappyActor extends Actor {
   @Override
   public void act() {
-    System.out.println("HappyActor");
+    System.err.println("HappyActor");
   }
 }
 
 class SadActor extends Actor {
   @Override
   public void act() {
-    System.out.println("SadActor");
+    System.err.println("SadActor");
   }
 }
 

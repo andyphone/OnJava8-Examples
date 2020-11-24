@@ -9,43 +9,43 @@ public class CarWash {
     UNDERBODY {
       @Override
       void action() {
-        System.out.println("Spraying the underbody");
+        System.err.println("Spraying the underbody");
       }
     },
     WHEELWASH {
       @Override
       void action() {
-        System.out.println("Washing the wheels");
+        System.err.println("Washing the wheels");
       }
     },
     PREWASH {
       @Override
       void action() {
-        System.out.println("Loosening the dirt");
+        System.err.println("Loosening the dirt");
       }
     },
     BASIC {
       @Override
       void action() {
-        System.out.println("The basic wash");
+        System.err.println("The basic wash");
       }
     },
     HOTWAX {
       @Override
       void action() {
-        System.out.println("Applying hot wax");
+        System.err.println("Applying hot wax");
       }
     },
     RINSE {
       @Override
       void action() {
-        System.out.println("Rinsing");
+        System.err.println("Rinsing");
       }
     },
     BLOWDRY {
       @Override
       void action() {
-        System.out.println("Blowing dry");
+        System.err.println("Blowing dry");
       }
     };
     abstract void action();
@@ -65,14 +65,14 @@ public class CarWash {
   }
   public static void main(String[] args) {
     CarWash wash = new CarWash();
-    System.out.println(wash);
+    System.err.println(wash);
     wash.washCar();
     // Order of addition is unimportant:
     wash.add(Cycle.BLOWDRY);
     wash.add(Cycle.BLOWDRY); // Duplicates ignored
     wash.add(Cycle.RINSE);
     wash.add(Cycle.HOTWAX);
-    System.out.println(wash);
+    System.err.println(wash);
     wash.washCar();
   }
 }

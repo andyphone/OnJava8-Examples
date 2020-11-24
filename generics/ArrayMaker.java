@@ -16,7 +16,7 @@ public class ArrayMaker<T> {
     ArrayMaker<String> stringMaker =
       new ArrayMaker<>(String.class);
     String[] stringArray = stringMaker.create(9);
-    System.out.println(Arrays.toString(stringArray));
+    System.err.println(Arrays.toString(stringArray));
   }
 }
 /* Output:

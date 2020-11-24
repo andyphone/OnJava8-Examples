@@ -35,11 +35,11 @@ public class AdapterMethodIdiom {
         Arrays.asList("To be or not to be".split(" ")));
     // Grabs the ordinary iterator via iterator():
     for(String s : ral)
-      System.out.print(s + " ");
-    System.out.println();
+      System.err.print(s + " ");
+    System.err.println();
     // Hand it the Iterable of your choice
     for(String s : ral.reversed())
-      System.out.print(s + " ");
+      System.err.print(s + " ");
   }
 }
 /* Output:

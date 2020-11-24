@@ -45,7 +45,7 @@ public class Staff extends ArrayList<Position> {
       staff.fillPosition("Software Engineer",
         new Person(
           "Bob", "Coder", "Bright Light City"));
-    System.out.println(staff);
+    System.err.println(staff);
   }
 }
 /* Output:

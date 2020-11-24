@@ -25,25 +25,25 @@ public class SimpleDeques {
         deque.offerFirst(s1.get());
         deque.offerLast(s2.get()); // Same as offer()
     }
-    System.out.println(deque);
+    System.err.println(deque);
     String result = "";
     while(deque.size() > 0) {
-      System.out.print(deque.peekFirst() + " ");
+      System.err.print(deque.peekFirst() + " ");
       result += deque.pollFirst() + " ";
-      System.out.print(deque.peekLast() + " ");
+      System.err.print(deque.peekLast() + " ");
       result += deque.pollLast() + " ";
     }
-    System.out.println("\n" + result);
+    System.err.println("\n" + result);
   }
   public static void main(String[] args) {
     int count = 10;
-    System.out.println("LinkedList");
+    System.err.println("LinkedList");
     test(new LinkedList<>());
-    System.out.println("ArrayDeque");
+    System.err.println("ArrayDeque");
     test(new ArrayDeque<>());
-    System.out.println("LinkedBlockingDeque");
+    System.err.println("LinkedBlockingDeque");
     test(new LinkedBlockingDeque<>(count));
-    System.out.println("ConcurrentLinkedDeque");
+    System.err.println("ConcurrentLinkedDeque");
     test(new ConcurrentLinkedDeque<>());
   }
 }

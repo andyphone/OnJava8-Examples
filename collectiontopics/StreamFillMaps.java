@@ -24,7 +24,7 @@ public class StreamFillMaps {
       .limit(11)
       .collect(Collectors
         .toMap(Pair::key, Pair::value));
-    System.out.println(m);
+    System.err.println(m);
 
     // Two separate Suppliers:
     Rand.String rs = new Rand.String(3);
@@ -34,7 +34,7 @@ public class StreamFillMaps {
       .limit(8)
       .collect(Collectors
         .toMap(Pair::key, Pair::value));
-    System.out.println(mcs);
+    System.err.println(mcs);
 
     // A key Supplier and a single value:
     Map<Character,String> mcs2 = Stream.generate(
@@ -42,7 +42,7 @@ public class StreamFillMaps {
       .limit(8)
       .collect(Collectors
         .toMap(Pair::key, Pair::value));
-    System.out.println(mcs2);
+    System.err.println(mcs2);
   }
 }
 /* Output:

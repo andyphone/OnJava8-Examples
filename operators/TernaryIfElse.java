@@ -14,10 +14,10 @@ public class TernaryIfElse {
       return i * 10;
   }
   public static void main(String[] args) {
-    System.out.println(ternary(9));
-    System.out.println(ternary(10));
-    System.out.println(standardIfElse(9));
-    System.out.println(standardIfElse(10));
+    System.err.println(ternary(9));
+    System.err.println(ternary(10));
+    System.err.println(standardIfElse(9));
+    System.err.println(standardIfElse(10));
   }
 }
 /* Output:

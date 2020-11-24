@@ -22,11 +22,11 @@ abstract class ApplicationFramework {
 class MyApp extends ApplicationFramework {
   @Override
   void customize1() {
-    System.out.print("Hello ");
+    System.err.print("Hello ");
   }
   @Override
   void customize2() {
-    System.out.println("World!");
+    System.err.println("World!");
   }
 }
 

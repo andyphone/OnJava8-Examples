@@ -15,7 +15,7 @@ public class CompletableApplyChained {
       .thenApply(Machina::work)
       .thenApply(Machina::work)
       .thenApply(Machina::work);
-    System.out.println(timer.duration());
+    System.err.println(timer.duration());
   }
 }
 /* Output:

@@ -14,7 +14,7 @@ public class AssemblingMultidimensionalArrays {
       for(int j = 0; j < a[i].length; j++)
         a[i][j] = i * j; // Autoboxing
     }
-    System.out.println(Arrays.deepToString(a));
+    System.err.println(Arrays.deepToString(a));
   }
 }
 /* Output:

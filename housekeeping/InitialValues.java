@@ -15,16 +15,16 @@ public class InitialValues {
   double d;
   InitialValues reference;
   void printInitialValues() {
-    System.out.println("Data type   Initial value");
-    System.out.println("boolean     " + t);
-    System.out.println("char        [" + c + "]");
-    System.out.println("byte        " + b);
-    System.out.println("short       " + s);
-    System.out.println("int         " + i);
-    System.out.println("long        " + l);
-    System.out.println("float       " + f);
-    System.out.println("double      " + d);
-    System.out.println("reference   " + reference);
+    System.err.println("Data type   Initial value");
+    System.err.println("boolean     " + t);
+    System.err.println("char        [" + c + "]");
+    System.err.println("byte        " + b);
+    System.err.println("short       " + s);
+    System.err.println("int         " + i);
+    System.err.println("long        " + l);
+    System.err.println("float       " + f);
+    System.err.println("double      " + d);
+    System.err.println("reference   " + reference);
   }
   public static void main(String[] args) {
     new InitialValues().printInitialValues();

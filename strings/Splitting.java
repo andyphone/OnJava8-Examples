@@ -10,7 +10,7 @@ public class Splitting {
     "you must cut down the mightiest tree in the " +
     "forest...with... a herring!";
   public static void split(String regex) {
-    System.out.println(
+    System.err.println(
       Arrays.toString(knights.split(regex)));
   }
   public static void main(String[] args) {

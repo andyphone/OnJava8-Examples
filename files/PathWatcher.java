@@ -17,7 +17,7 @@ public class PathWatcher {
           f.toString().endsWith(".txt"))
         .forEach(f -> {
           try {
-            System.out.println("deleting " + f);
+            System.err.println("deleting " + f);
             Files.delete(f);
           } catch(IOException e) {
             throw new RuntimeException(e);
@@ -41,7 +41,7 @@ public class PathWatcher {
         250, TimeUnit.MILLISECONDS);
     WatchKey key = watcher.take();
     for(WatchEvent evt : key.pollEvents()) {
-      System.out.println(
+      System.err.println(
         "evt.context(): " + evt.context() +
         "\nevt.count(): " + evt.count() +
         "\nevt.kind(): " + evt.kind());

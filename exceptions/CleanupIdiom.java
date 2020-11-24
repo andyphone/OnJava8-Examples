@@ -8,7 +8,7 @@ class NeedsCleanup { // Construction can't fail
   private static long counter = 1;
   private final long id = counter++;
   public void dispose() {
-    System.out.println(
+    System.err.println(
       "NeedsCleanup " + id + " disposed");
   }
 }
@@ -54,12 +54,12 @@ public class CleanupIdiom {
           nc5.dispose();
         }
       } catch(ConstructionException e) { // nc5 const.
-        System.out.println(e);
+        System.err.println(e);
       } finally {
         nc4.dispose();
       }
     } catch(ConstructionException e) { // nc4 const.
-      System.out.println(e);
+      System.err.println(e);
     }
   }
 }

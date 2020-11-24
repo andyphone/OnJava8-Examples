@@ -6,48 +6,48 @@
 
 class Plate {
   Plate(int i) {
-    System.out.println("Plate constructor");
+    System.err.println("Plate constructor");
   }
 }
 
 class DinnerPlate extends Plate {
   DinnerPlate(int i) {
     super(i);
-    System.out.println("DinnerPlate constructor");
+    System.err.println("DinnerPlate constructor");
   }
 }
 
 class Utensil {
   Utensil(int i) {
-    System.out.println("Utensil constructor");
+    System.err.println("Utensil constructor");
   }
 }
 
 class Spoon extends Utensil {
   Spoon(int i) {
     super(i);
-    System.out.println("Spoon constructor");
+    System.err.println("Spoon constructor");
   }
 }
 
 class Fork extends Utensil {
   Fork(int i) {
     super(i);
-    System.out.println("Fork constructor");
+    System.err.println("Fork constructor");
   }
 }
 
 class Knife extends Utensil {
   Knife(int i) {
     super(i);
-    System.out.println("Knife constructor");
+    System.err.println("Knife constructor");
   }
 }
 
 // A cultural way of doing something:
 class Custom {
   Custom(int i) {
-    System.out.println("Custom constructor");
+    System.err.println("Custom constructor");
   }
 }
 
@@ -62,7 +62,7 @@ public class PlaceSetting extends Custom {
     frk = new Fork(i + 3);
     kn = new Knife(i + 4);
     pl = new DinnerPlate(i + 5);
-    System.out.println("PlaceSetting constructor");
+    System.err.println("PlaceSetting constructor");
   }
   public static void main(String[] args) {
     PlaceSetting x = new PlaceSetting(9);

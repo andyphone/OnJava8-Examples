@@ -60,12 +60,12 @@ extends AbstractMap<Integer,String> {
   public static void main(String[] args) {
     final int size = 6;
     CountMap cm = new CountMap(60);
-    System.out.println(cm);
-    System.out.println(cm.get(500));
+    System.err.println(cm);
+    System.err.println(cm.get(500));
     cm.values().stream()
       .limit(size)
       .forEach(System.out::println);
-    System.out.println();
+    System.err.println();
     new Random(47).ints(size, 0, 1000)
       .mapToObj(cm::get)
       .forEach(System.out::println);

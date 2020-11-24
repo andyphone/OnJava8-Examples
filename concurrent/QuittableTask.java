@@ -15,6 +15,6 @@ public class QuittableTask implements Runnable {
   public void run() {
     while(running.get())         // [1]
       new Nap(0.1);
-    System.out.print(id + " ");  // [2]
+    System.err.print(id + " ");  // [2]
   }
 }

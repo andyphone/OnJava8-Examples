@@ -8,10 +8,10 @@ class CloseException extends Exception {}
 class Reporter2 implements AutoCloseable {
   String name = getClass().getSimpleName();
   Reporter2() {
-    System.out.println("Creating " + name);
+    System.err.println("Creating " + name);
   }
   public void close() throws CloseException {
-    System.out.println("Closing " + name);
+    System.err.println("Closing " + name);
   }
 }
 
@@ -30,9 +30,9 @@ public class CloseExceptions {
       Closer c = new Closer();
       Second s = new Second()
     ) {
-      System.out.println("In body");
+      System.err.println("In body");
     } catch(CloseException e) {
-      System.out.println("Caught: " + e);
+      System.err.println("Caught: " + e);
     }
   }
 }

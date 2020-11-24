@@ -12,10 +12,10 @@ public class Alias2 {
   }
   public static void main(String[] args) {
     Alias2 x = new Alias2(7);
-    System.out.println("x: " + x.i);
-    System.out.println("Calling f(x)");
+    System.err.println("x: " + x.i);
+    System.err.println("Calling f(x)");
     f(x);
-    System.out.println("x: " + x.i);
+    System.err.println("x: " + x.i);
   }
 }
 /* Output:

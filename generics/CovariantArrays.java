@@ -17,11 +17,11 @@ public class CovariantArrays {
     try {
       // Compiler allows you to add Fruit:
       fruit[0] = new Fruit(); // ArrayStoreException
-    } catch(Exception e) { System.out.println(e); }
+    } catch(Exception e) { System.err.println(e); }
     try {
       // Compiler allows you to add Oranges:
       fruit[0] = new Orange(); // ArrayStoreException
-    } catch(Exception e) { System.out.println(e); }
+    } catch(Exception e) { System.err.println(e); }
   }
 }
 /* Output:

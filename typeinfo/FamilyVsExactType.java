@@ -11,27 +11,27 @@ class Derived extends Base {}
 
 public class FamilyVsExactType {
   static void test(Object x) {
-    System.out.println(
+    System.err.println(
       "Testing x of type " + x.getClass());
-    System.out.println(
+    System.err.println(
       "x instanceof Base " + (x instanceof Base));
-    System.out.println(
+    System.err.println(
       "x instanceof Derived " + (x instanceof Derived));
-    System.out.println(
+    System.err.println(
       "Base.isInstance(x) " + Base.class.isInstance(x));
-    System.out.println(
+    System.err.println(
       "Derived.isInstance(x) " +
       Derived.class.isInstance(x));
-    System.out.println(
+    System.err.println(
       "x.getClass() == Base.class " +
       (x.getClass() == Base.class));
-    System.out.println(
+    System.err.println(
       "x.getClass() == Derived.class " +
       (x.getClass() == Derived.class));
-    System.out.println(
+    System.err.println(
       "x.getClass().equals(Base.class)) "+
       (x.getClass().equals(Base.class)));
-    System.out.println(
+    System.err.println(
       "x.getClass().equals(Derived.class)) " +
       (x.getClass().equals(Derived.class)));
   }

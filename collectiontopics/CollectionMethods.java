@@ -21,9 +21,9 @@ public class CollectionMethods {
     // Find max and min elements; this means
     // different things depending on the way
     // the Comparable interface is implemented:
-    System.out.println(
+    System.err.println(
       "Collections.max(c) = " + Collections.max(c));
-    System.out.println(
+    System.err.println(
       "Collections.min(c) = " + Collections.min(c));
     border();
     // Add a Collection to another Collection
@@ -45,10 +45,10 @@ public class CollectionMethods {
     border();
     // Is an element in this Collection?
     String val = LIST.get(3);
-    System.out.println(
+    System.err.println(
       "c.contains(" + val  + ") = " + c.contains(val));
     // Is a Collection in this Collection?
-    System.out.println(
+    System.err.println(
       "c.containsAll(c2) = " + c.containsAll(c2));
     Collection<String> c3 =
       ((List<String>)c).subList(3, 5);
@@ -59,7 +59,7 @@ public class CollectionMethods {
     // Throw away all the elements
     // in c2 that also appear in c3:
     c2.removeAll(c3);
-    System.out.println(
+    System.err.println(
       "c2.isEmpty() = " +  c2.isEmpty());
     border();
     // Functional operation:
@@ -69,7 +69,7 @@ public class CollectionMethods {
     // Stream operation:
     c.stream().forEach(System.out::println);
     c.clear(); // Remove all elements
-    System.out.println("after c.clear():" + c);
+    System.err.println("after c.clear():" + c);
   }
 }
 /* Output:

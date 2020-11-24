@@ -10,7 +10,7 @@ public class SetOfInteger {
     Set<Integer> intset = new HashSet<>();
     for(int i = 0; i < 10000; i++)
       intset.add(rand.nextInt(30));
-    System.out.println(intset);
+    System.err.println(intset);
   }
 }
 /* Output:

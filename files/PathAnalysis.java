@@ -7,12 +7,12 @@ import java.io.IOException;
 
 public class PathAnalysis {
   static void say(String id, Object result) {
-    System.out.print(id + ": ");
-    System.out.println(result);
+    System.err.print(id + ": ");
+    System.err.println(result);
   }
   public static void
   main(String[] args) throws IOException {
-    System.out.println(System.getProperty("os.name"));
+    System.err.println(System.getProperty("os.name"));
     Path p =
       Paths.get("PathAnalysis.java").toAbsolutePath();
     say("Exists", Files.exists(p));

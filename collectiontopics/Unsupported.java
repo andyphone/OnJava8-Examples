@@ -11,11 +11,11 @@ public class Unsupported {
     try {
       tst.run();
     } catch(Exception e) {
-      System.out.println(description + "(): " + e);
+      System.err.println(description + "(): " + e);
     }
   }
   static void test(String msg, List<String> list) {
-    System.out.println("--- " + msg + " ---");
+    System.err.println("--- " + msg + " ---");
     Collection<String> c = list;
     Collection<String> subList = list.subList(1,8);
     // Copy of the sublist:

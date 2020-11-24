@@ -21,7 +21,7 @@ public class Parcel1 {
   public void ship(String dest) {
     Contents c = new Contents();
     Destination d = new Destination(dest);
-    System.out.println(d.readLabel());
+    System.err.println(d.readLabel());
   }
   public static void main(String[] args) {
     Parcel1 p = new Parcel1();

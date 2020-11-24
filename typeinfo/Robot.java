@@ -11,11 +11,11 @@ public interface Robot {
   List<Operation> operations();
   static void test(Robot r) {
     if(r instanceof Null)
-      System.out.println("[Null Robot]");
-    System.out.println("Robot name: " + r.name());
-    System.out.println("Robot model: " + r.model());
+      System.err.println("[Null Robot]");
+    System.err.println("Robot name: " + r.name());
+    System.err.println("Robot model: " + r.model());
     for(Operation operation : r.operations()) {
-      System.out.println(operation.description.get());
+      System.err.println(operation.description.get());
       operation.command.run();
     }
   }

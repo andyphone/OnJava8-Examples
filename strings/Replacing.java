@@ -6,9 +6,9 @@
 public class Replacing {
   static String s = Splitting.knights;
   public static void main(String[] args) {
-    System.out.println(
+    System.err.println(
       s.replaceFirst("f\\w+", "located"));
-    System.out.println(
+    System.err.println(
       s.replaceAll("shrubbery|tree|herring","banana"));
   }
 }

@@ -12,45 +12,45 @@ public class MathOps {
     int i, j, k;
     // Choose value from 1 to 100:
     j = rand.nextInt(100) + 1;
-    System.out.println("j : " + j);
+    System.err.println("j : " + j);
     k = rand.nextInt(100) + 1;
-    System.out.println("k : " + k);
+    System.err.println("k : " + k);
     i = j + k;
-    System.out.println("j + k : " + i);
+    System.err.println("j + k : " + i);
     i = j - k;
-    System.out.println("j - k : " + i);
+    System.err.println("j - k : " + i);
     i = k / j;
-    System.out.println("k / j : " + i);
+    System.err.println("k / j : " + i);
     i = k * j;
-    System.out.println("k * j : " + i);
+    System.err.println("k * j : " + i);
     i = k % j;
-    System.out.println("k % j : " + i);
+    System.err.println("k % j : " + i);
     j %= k;
-    System.out.println("j %= k : " + j);
+    System.err.println("j %= k : " + j);
     // Floating-point number tests:
     float u, v, w; // Applies to doubles, too
     v = rand.nextFloat();
-    System.out.println("v : " + v);
+    System.err.println("v : " + v);
     w = rand.nextFloat();
-    System.out.println("w : " + w);
+    System.err.println("w : " + w);
     u = v + w;
-    System.out.println("v + w : " + u);
+    System.err.println("v + w : " + u);
     u = v - w;
-    System.out.println("v - w : " + u);
+    System.err.println("v - w : " + u);
     u = v * w;
-    System.out.println("v * w : " + u);
+    System.err.println("v * w : " + u);
     u = v / w;
-    System.out.println("v / w : " + u);
+    System.err.println("v / w : " + u);
     // The following also works for char,
     // byte, short, int, long, and double:
     u += v;
-    System.out.println("u += v : " + u);
+    System.err.println("u += v : " + u);
     u -= v;
-    System.out.println("u -= v : " + u);
+    System.err.println("u -= v : " + u);
     u *= v;
-    System.out.println("u *= v : " + u);
+    System.err.println("u *= v : " + u);
     u /= v;
-    System.out.println("u /= v : " + u);
+    System.err.println("u /= v : " + u);
   }
 }
 /* Output:

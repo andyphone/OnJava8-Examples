@@ -41,11 +41,11 @@ public class GetChannel {
       fc.read(buff);
       buff.flip();
       while(buff.hasRemaining())
-        System.out.write(buff.get());
+        System.err.write(buff.get());
     } catch(IOException e) {
       throw new RuntimeException(e);
     }
-    System.out.flush();
+    System.err.flush();
   }
 }
 /* Output:

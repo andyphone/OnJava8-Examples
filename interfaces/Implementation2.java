@@ -6,10 +6,10 @@
 public class Implementation2
 implements InterfaceWithDefault {
   public void firstMethod() {
-    System.out.println("firstMethod");
+    System.err.println("firstMethod");
   }
   public void secondMethod() {
-    System.out.println("secondMethod");
+    System.err.println("secondMethod");
   }
   public static void main(String[] args) {
     InterfaceWithDefault i =

@@ -13,7 +13,7 @@ public class FailFast {
     try {
       String s = it.next();
     } catch(ConcurrentModificationException e) {
-      System.out.println(e);
+      System.err.println(e);
     }
   }
 }
