@@ -11,4 +11,6 @@ public class SimpleEnumUse {
 }
 /* Output:
 MEDIUM
+
+self-note ordinal() 方法表示某个特定 enum 常量的声明顺序
 */

@@ -27,4 +27,6 @@ class [Ljava.lang.Character; length 0
 class [I length 1
 class [I length 0
 int[]: class [I
+
+self-note:前导的 "[" 代表这是一个后面紧随的类型的数组，"I" 表示基本类型 int；
 */
