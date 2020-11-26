@@ -38,4 +38,6 @@ public class Orc extends Villain {
 /* Output:
 Orc 12: I'm a Villain and my name is Limburger
 Orc 19: I'm a Villain and my name is Bob
+self-note: 尽管可以创建 protected 属性，但是最好的方式是将属性声明为 private 以一直保留更改底层实现的权利。
+然后通过 protected 控制类的继承者(Orc类)访问权限。
 */

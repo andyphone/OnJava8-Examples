@@ -6,11 +6,11 @@
 // a private or private final method
 
 class WithFinals {
-  // Identical to "private" alone:
+  // Identical to "private" alone: 这里 有没有final是一样的
   private final void f() {
     System.err.println("WithFinals.f()");
   }
-  // Also automatically "final":
+  // Also automatically "final": self-note:私有方法自动处于final状态
   private void g() {
     System.err.println("WithFinals.g()");
   }
@@ -40,10 +40,10 @@ public class FinalOverridingIllusion {
     op2.f();
     op2.g();
     // You can upcast:
-    OverridingPrivate op = op2;
+    OverridingPrivate op = op2; //self-note: 向上转型会导致调用同名方法不明确而无法调用
     // But you can't call the methods:
-    //- op.f();
-    //- op.g();
+//     op.f(); 如果一个方法是 private 的，它就不是基类接口的一部分。它只是隐藏在类内部的代码，且恰好有相同的命名而已。
+//     op.g();
     // Same here:
     WithFinals wf = op2;
     //- wf.f();
