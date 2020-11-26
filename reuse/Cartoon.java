@@ -17,9 +17,9 @@ class Drawing extends Art {
 }
 
 public class Cartoon extends Drawing {
-  public Cartoon() {
-    System.err.println("Cartoon constructor");
-  }
+//  public Cartoon() {
+//    System.err.println("Cartoon constructor");
+//  }
   public static void main(String[] args) {
     Cartoon x = new Cartoon();
   }
@@ -28,4 +28,9 @@ public class Cartoon extends Drawing {
 Art constructor
 Drawing constructor
 Cartoon constructor
+
+
+self-note : 即使不为 Cartoon 创建构造函数，
+编译器也会为你合成一个无参数构造函数，调用基类构造函数。
+尝试删除 Cartoon 构造函数来查看这个。
 */

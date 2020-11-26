@@ -45,4 +45,10 @@ Cleanser dilute() apply() Detergent.scrub() scrub()
 foam()
 Testing base class:
 Cleanser dilute() apply() scrub()
+
+
+self-note : 如在 scrub() 中所见，可以使用基类中定义的方法并修改它。
+在这里，你可以在新类中调用基类的该方法。但是在 scrub() 内部，不能简单地调用 scrub()，因为这会产生递归调用。
+为了解决这个问题，Java的 super 关键字引用了当前类继承的“超类”(基类)。
+因此表达式 super.scrub() 调用方法 scrub() 的基类版本。
 */

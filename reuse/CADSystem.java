@@ -69,10 +69,21 @@ public class CADSystem extends Shape {
     System.err.println("Combined constructor");
   }
   @Override
+  /**
+   * self-note
+   * 在很多情况下，清理问题不是问题；你只需要让垃圾收集器来完成这项工作。
+   * 但是，当你必须执行显式清理时，就需要多做努力，更加细心，因为在垃圾收集方面没有什么可以依赖的。
+   * 可能永远不会调用垃圾收集器。如果调用，它可以按照它想要的任何顺序回收对象。
+   * 除了内存回收外，你不能依赖垃圾收集来做任何事情。
+   * 如果希望进行清理，可以使用自己的清理方法，不要使用 finalize()。
+   */
   public void dispose() {
     System.err.println("CADSystem.dispose()");
     // The order of cleanup is the reverse
     // of the order of initialization:
+    // 必须注意基类和成员对象清理方法的调用顺序，以防一个子对象依赖于另一个子对象
+    // 即 按"与创建的相反顺序"执行特定于类的所有清理工作。(一般来说，这要求基类元素仍然是可访问的。)
+    // 然后 调用基类清理方法
     t.dispose();
     c.dispose();
     for(int i = lines.length - 1; i >= 0; i--)

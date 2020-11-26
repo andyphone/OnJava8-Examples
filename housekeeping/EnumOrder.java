@@ -16,4 +16,7 @@ MILD, ordinal 1
 MEDIUM, ordinal 2
 HOT, ordinal 3
 FLAMING, ordinal 4
+self-note:
+ordinal() 方法表示某个特定 enum 常量的声明顺序，
+static values() 方法按照 enum 常量的声明顺序，生成这些常量值构成的数组
 */
