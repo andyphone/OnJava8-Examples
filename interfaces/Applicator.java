@@ -55,4 +55,10 @@ Using Processor Downcase
 we are such stuff as dreams are made on
 Using Processor Splitter
 [We, are, such, stuff, as, dreams, are, made, on]
+
+
+self-note: 像本例中这样，创建一个能根据传入的参数类型从而具备不同行为的方法称为策略设计模式。
+方法包含算法中不变的部分，策略包含变化的部分。
+策略就是传入的对象，它包含要执行的代码。
+在这里，Processor 对象是策略，main() 方法展示了三种不同的应用于 String s 上的策略。
 */

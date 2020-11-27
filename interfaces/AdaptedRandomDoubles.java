@@ -33,3 +33,9 @@ implements RandomDoubles, Readable {
 0.5166020801268457 0.2678662084200585
 0.2613610344283964
 */
+/**
+ * self-note:  RandomDoubles 类没有实现 Readable 接口,
+ * 使用适配器模式，但这里适配器类可以实现两个接口
+ * 通过关键字 interface 提供的多继承，我们可以创建一个既是 RandomDoubles，又是 Readable 的类AdaptedRandomDoubles：
+ *
+ */

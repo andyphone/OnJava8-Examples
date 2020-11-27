@@ -37,4 +37,8 @@ Using Processor HighPass
 Waveform 0
 Using Processor BandPass
 Waveform 0
+
+self-note: 这种使用适配器的方式设计模式中，
+FilterAdapter 的构造器接受已有的接口 Filter，继而产生需要的 Processor 接口的对象。
+你可能还注意到 FilterAdapter 中使用了委托。
 */

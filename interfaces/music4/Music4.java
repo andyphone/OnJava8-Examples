@@ -4,8 +4,10 @@
 // Visit http://OnJava8.com for more book information.
 // Abstract classes and methods
 // {java interfaces.music4.Music4}
-package interfaces.music4;
-import polymorphism.music.Note;
+package music4;
+
+
+import music5.Note;
 
 abstract class Instrument {
   private int i; // Storage allocated for each

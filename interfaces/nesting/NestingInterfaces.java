@@ -3,7 +3,7 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // {java interfaces.nesting.NestingInterfaces}
-package interfaces.nesting;
+package nesting;
 
 class A {
   interface B {
@@ -92,14 +92,18 @@ public class NestingInterfaces {
   }
   public static void main(String[] args) {
     A a = new A();
-    // Can't access A.D:
-    //- A.D ad = a.getD();
-    // Doesn't return anything but A.D:
-    //- A.DImp2 di2 = a.getD();
-    // Cannot access a member of the interface:
-    //- a.getD().f();
-    // Only another A can do anything with getD():
-    A a2 = new A();
+
+    //-
+//     A.D ad = a.getD(); // Can't access A.D:
+
+    //-
+//     A.DImp2 di2 = a.getD(); // Doesn't return anything but A.D:
+
+    //-
+//     a.getD().f();  // Cannot access a member of the interface:
+
+    //-
+    A a2 = new A(); // Only another A can do anything with getD():
     a2.receiveD(a.getD());
   }
 }
