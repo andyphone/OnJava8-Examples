@@ -28,7 +28,7 @@ class OverridingPrivate extends WithFinals {
 class OverridingPrivate2 extends OverridingPrivate {
   public final void f() {
     System.err.println("OverridingPrivate2.f()");
-  }
+  }//final给方法上锁，防止子类覆写
   public void g() {
     System.err.println("OverridingPrivate2.g()");
   }

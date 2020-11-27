@@ -18,18 +18,30 @@ class Insect {
     return 47;
   }
 }
+class Insect2 {
+  protected int j;
 
-public class Beetle extends Insect {
-  private int k = printInit("Beetle.k initialized");
-  public Beetle() {
-    System.err.println("k = " + k);
-    System.err.println("j = " + j);
+  static{
+    System.err.println("基类都会被加载!!!");
   }
-  private static int x2 =
-    printInit("static Beetle.x2 initialized");
+  static int printInit(String s) {
+    System.err.println(s);
+    return 47;
+  }
+}
+public class Beetle extends Insect2 {
+//  private int k = printInit("Beetle.k initialized");
+//  public Beetle() {
+//    System.err.println("k = " + k);
+//    System.err.println("j = " + j);
+//  }
+//  private static int x2 =
+//    printInit("static Beetle.x2 initialized");
   public static void main(String[] args) {
     System.err.println("Beetle constructor");
-    Beetle b = new Beetle();
+//    Beetle b = new Beetle();
+//    self-note: 不论是否创建了基类的对象，基类Insect2都会被加载。
+//    如果基类还存在自身的基类，那么基类的基类也将被加载。除此之外要用到(Insect)才会加载
   }
 }
 /* Output:

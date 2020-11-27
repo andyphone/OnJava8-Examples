@@ -4,31 +4,32 @@
 // Visit http://OnJava8.com for more book information.
 // Overloading instead of upcasting
 // {java polymorphism.music.Music2}
-package polymorphism.music;
+package music;
+
 
 class Stringed extends Instrument {
   @Override
-  public void play(Note n) {
+  public void play(polymorphism.music.Note n) {
     System.err.println("Stringed.play() " + n);
   }
 }
 
 class Brass extends Instrument {
   @Override
-  public void play(Note n) {
+  public void play(polymorphism.music.Note n) {
     System.err.println("Brass.play() " + n);
   }
 }
 
 public class Music2 {
   public static void tune(Wind i) {
-    i.play(Note.MIDDLE_C);
+    i.play(polymorphism.music.Note.MIDDLE_C);
   }
   public static void tune(Stringed i) {
-    i.play(Note.MIDDLE_C);
+    i.play(polymorphism.music.Note.MIDDLE_C);
   }
   public static void tune(Brass i) {
-    i.play(Note.MIDDLE_C);
+    i.play(polymorphism.music.Note.MIDDLE_C);
   }
   public static void main(String[] args) {
     Wind flute = new Wind();
