@@ -3,21 +3,21 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // A "factory" that randomly creates shapes
-package polymorphism.shape;
+package shape;
 import java.util.*;
 
 public class RandomShapes {
   private Random rand = new Random(47);
-  public Shape get() {
+  public shape.Shape get() {
     switch(rand.nextInt(3)) {
       default:
-      case 0: return new Circle();
-      case 1: return new Square();
-      case 2: return new Triangle();
+      case 0: return new shape.Circle();
+      case 1: return new shape.Square();
+      case 2: return new shape.Triangle();
     }
   }
-  public Shape[] array(int sz) {
-    Shape[] shapes = new Shape[sz];
+  public  Shape[] array(int sz) {
+     Shape[] shapes = new  Shape[sz];
     // Fill up the array with shapes:
     for(int i = 0; i < shapes.length; i++)
       shapes[i] = get();

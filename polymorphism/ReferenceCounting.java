@@ -24,6 +24,11 @@ class Shared {
 
 class Composing {
   private Shared shared;
+  /**
+   * self-note: 一旦某个成员对象(shared)被其它一个或多个对象共享时，问题就变得复杂了，不能只是简单地调用 dispose()。
+   * 这里，也许就必须使用引用计数来跟踪仍然访问着共享对象的对象数量
+   * 使用这种技巧需要加倍细心，但是如果正在共享的对象需要被清理，你没有太多选择。
+   */
   private static long counter = 0;
   private final long id = counter++;
   Composing(Shared shared) {

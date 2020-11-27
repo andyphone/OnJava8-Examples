@@ -4,7 +4,6 @@
 // Visit http://OnJava8.com for more book information.
 // Cleanup and inheritance
 // {java polymorphism.Frog}
-package polymorphism;
 
 class Characteristic {
   private String s;
@@ -120,3 +119,12 @@ LivingCreature dispose
 disposing Description Basic Living Creature
 disposing Characteristic is alive
 */
+/**
+ * self-note:
+ *
+ * 对象销毁的顺序应该与初始化的顺序相反，以防一个对象依赖另一个对象。
+ * 属性销毁的顺序与声明的顺序相反（因为属性是按照声明顺序初始化的）。
+ * 首先进行派生类的清理工作，然后才是基类的清理。
+ * 这是因为派生类的清理可能调用基类的一些方法，所以基类组件这时得存活，不能过早地被销毁。
+ * 尽管通常不必进行清理工作，但万一需要时，就得谨慎小心地执行。
+ */

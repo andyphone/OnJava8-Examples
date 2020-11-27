@@ -31,7 +31,7 @@ public class RTTI {
     // Compile time: method not found in Useful:
     //- x[1].u();
     ((MoreUseful)x[1]).u(); // Downcast/RTTI
-    ((MoreUseful)x[0]).u(); // Exception thrown
+//    ((MoreUseful)x[0]).u(); // Exception thrown
   }
 }
 /* Output:
@@ -39,5 +39,5 @@ ___[ Error Output ]___
 Exception in thread "main"
 java.lang.ClassCastException: Useful cannot be cast to
 MoreUseful
-        at RTTI.main(RTTI.java:31)
+        at RTTI.main(RTTI.java:34)
 */

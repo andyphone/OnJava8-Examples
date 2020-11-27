@@ -18,7 +18,7 @@ interface Jim2 {
 
 public class Jim implements Jim1, Jim2 {
   @Override
-  public void jim() { Jim2.super.jim(); }
+  public void jim() { Jim2.super.jim(); }//self-note: 为了解决多个implements中各个接口的签名相同而导致的命名冲突(返回类型不是方法签名的一部分，因此不能用来区分方法),的问题
   public static void main(String[] args) {
     new Jim().jim();
   }

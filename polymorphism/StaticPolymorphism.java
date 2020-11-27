@@ -26,11 +26,13 @@ class StaticSub extends StaticSuper {
 public class StaticPolymorphism {
   public static void main(String[] args) {
     StaticSuper sup = new StaticSub(); // Upcast
-    System.err.println(StaticSuper.staticGet());
+    System.err.println(StaticSuper.staticGet());//self-note: 如果一个方法是静态(static)的，它的行为就不具有多态性：只与类关联
     System.err.println(sup.dynamicGet());
   }
 }
 /* Output:
 Base staticGet()
 Derived dynamicGet()
+
+
 */
