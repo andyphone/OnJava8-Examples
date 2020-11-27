@@ -76,7 +76,7 @@ public class NestingInterfaces {
   //- }
   class EImp implements E {
     @Override
-    public void g() {}
+    public void g() {}  //尤其是当实现某个接口(E)时，并不需要实现嵌套在其内部的接口(E.G)。
   }
   class EGImp implements E.G {
     @Override
@@ -94,16 +94,21 @@ public class NestingInterfaces {
     A a = new A();
 
     //-
-//     A.D ad = a.getD(); // Can't access A.D:
+     A.D ad = a.getD(); // Can't access A.D:
 
     //-
-//     A.DImp2 di2 = a.getD(); // Doesn't return anything but A.D:
+     A.DImp2 di2 = a.getD(); // Doesn't return anything but A.D:
 
     //-
-//     a.getD().f();  // Cannot access a member of the interface:
+     a.getD().f();  // Cannot access a member of the interface:
 
     //-
     A a2 = new A(); // Only another A can do anything with getD():
     a2.receiveD(a.getD());
+
+    /**
+     * getD()是一个 public 方法却返回了对 private 接口的引用。能对这个返回值做些什么呢？
+     * main() 方法里进行了一些使用返回值的尝试但都失败了。返回值必须交给有权使用它的对象，本例中另一个 A 通过 receiveD() 方法接受了它。
+     */
   }
 }
