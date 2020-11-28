@@ -30,7 +30,7 @@ public class FilterProcessor {
    Applicator.apply(
       new FilterAdapter(new HighPass(2.0)), w);
    Applicator.apply(
-      new FilterAdapter(new BandPass(3.0, 4.0)), w);//对于filter来说,没有任何改动,但是能用apply方法了
+      new FilterAdapter(new BandPass(3.0, 4.0)), w);//self-note: 对于filter及其派生类来说,没有任何改动,但是能用apply方法了; 完全解耦
     Upcase p = new Upcase();
     Applicator.apply(
             p, "sss");//除了开始将Processor改为接口外,也没有别的改动了.
