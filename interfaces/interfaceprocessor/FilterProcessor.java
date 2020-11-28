@@ -3,8 +3,11 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // {java interfaces.interfaceprocessor.FilterProcessor}
-package interfaces.interfaceprocessor;
-import interfaces.filters.*;
+//package interfaces.interfaceprocessor;
+//import interfaces.filters.*;
+//import interfaces;
+package interfaceprocessor;
+import filters.*;
 
 class FilterAdapter implements Processor {
   Filter filter;
@@ -24,10 +27,13 @@ public class FilterProcessor {
     Waveform w = new Waveform();
     Applicator.apply(
       new FilterAdapter(new LowPass(1.0)), w);
-    Applicator.apply(
+   Applicator.apply(
       new FilterAdapter(new HighPass(2.0)), w);
+   Applicator.apply(
+      new FilterAdapter(new BandPass(3.0, 4.0)), w);//对于filter来说,没有任何改动,但是能用apply方法了
+    Upcase p = new Upcase();
     Applicator.apply(
-      new FilterAdapter(new BandPass(3.0, 4.0)), w);
+            p, "sss");//除了开始将Processor改为接口外,也没有别的改动了.
   }
 }
 /* Output:

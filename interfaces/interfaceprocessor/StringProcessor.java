@@ -3,7 +3,9 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // {java interfaces.interfaceprocessor.StringProcessor}
-package interfaces.interfaceprocessor;
+package interfaceprocessor;
+import filters.Waveform;
+
 import java.util.*;
 
 interface StringProcessor extends Processor {

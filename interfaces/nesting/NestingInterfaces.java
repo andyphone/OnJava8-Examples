@@ -94,13 +94,13 @@ public class NestingInterfaces {
     A a = new A();
 
     //-
-     A.D ad = a.getD(); // Can't access A.D:
+//     A.D ad = a.getD(); // Can't access A.D:
 
     //-
-     A.DImp2 di2 = a.getD(); // Doesn't return anything but A.D:
+//     A.DImp2 di2 = a.getD(); // Doesn't return anything but A.D:
 
     //-
-     a.getD().f();  // Cannot access a member of the interface:
+//     a.getD().f();  // Cannot access a member of the interface:
 
     //-
     A a2 = new A(); // Only another A can do anything with getD():
