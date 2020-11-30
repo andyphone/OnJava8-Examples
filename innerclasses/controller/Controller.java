@@ -12,6 +12,7 @@ public class Controller {
   public void addEvent(Event c) { eventList.add(c); }
   public void run() {
     while(eventList.size() > 0)
+//      System.err.println("eventList.size(): "+eventList.size());
       // Make a copy so you're not modifying the list
       // while you're selecting the elements in it:
       for(Event e : new ArrayList<>(eventList))

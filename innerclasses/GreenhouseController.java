@@ -10,8 +10,10 @@ public class GreenhouseController {
     GreenhouseControls gc = new GreenhouseControls();
     // Instead of using code, you could parse
     // configuration information from a text file:
-    gc.addEvent(gc.new Bell(900));
+//    gc.addEvent(gc.new Bell(900));
     Event[] eventList = {
+            gc.new Bell(900) ,
+
       gc.new ThermostatNight(0),
       gc.new LightOn(200),
       gc.new LightOff(400),
