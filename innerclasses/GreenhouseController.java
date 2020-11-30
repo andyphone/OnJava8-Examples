@@ -5,14 +5,17 @@
 // Configure and execute the greenhouse system
 import controller.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class GreenhouseController {
   public static void main(String[] args) {
     GreenhouseControls gc = new GreenhouseControls();
     // Instead of using code, you could parse
     // configuration information from a text file:
-//    gc.addEvent(gc.new Bell(900));
+    gc.addEvent(gc.new Bell(900));
     Event[] eventList = {
-            gc.new Bell(900) ,
+//            gc.new Bell(900) ,
 
       gc.new ThermostatNight(0),
       gc.new LightOn(200),
@@ -21,8 +24,9 @@ public class GreenhouseController {
       gc.new WaterOff(800),
       gc.new ThermostatDay(1400)
     };
+    gc.setEventList(new ArrayList<>(Arrays.asList(eventList)));
 
-    gc.addEvent(gc.new Restart(2000, eventList));
+//    gc.addEvent(gc.new Restart(2000, eventList));
   /*  gc.addEvent(
       new GreenhouseControls.Terminate(5000));*/
     gc.run();

@@ -9,8 +9,15 @@ import java.util.*;
 public class Controller {
   // A class from java.util to hold Event objects:
   private List<Event> eventList = new ArrayList<>();
+
+  public void setEventList(List<Event> eventList) {
+    this.eventList = eventList;
+  }
+
   public void addEvent(Event c) { eventList.add(c); }
   public void run() {
+          System.err.println("eventList.size(): "+eventList.size());
+
     while(eventList.size() > 0)
 //      System.err.println("eventList.size(): "+eventList.size());
       // Make a copy so you're not modifying the list
