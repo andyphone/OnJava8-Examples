@@ -4,13 +4,13 @@
 // Visit http://OnJava8.com for more book information.
 
 class Parcel4 {
+  private int aaa ;
   private class PContents implements Contents {
     private int i = 11;
     @Override
     public int value() { return i; }
   }
-  protected final class
-  PDestination implements Destination {
+  protected final class PDestination implements Destination {
     private String label;
     private PDestination(String whereTo) {
       label = whereTo;
@@ -32,6 +32,8 @@ public class TestParcel {
     Contents c = p.contents();
     Destination d = p.destination("Tasmania");
     // Illegal -- can't access private class:
-    //- Parcel4.PContents pc = p.new PContents();
+ /*   Parcel4.PContents pc = p.new PContents();
+     p.aaa;*/
+
   }
 }

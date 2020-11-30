@@ -4,6 +4,8 @@
 // Visit http://OnJava8.com for more book information.
 // Holds a sequence of Objects
 
+import java.util.Arrays;
+
 interface Selector {
   boolean end();
   Object current();
@@ -23,7 +25,9 @@ public class Sequence {
   private class SequenceSelector implements Selector {
     private int i = 0;
     @Override
-    public boolean end() { return i == items.length; }
+    public boolean end() {
+      System.err.println("TT:"+ Arrays.toString(Sequence.this.items));//self-note: .this返回对整个外部对象的引用
+      return i == items.length; }
     @Override
     public Object current() { return items[i]; }
     @Override
