@@ -6,7 +6,7 @@
 // control system, all in a single class. Inner
 // classes allow you to encapsulate different
 // functionality for each type of event.
-import innerclasses.controller.*;
+import controller.*;
 
 public class GreenhouseControls extends Controller {
   private boolean light = false;
@@ -115,8 +115,7 @@ public class GreenhouseControls extends Controller {
   }
   public class Restart extends Event {
     private Event[] eventList;
-    public
-    Restart(long delayTime, Event[] eventList) {
+    public Restart(long delayTime, Event[] eventList) {
       super(delayTime);
       this.eventList = eventList;
       for(Event e : eventList)
@@ -133,7 +132,7 @@ public class GreenhouseControls extends Controller {
     }
     @Override
     public String toString() {
-      return "Restarting system";
+      return "Restarting system----------------重启";
     }
   }
   public static class Terminate extends Event {
