@@ -15,7 +15,8 @@ class Egg2 {
   }
   private Yolk y = new Yolk();
   Egg2() { System.err.println("New Egg2()"); }
-  public void insertYolk(Yolk yy) { y = yy; }
+  public void insertYolk(Yolk yy) {
+    System.err.println("y = yy;");y = yy; }
   public void g() { y.f(); }
 }
 
@@ -29,9 +30,11 @@ public class BigEgg2 extends Egg2 {
       System.err.println("BigEgg2.Yolk.f()");
     }
   }
-  public BigEgg2() { insertYolk(new Yolk()); }
+  public BigEgg2() {
+    System.err.println("insertYolk(new Yolk());");insertYolk(new Yolk()); }
   public static void main(String[] args) {
     Egg2 e2 = new BigEgg2();
+    System.err.println("before g()-------------");
     e2.g();
   }
 }

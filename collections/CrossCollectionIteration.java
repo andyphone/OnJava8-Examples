@@ -2,7 +2,7 @@
 // (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-import typeinfo.pets.*;
+import pets.*;
 import java.util.*;
 
 public class CrossCollectionIteration {
@@ -33,4 +33,7 @@ public class CrossCollectionIteration {
 7:Manx
 5:Cymric 2:Cymric 7:Manx 1:Manx 3:Mutt 6:Pug 4:Pug
 0:Rat
+
+self-note:  Iterator 的真正威力：能够将遍历序列的操作与该序列的底层结构分离。
+            出于这个原因，我们有时会说：迭代器统一了对集合的访问方式。
 */

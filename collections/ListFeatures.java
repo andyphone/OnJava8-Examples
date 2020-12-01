@@ -2,7 +2,7 @@
 // (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-import typeinfo.pets.*;
+import pets.*;
 import java.util.*;
 
 public class ListFeatures {
@@ -42,8 +42,9 @@ public class ListFeatures {
     copy.retainAll(sub);
     System.err.println("13: " + copy);
     copy = new ArrayList<>(pets); // Get a fresh copy
-    copy.remove(2); // Remove by index
+    copy.remove(6); // Remove by index
     System.err.println("14: " + copy);
+    System.err.println("current sub--->"+sub);
     copy.removeAll(sub); // Only removes exact objects
     System.err.println("15: " + copy);
     copy.set(1, new Mouse()); // Replace an element
@@ -90,4 +91,16 @@ sub: [Mouse, Pug]
 21: [Manx, Cymric, Rat, EgyptianMau]
 22: EgyptianMau
 23: 14
+
+self-note:
+需求	               list的方法	                        说明	                                  备注
+
+交集	         listA.retainAll(listB)	  依赖equals      listA内容变为listA和listB都存在的对象	    listB不变
+
+
+差集	         listA.removeAll(listB)	  依赖equals      listA中存在的listB的内容去重	            listB不变
+
+
+并集	         listA.removeAll(listB)
+             listA.addAll(listB)	                为了去重，listA先取差集，然后追加全部的listB	listB不变
 */
