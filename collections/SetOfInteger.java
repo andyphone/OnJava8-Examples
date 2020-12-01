@@ -8,8 +8,14 @@ public class SetOfInteger {
   public static void main(String[] args) {
     Random rand = new Random(47);
     Set<Integer> intset = new HashSet<>();
-    for(int i = 0; i < 10000; i++)
+    int i = 0;
+    for(; i < 10000; i++) {
       intset.add(rand.nextInt(30));
+      if (intset.size()==30) {
+        break;
+      }
+    }
+    System.err.println("i="+i);
     System.err.println(intset);
   }
 }

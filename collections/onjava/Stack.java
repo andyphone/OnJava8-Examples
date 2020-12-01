@@ -1,11 +1,12 @@
-// onjava/Stack.java
+package onjava;// onjava/Stack.java
 // (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // A Stack class built with an ArrayDeque
 //package onjava;
-import java.util.Deque;
+
 import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class Stack<T> {
   private Deque<T> storage = new ArrayDeque<>();
