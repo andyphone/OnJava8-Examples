@@ -21,6 +21,8 @@ public class QueueDemo {
     for(char c : "Brontosaurus".toCharArray())
       qc.offer(c);
     printQ(qc);
+
+
   }
 }
 /* Output:

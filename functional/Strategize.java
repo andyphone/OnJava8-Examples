@@ -8,6 +8,7 @@ interface Strategy {
 }
 
 class Soft implements Strategy {
+  @Override
   public String approach(String msg) {
     return msg.toLowerCase() + "?";
   }
@@ -32,21 +33,29 @@ public class Strategize {
   void changeStrategy(Strategy strategy) {
     this.strategy = strategy;
   }
+
+
   public static void main(String[] args) {
     Strategy[] strategies = {
+
+      //fun1
       new Strategy() { // [2]
+        @Override
         public String approach(String msg) {
           return msg.toUpperCase() + "!";
         }
       },
+      //fun1的简写 msg -> msg.toUpperCase() + "!",
       msg -> msg.substring(0, 5), // [3]
       Unrelated::twice // [4]
     };
     Strategize s = new Strategize("Hello there");
-    s.communicate();
+    s.communicate();  //最原始
+
+
     for(Strategy newStrategy : strategies) {
       s.changeStrategy(newStrategy); // [5]
-      s.communicate(); // [6]
+      s.communicate(); // [6]   //余下的几种
     }
   }
 }

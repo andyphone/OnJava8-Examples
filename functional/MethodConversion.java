@@ -21,7 +21,7 @@ public class MethodConversion {
     bic.accept(new In1(), new In2());
 
     bic = MethodConversion::someOtherName;
-    // bic.someOtherName(new In1(), new In2()); // Nope
+//     bic.someOtherName(new In1(), new In2()); // Nope
     bic.accept(new In1(), new In2());
   }
 }

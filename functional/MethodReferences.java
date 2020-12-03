@@ -30,18 +30,19 @@ public class MethodReferences {
       System.err.println(msg);
     }
   }
+  //self-note:
   public static void main(String[] args) {
     Describe d = new Describe();
-    Callable c = d::show; // [6]
+    Callable c = d::show; // [6]   我们将 **Describe** 对象的方法引用赋值给 **Callable**
     c.call("call()"); // [7]
 
-    c = MethodReferences::hello; // [8]
+    c = MethodReferences::hello; // [8] 这是一个**静态**方法引用。
     c.call("Bob");
 
-    c = new Description("valuable")::help; // [9]
+    c = new Description("valuable")::help; // [9]  这是 **[6]** 的另一个版本：对已实例化对象的方法的引用，有时称为*绑定方法引用*。
     c.call("information");
 
-    c = Helper::assist; // [10]
+    c = Helper::assist; // [10]  **[10]** 最后，获取静态内部类中静态方法的引用与 **[8]** 中通过外部类引用相似。
     c.call("Help!");
   }
 }

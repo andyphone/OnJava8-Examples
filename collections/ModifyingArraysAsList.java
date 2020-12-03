@@ -8,8 +8,7 @@ public class ModifyingArraysAsList {
   public static void main(String[] args) {
     Random rand = new Random(47);
     Integer[] ia = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    List<Integer> list1 =
-      new ArrayList<>(Arrays.asList(ia));
+    List<Integer> list1 = new ArrayList<>(Arrays.asList(ia));
     System.err.println("Before shuffling: " + list1);
     Collections.shuffle(list1, rand);
     System.err.println("After shuffling: " + list1);
