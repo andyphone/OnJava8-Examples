@@ -27,6 +27,10 @@ public class TransformFunction {
       return new O();
     });
     O o = f2.apply(new I());
+    //self-note:
+    /**
+     * 在这里,运行高阶函数f2,然后会运行传入的函数in,其结果再运行andThen()部分.
+     */
   }
 }
 /* Output:

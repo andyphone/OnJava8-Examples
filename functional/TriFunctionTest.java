@@ -6,8 +6,12 @@
 public class TriFunctionTest {
   static int f(int i, long l, double d) { return 99; }
   public static void main(String[] args) {
+
     TriFunction<Integer, Long, Double, Integer> tf =
       TriFunctionTest::f;
+
     tf = (i, l, d) -> 12;
+    //self-note: 这里我们同时测试了方法引用和 Lambda 表达式。
+
   }
 }
