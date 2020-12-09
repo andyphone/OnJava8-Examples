@@ -20,6 +20,7 @@ public class RandomWords implements Supplier<String> {
         words.add(word.toLowerCase());
     }
   }
+  @Override
   public String get() {
     return words.get(rand.nextInt(words.size()));
   }
@@ -31,9 +32,9 @@ public class RandomWords implements Supplier<String> {
   public static void
   main(String[] args) throws Exception {
     System.err.println(
-      Stream.generate(new RandomWords("Cheese.dat"))
+      Stream.generate(new RandomWords("D:\\GitOnlyTestProject\\OnJava8-Examples\\streams\\Cheese.dat"))
         .limit(10)
-        .collect(Collectors.joining(" ")));
+        .collect(Collectors.joining("|")));
   }
 }
 /* Output:

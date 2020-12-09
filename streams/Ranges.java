@@ -6,20 +6,21 @@ import static java.util.stream.IntStream.*;
 
 public class Ranges {
   public static void main(String[] args) {
+    //self-note: 左闭右开,1到99之和      //    rangeClosed的话就是1到100了!
     // The traditional way:
     int result = 0;
-    for(int i = 10; i < 20; i++)
+    for(int i = 1; i < 100; i++)
       result += i;
     System.err.println(result);
 
     // for-in with a range:
     result = 0;
-    for(int i : range(10, 20).toArray())
+    for(int i : range(1, 100).toArray())
       result += i;
     System.err.println(result);
 
     // Use streams:
-    System.err.println(range(10, 20).sum());
+    System.err.println(rangeClosed(1, 100).sum());
   }
 }
 /* Output:
