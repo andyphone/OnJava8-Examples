@@ -26,7 +26,7 @@ public class Reduce {
       .limit(10)
       .peek(System.out::println)
       .reduce((fr0, fr1) -> fr0.size < 50 ? fr0 : fr1)
-      .ifPresent(System.out::println);
+      .ifPresent(System.err::println);
   }
 }
 /* Output:

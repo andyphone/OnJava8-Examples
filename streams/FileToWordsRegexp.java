@@ -16,8 +16,7 @@ public class FileToWordsRegexp {
       .collect(Collectors.joining(" "));
   }
   public Stream<String> stream() {
-    return Pattern
-      .compile("[ .,?]+").splitAsStream(all);
+    return Pattern.compile("[ .,?]+").splitAsStream(all);
   }
   public static void
   main(String[] args) throws Exception {

@@ -11,7 +11,6 @@ public class FileToWords {
   throws Exception {
     return Files.lines(Paths.get(filePath))
       .skip(1) // First (comment) line
-      .flatMap(line ->
-        Pattern.compile("\\W+").splitAsStream(line));
+      .flatMap(line -> Pattern.compile("\\W+").splitAsStream(line));
   }
 }
