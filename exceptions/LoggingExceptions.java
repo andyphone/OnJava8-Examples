@@ -8,8 +8,7 @@ import java.util.logging.*;
 import java.io.*;
 
 class LoggingException extends Exception {
-  private static Logger logger =
-    Logger.getLogger("LoggingException");
+  private static Logger logger = Logger.getLogger("LoggingException");
   LoggingException() {
     StringWriter trace = new StringWriter();
     printStackTrace(new PrintWriter(trace));

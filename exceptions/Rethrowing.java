@@ -7,7 +7,7 @@
 public class Rethrowing {
   public static void f() throws Exception {
     System.err.println(
-      "originating the exception in f()");
+      "originating the exception in f()---------------------");
     throw new Exception("thrown from f()");
   }
   public static void g() throws Exception {
@@ -15,7 +15,7 @@ public class Rethrowing {
       f();
     } catch(Exception e) {
       System.err.println(
-        "Inside g(), e.printStackTrace()");
+        "Inside g(), e.printStackTrace()---------------------");
       e.printStackTrace(System.out);
       throw e;
     }
@@ -25,7 +25,7 @@ public class Rethrowing {
       f();
     } catch(Exception e) {
       System.err.println(
-        "Inside h(), e.printStackTrace()");
+        "Inside h(), e.printStackTrace()---------------------");
       e.printStackTrace(System.out);
       throw (Exception)e.fillInStackTrace();
     }

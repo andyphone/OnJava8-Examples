@@ -4,7 +4,8 @@
 // Visit http://OnJava8.com for more book information.
 // Keeps track of how many of itself are created.
 //package validating;
-import java.util.*;
+
+import java.util.ArrayList;
 
 public class CountedList extends ArrayList<String> {
   private static int counter = 0;

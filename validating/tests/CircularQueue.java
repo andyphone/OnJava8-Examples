@@ -4,7 +4,6 @@
 // Visit http://OnJava8.com for more book information.
 // Demonstration of Design by Contract (DbC)
 //package validating;
-//import java.util.*;
 
 import java.util.Arrays;
 

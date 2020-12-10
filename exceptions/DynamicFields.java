@@ -31,8 +31,7 @@ public class DynamicFields {
         return i;
     return -1;
   }
-  private int getFieldNumber(String id)
-  throws NoSuchFieldException {
+  private int getFieldNumber(String id) throws NoSuchFieldException {
     int fieldNum = hasField(id);
     if(fieldNum == -1)
       throw new NoSuchFieldException();
@@ -54,20 +53,18 @@ public class DynamicFields {
     // Recursive call with expanded fields:
     return makeField(id);
   }
-  public Object
-  getField(String id) throws NoSuchFieldException {
+  public Object getField(String id) throws NoSuchFieldException {
     return fields[getFieldNumber(id)][1];
   }
-  public Object setField(String id, Object value)
-  throws DynamicFieldsException {
+  public Object setField(String id, Object value) throws DynamicFieldsException {
     if(value == null) {
       // Most exceptions don't have a "cause"
       // constructor. In these cases you must use
       // initCause(), available in all
       // Throwable subclasses.
-      DynamicFieldsException dfe =
-        new DynamicFieldsException();
-      dfe.initCause(new NullPointerException());
+      DynamicFieldsException dfe = new DynamicFieldsException();
+      dfe.initCause(new NullPointerException());//self-note:  这样做就会在错误输出里多一句 Caused by: java.lang.NullPointerException
+
       throw dfe;
     }
     int fieldNumber = hasField(id);
@@ -78,14 +75,14 @@ public class DynamicFields {
       result = getField(id); // Get old value
     } catch(NoSuchFieldException e) {
       // Use constructor that takes "cause":
-      throw new RuntimeException(e);
+      throw new RuntimeException(e);//self-note: 这里用了cause参数构造器 RuntimeException(Throwable cause)
     }
     fields[fieldNumber][1] = value;
     return result;
   }
   public static void main(String[] args) {
     DynamicFields df = new DynamicFields(3);
-    System.err.println(df);
+    System.err.println("df-->"+df);
     try {
       df.setField("d", "A value for d");
       df.setField("number", 47);
@@ -96,8 +93,7 @@ public class DynamicFields {
       System.err.println("df: " + df);
       System.err.println("df.getField(\"d\") : "
         + df.getField("d"));
-      Object field =
-        df.setField("d", null); // Exception
+      Object field = df.setField("d", null); // Exception
     } catch(NoSuchFieldException |
             DynamicFieldsException e) {
       e.printStackTrace(System.out);
