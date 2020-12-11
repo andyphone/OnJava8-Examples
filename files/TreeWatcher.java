@@ -9,7 +9,9 @@ import static java.nio.file.StandardWatchEventKinds.*;
 import java.util.concurrent.*;
 
 public class TreeWatcher {
+  static int i=1;
   static void watchDir(Path dir) {
+    System.err.println("树" + i++);//self-note: 开了十七个额外线程,每个线程监听一个子目录!
     try {
       WatchService watcher =
         FileSystems.getDefault().newWatchService();
@@ -32,8 +34,7 @@ public class TreeWatcher {
       throw new RuntimeException(e);
     }
   }
-  public static void
-  main(String[] args) throws Exception {
+  public static void main(String[] args) throws Exception {
     Directories.refreshTestDir();
     Directories.populateTestDir();
     Files.walk(Paths.get("test"))

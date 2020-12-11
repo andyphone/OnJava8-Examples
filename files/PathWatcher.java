@@ -27,19 +27,21 @@ public class PathWatcher {
       throw new RuntimeException(e);
     }
   }
-  public static void
-  main(String[] args) throws Exception {
+  public static void main(String[] args) throws Exception {
     Directories.refreshTestDir();
     Directories.populateTestDir();
     Files.createFile(test.resolve("Hello.txt"));
-    WatchService watcher =
-      FileSystems.getDefault().newWatchService();
+    WatchService watcher = FileSystems.getDefault().newWatchService();
     test.register(watcher, ENTRY_DELETE);
+
     Executors.newSingleThreadScheduledExecutor()
-      .schedule(
-        PathWatcher::delTxtFiles,
-        250, TimeUnit.MILLISECONDS);
-    WatchKey key = watcher.take();
+            .schedule(
+                    PathWatcher::delTxtFiles,
+                    5, TimeUnit.SECONDS);
+    //    delTxtFiles();
+        WatchKey key = watcher.take();
+
+
     for(WatchEvent evt : key.pollEvents()) {
       System.err.println(
         "evt.context(): " + evt.context() +

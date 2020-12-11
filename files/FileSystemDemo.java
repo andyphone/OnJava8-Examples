@@ -11,6 +11,8 @@ public class FileSystemDemo {
   public static void main(String[] args) {
     System.err.println(System.getProperty("os.name"));
     FileSystem fsys = FileSystems.getDefault();
+//    FileSystems.getFileSystem() //self-note: 通过uri参数得到文件系统
+//    FileSystems.newFileSystem()
     for(FileStore fs : fsys.getFileStores())
       show("File Store", fs);
     for(Path rd : fsys.getRootDirectories())
