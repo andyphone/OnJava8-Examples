@@ -4,7 +4,7 @@
 // Visit http://OnJava8.com for more book information.
 // Relying on a common resource
 import java.util.*;
-import onjava.Timer;
+//import onjava.Timer;
 
 public class BadMicroBenchmark2 {
   // SIZE reduced to make it run faster:
@@ -23,7 +23,7 @@ public class BadMicroBenchmark2 {
       Timer.duration(() ->
         Arrays.parallelSetAll(la, n -> sr.nextLong())));
     System.err.println("setAll: " +
-      Timer.duration(() ->
+      Timer.duration(() ->PathInfo
         Arrays.setAll(la, n -> sr.nextLong())));
   }
 }

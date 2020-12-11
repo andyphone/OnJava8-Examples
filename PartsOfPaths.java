@@ -10,15 +10,11 @@ public class PartsOfPaths {
     Path p = Paths.get("PartsOfPaths.java").toAbsolutePath();
     System.err.println(p);
     System.err.println(Files.exists(p));
-
-    for(int i = 0; i < p.getNameCount(); i++) {
+    
+    for(int i = 0; i < p.getNameCount(); i++)
       System.err.println("第" + i + "部分--"+p.getName(i));
-    }
-
-
-    System.err.println("ends with '.java'1: " + p.endsWith(".java"));
-    System.err.println("ends with '.java'2: " + p.endsWith("PartsOfPaths.java"));
-
+    System.err.println("ends with '.java': " +
+      p.endsWith(".java"));
     for(Path pp : p) {
       System.err.print(pp + ": ");
       System.err.print(p.startsWith(pp) + " : ");

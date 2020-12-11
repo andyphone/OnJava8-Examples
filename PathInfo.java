@@ -48,8 +48,7 @@ public class PathInfo {
     Path puri = Paths.get(u);
     System.err.println(Files.exists(puri));
 
-    File f = ap.toFile(); // Don't be fooled //self-note: 这是 java.io.File的产物, 和nio.file无关;
-    System.err.println("|||"+f);
+    File f = ap.toFile(); // Don't be fooled
   }
 }
 /* Output:

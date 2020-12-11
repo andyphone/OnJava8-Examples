@@ -13,7 +13,10 @@ public class RandomWords implements Supplier<String> {
   Random rand = new Random(47);
   RandomWords(String fname) throws IOException {
     List<String> lines =
-      Files.readAllLines(Paths.get(fname));
+      Files.readAllLines(Paths.get("")
+              .resolve("streams")
+              .resolve(fname)
+              .toRealPath());
     // Skip the first line:
     for(String line : lines.subList(1, lines.size())) {
       for(String word : line.split("[ .?,]+"))
@@ -32,7 +35,7 @@ public class RandomWords implements Supplier<String> {
   public static void
   main(String[] args) throws Exception {
     System.err.println(
-      Stream.generate(new RandomWords("D:\\GitOnlyTestProject\\OnJava8-Examples\\streams\\Cheese.dat"))
+      Stream.generate(new RandomWords("Cheese.dat"))
         .limit(10)
         .collect(Collectors.joining("|")));
   }

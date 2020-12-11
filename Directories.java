@@ -8,11 +8,12 @@ import java.nio.file.*;
 
 public class Directories {
   static Path test = Paths.get("test");
-  static String sep = FileSystems.getDefault().getSeparator();
-  static List<String> parts = Arrays.asList("foo", "bar", "baz", "bag");
-
+  static String sep =
+    FileSystems.getDefault().getSeparator();
+  static List<String> parts =
+    Arrays.asList("foo", "bar", "baz", "bag");
   static Path makeVariant() {
-    Collections.rotate(parts, 1);//self-note: 每次调用都轮转一次来输出不同的路径
+    Collections.rotate(parts, 1);
     return Paths.get("test", String.join(sep, parts));
   }
   static void refreshTestDir() throws Exception {
@@ -21,7 +22,8 @@ public class Directories {
     if(!Files.exists(test))
       Files.createDirectory(test);
   }
-  public static void main(String[] args) throws Exception {
+  public static void
+  main(String[] args) throws Exception {
     refreshTestDir();
     Files.createFile(test.resolve("Hello.txt"));
     Path variant = makeVariant();
@@ -32,19 +34,19 @@ public class Directories {
       System.err.println("Nope, that doesn't work.");
     }
     populateTestDir();
-    Path tempdir = Files.createTempDirectory(test, "DIR_");
-    Path fileName = Files.createTempFile(tempdir, "pre", ".non").getFileName();
-    System.err.println("tmp文件名"+fileName);
+    Path tempdir =
+      Files.createTempDirectory(test, "DIR_");
+    Files.createTempFile(tempdir, "pre", ".non");
     Files.newDirectoryStream(test)
       .forEach(System.out::println);
-    System.out.println("*********");
+    System.err.println("*********");
     Files.walk(test).forEach(System.out::println);
   }
   static void populateTestDir() throws Exception {
     for(int i = 0; i < parts.size(); i++) {
       Path variant = makeVariant();
       if(!Files.exists(variant)) {
-        Files.createDirectories(variant);//self-note: 创建多级目录
+        Files.createDirectories(variant);
         Files.copy(Paths.get("Directories.java"),
           variant.resolve("File.txt"));
         Files.createTempFile(variant, null, null);
