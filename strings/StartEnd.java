@@ -18,7 +18,7 @@ public class StartEnd {
     Display(String regex) { this.regex = regex; }
     void display(String message) {
       if(!regexPrinted) {
-        System.err.println(regex);
+        System.err.println("模式---------"+regex);
         regexPrinted = true;
       }
       System.err.println(message);
@@ -41,7 +41,7 @@ public class StartEnd {
   public static void main(String[] args) {
     for(String in : input.split("\n")) {
       System.err.println("input : " + in);
-      for(String regex : new String[]{"\\w*ere\\w*",
+      for(String regex : new String[]{"A\\w*","\\w*ere\\w*",
         "\\w*ever", "T\\w+", "Never.*?!"})
         examine(in, regex);
     }

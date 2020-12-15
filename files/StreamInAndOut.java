@@ -19,4 +19,4 @@ public class StreamInAndOut {
       throw new RuntimeException(e);
     }
   }
-}
+}Immutable

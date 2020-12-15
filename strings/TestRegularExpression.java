@@ -5,29 +5,29 @@
 // Simple regular expression demonstration
 // {java TestRegularExpression
 // abcabcabcdefabc "abc+" "(abc)+" }
+
 import java.util.regex.*;
 
 public class TestRegularExpression {
-  public static void main(String[] args) {
-    if(args.length < 2) {
-      System.err.println(
-        "Usage:\njava TestRegularExpression " +
-        "characterSequence regularExpression+");
-      System.exit(0);
+    public static void main(String[] args) {
+        if (args.length < 2) {
+            System.err.println(
+                    "Usage:\njava TestRegularExpression " + "characterSequence regularExpression+");
+            System.exit(0);
+        }
+        System.err.println("Input: \"" + args[0] + "\"");
+        for (String arg : args) {
+            System.err.println(
+                    "Regular expression: \"" + arg + "\""+"---------------");
+            Pattern p = Pattern.compile(arg);
+            Matcher m = p.matcher(args[0]);
+            while (m.find()) {
+                System.err.println(
+                        "Match \"" + m.group() + "\" at positions " +
+                                m.start() + "-" + (m.end() - 1));
+            }
+        }
     }
-    System.err.println("Input: \"" + args[0] + "\"");
-    for(String arg : args) {
-      System.err.println(
-        "Regular expression: \"" + arg + "\"");
-      Pattern p = Pattern.compile(arg);
-      Matcher m = p.matcher(args[0]);
-      while(m.find()) {
-        System.err.println(
-          "Match \"" + m.group() + "\" at positions " +
-          m.start() + "-" + (m.end() - 1));
-      }
-    }
-  }
 }
 /* Output:
 Input: "abcabcabcdefabc"

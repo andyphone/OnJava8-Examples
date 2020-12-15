@@ -21,6 +21,7 @@ public class Groups {
     while(m.find()) {
       for(int j = 0; j <= m.groupCount(); j++)
         System.err.print("[" + m.group(j) + "]");
+//      System.err.println(m.groupCount());
       System.err.println();
     }
   }

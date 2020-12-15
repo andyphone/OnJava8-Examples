@@ -10,23 +10,19 @@ import java.nio.file.*;
 import java.util.stream.*;
 
 public class JGrep {
-  public static void
-  main(String[] args) throws Exception {
+  public static void main(String[] args) throws Exception {
     if(args.length < 2) {
-      System.err.println(
-        "Usage: java JGrep file regex");
+      System.out.println("Usage: java JGrep file regex");
       System.exit(0);
     }
     Pattern p = Pattern.compile(args[1]);
     // Iterate through the lines of the input file:
     int index = 0;
     Matcher m = p.matcher("");
-    for(String line :
-        Files.readAllLines(Paths.get(args[0]))) {
+    for(String line: Files.readAllLines(Paths.get(args[0]))) {
       m.reset(line);
       while(m.find())
-        System.err.println(index++ + ": " +
-          m.group() + ": " + m.start());
+      System.out.println(index++ + ": " + m.group() + ": " + m.start());
     }
   }
 }
