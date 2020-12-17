@@ -3,46 +3,99 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // Using isInstance()
-import java.util.*;
-import java.util.stream.*;
-//import onjava.*;
-import typeinfo.Pair;
-import typeinfo.pets.*;
+
+import typeinfo.pets.LiteralPetCreator;
+import typeinfo.pets.Pet;
+import typeinfo.pets.Pets;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
 
 public class PetCount3 {
-  static class Counter extends LinkedHashMap<Class<? extends Pet>, Integer> {
-    Counter() {
-      super(LiteralPetCreator.ALL_TYPES.stream()
+    static class Counter extends LinkedHashMap<Class<? extends Pet>, Integer> {
+        Counter() {
+            super(
+//self-note: fun1
+        /*      LiteralPetCreator.ALL_TYPES.stream()
         .map(lpc -> Pair.make(lpc, 0))
-        .collect(Collectors.toMap(Pair::key, Pair::value))
-      );
+        .collect(Collectors.toMap(Pair::key, Pair::value))*/
+
+
+//self-note: fun2
+//            listToMap(LiteralPetCreator.ALL_TYPES,  newList()   )
+
+//self-note: fun3
+                    /*listToMap(LiteralPetCreator.ALL_TYPES,
+                            Stream.generate(() -> 0)
+                                    .limit(LiteralPetCreator.ALL_TYPES.size())
+                                    .collect(Collectors.toList()))*/
+//self-note: fun4
+//                    LiteralPetCreator.ALL_TYPES.stream().collect(Collectors.toMap(x->x, x->0))
+
+//self-note: fun5
+                    LiteralPetCreator.ALL_TYPES.stream().collect(Collectors.toMap(Function.identity(), x->0))
+
+
+            );
+        }
+
+        private static List<Integer> newList() {
+            List<Integer> l = new ArrayList<>();
+            int len = LiteralPetCreator.ALL_TYPES.size();
+            for (int i = 0; i < len; i++) {
+                l.add(0);
+            }
+            return l;
+        }
+
+        public void count(Pet pet) {
+            // Class.isInstance() eliminates instanceofs:
+            entrySet().stream()
+                    .filter(pair -> pair.getKey().isInstance(pet))
+                    .forEach(pair ->
+                            put(pair.getKey(), pair.getValue() + 1));
+        }
+
+        @Override
+        public String toString() {
+            String result = entrySet().stream()
+                    .map(pair -> String.format("%s=%s",
+                            pair.getKey().getSimpleName(),
+                            pair.getValue()))
+                    .collect(Collectors.joining(", "));
+            return "{" + result + "}";
+        }
     }
-    public void count(Pet pet) {
-      // Class.isInstance() eliminates instanceofs:
-      entrySet().stream()
-        .filter(pair -> pair.getKey().isInstance(pet))
-        .forEach(pair ->
-          put(pair.getKey(), pair.getValue() + 1));
+
+    public static void main(String[] args) {
+        Counter petCount = new Counter();
+        Pets.stream()
+                .limit(20)
+                .peek(petCount::count)
+                .forEach(p -> System.err.print(
+                        p.getClass().getSimpleName() + " "));
+        System.err.println("\n" + petCount);
     }
-    @Override
-    public String toString() {
-      String result = entrySet().stream()
-        .map(pair -> String.format("%s=%s",
-          pair.getKey().getSimpleName(),
-          pair.getValue()))
-        .collect(Collectors.joining(", "));
-      return "{" + result + "}";
+
+
+    public static <K, V> Map<K, V> listToMap(List<K> keys, List<V> values) {
+        return keys.stream().collect(
+                Collectors.toMap(
+                        key -> key,
+                        key -> values.get(keys.indexOf(key))
+                )
+        );
     }
-  }
-  public static void main(String[] args) {
-    Counter petCount = new Counter();
-    Pets.stream()
-      .limit(20)
-      .peek(petCount::count)
-      .forEach(p -> System.err.print(
-        p.getClass().getSimpleName() + " "));
-    System.err.println("\n" + petCount);
-  }
+
+
+
+
+
 }
 /* Output:
 Rat Manx Cymric Mutt Pug Cymric Pug Manx Cymric Rat
