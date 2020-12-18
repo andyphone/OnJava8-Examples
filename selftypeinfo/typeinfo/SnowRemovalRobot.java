@@ -1,4 +1,4 @@
-// typeinfo/SnowRemovalRobot.java
+package typeinfo;// typeinfo/SnowRemovalRobot.java
 // (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
@@ -25,6 +25,7 @@ public class SnowRemovalRobot implements Robot {
       () -> name + " can clear the roof",
       () -> System.err.println(
         name + " clearing roof")));
+  @Override
   public List<Operation> operations() { return ops; }
   public static void main(String[] args) {
     Robot.test(new SnowRemovalRobot("Slusher"));

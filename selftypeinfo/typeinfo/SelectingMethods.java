@@ -11,12 +11,9 @@ class MethodSelector implements InvocationHandler {
     this.proxied = proxied;
   }
   @Override
-  public Object
-  invoke(Object proxy, Method method, Object[] args)
-  throws Throwable {
+  public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
     if(method.getName().equals("interesting"))
-      System.err.println(
-        "Proxy detected the interesting method");
+      System.err.println("Proxy detected the interesting method");
     return method.invoke(proxied, args);
   }
 }

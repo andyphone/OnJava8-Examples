@@ -1,7 +1,9 @@
-// typeinfo/Staff.java
+package typeinfo;// typeinfo/Staff.java
 // (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
+
+
 import java.util.*;
 
 public class Staff extends ArrayList<Position> {
@@ -13,22 +15,22 @@ public class Staff extends ArrayList<Position> {
       add(new Position(title));
   }
   public Staff(String... titles) { add(titles); }
+
   public boolean positionAvailable(String title) {
-    for(Position position : this)
-      if(position.getTitle().equals(title) &&
-         position.getPerson().empty)
+    for(Position position : this) {
+      if(position.getTitle().equals(title) && position.getPerson().empty)
         return true;
+    }
     return false;
   }
   public void fillPosition(String title, Person hire) {
-    for(Position position : this)
-      if(position.getTitle().equals(title) &&
-         position.getPerson().empty) {
+    for(Position position : this) {
+      if(position.getTitle().equals(title) && position.getPerson().empty) {
         position.setPerson(hire);
         return;
       }
-    throw new RuntimeException(
-      "Position " + title + " not available");
+    }
+    throw new RuntimeException("Position " + title + " not available");
   }
   public static void main(String[] args) {
     Staff staff = new Staff("President", "CTO",

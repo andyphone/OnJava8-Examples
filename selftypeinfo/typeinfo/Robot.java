@@ -1,8 +1,8 @@
-// typeinfo/Robot.java
+package typeinfo;// typeinfo/Robot.java
 // (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-import onjava.*;
+
 import java.util.*;
 
 public interface Robot {

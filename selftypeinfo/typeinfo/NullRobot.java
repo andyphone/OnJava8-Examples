@@ -1,4 +1,4 @@
-// typeinfo/NullRobot.java
+package typeinfo;// typeinfo/NullRobot.java
 // (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
@@ -6,10 +6,10 @@
 import java.lang.reflect.*;
 import java.util.*;
 import java.util.stream.*;
-import onjava.*;
 
-class NullRobotProxyHandler
-implements InvocationHandler {
+
+
+class NullRobotProxyHandler implements InvocationHandler {
   private String nullName;
   private Robot proxied = new NRobot();
   NullRobotProxyHandler(Class<? extends Robot> type) {
@@ -34,8 +34,7 @@ implements InvocationHandler {
 }
 
 public class NullRobot {
-  public static Robot
-  newNullRobot(Class<? extends Robot> type) {
+  public static Robot newNullRobot(Class<? extends Robot> type) {
     return (Robot)Proxy.newProxyInstance(
       NullRobot.class.getClassLoader(),
       new Class[]{ Null.class, Robot.class },
