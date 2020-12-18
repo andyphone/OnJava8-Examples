@@ -44,6 +44,7 @@ class SimpleProxyDemo {
   }
   public static void main(String[] args) {
     consumer(new RealObject());
+    System.err.println();
     consumer(new SimpleProxy(new RealObject()));
   }
 }

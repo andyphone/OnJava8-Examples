@@ -20,8 +20,7 @@ public class FamilyVsExactType {
     System.err.println(
       "Base.isInstance(x) " + Base.class.isInstance(x));
     System.err.println(
-      "Derived.isInstance(x) " +
-      Derived.class.isInstance(x));
+      "Derived.isInstance(x) " + Derived.class.isInstance(x));
     System.err.println(
       "x.getClass() == Base.class " +
       (x.getClass() == Base.class));
@@ -37,6 +36,7 @@ public class FamilyVsExactType {
   }
   public static void main(String[] args) {
     test(new Base());
+    System.err.println("-------------------");
     test(new Derived());
   }
 }

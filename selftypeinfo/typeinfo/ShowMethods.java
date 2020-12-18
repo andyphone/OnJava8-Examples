@@ -8,7 +8,7 @@
 import java.lang.reflect.*;
 import java.util.regex.*;
 
-public class ShowMethods {
+ class ShowMethods {
   private static String usage =
     "usage:\n" +
     "ShowMethods qualified.class.name\n" +
@@ -24,28 +24,34 @@ public class ShowMethods {
     int lines = 0;
     try {
       Class<?> c = Class.forName(args[0]);
+      System.err.println("简单名字："+c.getSimpleName());
+      System.err.println();
+
+
       Method[] methods = c.getMethods();
       Constructor[] ctors = c.getConstructors();
+      Constructor[] ctors2 = c.getDeclaredConstructors();
+
+
       if(args.length == 1) {
-        for(Method method : methods)
-          System.err.println(
-            p.matcher(
-              method.toString()).replaceAll(""));
+        for(Method method : methods) {
+          System.err.println(p.matcher(method.toString()).replaceAll(""));
+//          System.err.println("M->"+method.toString().replaceAll("\\w+\\.",""));
+        }
         for(Constructor ctor : ctors)
-          System.err.println(
-            p.matcher(ctor.toString()).replaceAll(""));
+          System.err.println("ctor: "+p.matcher(ctor.toString()).replaceAll(""));
+        for(Constructor ctor : ctors2)
+          System.err.println("ctor2: "+ctor.toString());
         lines = methods.length + ctors.length;
       } else {
         for(Method method : methods)
           if(method.toString().contains(args[1])) {
-            System.err.println(p.matcher(
-              method.toString()).replaceAll(""));
+            System.err.println(p.matcher(method.toString()).replaceAll(""));
             lines++;
           }
         for(Constructor ctor : ctors)
           if(ctor.toString().contains(args[1])) {
-            System.err.println(p.matcher(
-              ctor.toString()).replaceAll(""));
+            System.err.println(p.matcher(ctor.toString()).replaceAll(""));
             lines++;
           }
       }
