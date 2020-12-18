@@ -1,11 +1,12 @@
-// onjava/TypeCounter.java
+package typeinfo;// onjava/TypeCounter.java
 // (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // Counts instances of a type family
 //package onjava;
-import java.util.*;
-import java.util.stream.*;
+
+import java.util.HashMap;
+import java.util.stream.Collectors;
 
 public class TypeCounter extends HashMap<Class<?>, Integer> {
   private Class<?> baseType;
@@ -14,8 +15,7 @@ public class TypeCounter extends HashMap<Class<?>, Integer> {
   }
   public void count(Object obj) {
     Class<?> type = obj.getClass();
-    if(!baseType.isAssignableFrom(type))
-      throw new RuntimeException(
+    if(!baseType.isAssignableFrom(type)) throw new RuntimeException(
         obj + " incorrect type: " + type +
         ", should be type or subtype of " + baseType);
     countClass(type);

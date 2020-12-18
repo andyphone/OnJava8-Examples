@@ -12,19 +12,26 @@ class Part implements Supplier<Part> {
   public String toString() {
     return getClass().getSimpleName();
   }
-  static List<Supplier<? extends Part>> prototypes =
-    Arrays.asList(
+  static List<Supplier<? extends Part>> prototypes;
+
+  static {
+    AirFilter airFilter = new AirFilter();
+    prototypes = Arrays.asList(
       new FuelFilter(),
-      new AirFilter(),
+            airFilter,
       new CabinAirFilter(),
       new OilFilter(),
       new FanBelt(),
       new PowerSteeringBelt(),
       new GeneratorBelt()
     );
+  }
+
   private static Random rand = new Random(47);
+  @Override
   public Part get() {
     int n = rand.nextInt(prototypes.size());
+    System.out.println("RANDNUM: "+n);
     return prototypes.get(n).get();
   }
 }

@@ -29,6 +29,7 @@ public class Pets {
     }
 
     public static Stream<Pet> stream() {
-        return Stream.generate(CREATOR);
+        Stream<Pet> generate = Stream.generate(CREATOR);
+        return generate;
     }
 }

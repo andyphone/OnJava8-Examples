@@ -1,9 +1,9 @@
-// typeinfo/PetCount4.java
+package typeinfo;// typeinfo/PetCount4.java
 // (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 import typeinfo.pets.*;
-import onjava.*;
+//import onjava.*;
 
 public class PetCount4 {
   public static void main(String[] args) {

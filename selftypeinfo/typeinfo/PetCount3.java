@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -74,11 +75,13 @@ public class PetCount3 {
 
     public static void main(String[] args) {
         Counter petCount = new Counter();
+        Consumer<Pet> count = petCount::count;
+        Consumer<Pet> petConsumer = p -> System.err.print(p.getClass().getSimpleName() + " ");
         Pets.stream()
                 .limit(20)
-                .peek(petCount::count)
-                .forEach(p -> System.err.print(
-                        p.getClass().getSimpleName() + " "));
+                .peek(count)
+                .forEach(petConsumer);//self-note: 这两个consumer可互换位置
+
         System.err.println("\n" + petCount);
     }
 
@@ -104,3 +107,12 @@ Pug Mouse Cymric
 {Rat=2, Pug=3, Mutt=3, Mouse=2, Cat=9, Dog=6, Cymric=5,
 EgyptianMau=2, Rodent=5, Hamster=1, Manx=7, Pet=20}
 */
+
+
+/**
+ *
+ * {EgyptianMau=2, Pug=3, Rat=2, Cymric=5, Mouse=2, Cat=9, Manx=7, Rodent=5, Mutt=3, Dog=6, Pet=20, Hamster=1}
+ * {EgyptianMau=2, Pug=3, Rat=2, Cymric=5, Mouse=2, Cat=9, Manx=7, Rodent=5, Mutt=3, Dog=6, Pet=20, Hamster=1}
+ * {EgyptianMau=2, Pug=3, Rat=2, Cymric=5, Mouse=2, Cat=9, Manx=7, Rodent=5, Mutt=3, Dog=6, Pet=20, Hamster=1}
+ *
+ */
