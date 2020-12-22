@@ -2,10 +2,11 @@
 // (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-import generics.watercolors.*;
+//import generics.watercolors.*;
+import watercolors.Watercolors;
+
 import java.util.*;
-import static onjava.Sets.*;
-import static generics.watercolors.Watercolors.*;
+import static watercolors.Watercolors.*;
 
 public class WatercolorSets {
   public static void main(String[] args) {
@@ -16,16 +17,16 @@ public class WatercolorSets {
     System.err.println("set1: " + set1);
     System.err.println("set2: " + set2);
     System.err.println(
-      "union(set1, set2): " + union(set1, set2));
-    Set<Watercolors> subset = intersection(set1, set2);
+      "union(set1, set2): " + Sets.union(set1, set2));
+    Set<Watercolors> subset = Sets.intersection(set1, set2);
     System.err.println(
       "intersection(set1, set2): " + subset);
     System.err.println("difference(set1, subset): " +
-      difference(set1, subset));
+            Sets.difference(set1, subset));
     System.err.println("difference(set2, subset): " +
-      difference(set2, subset));
+            Sets. difference(set2, subset));
     System.err.println("complement(set1, set2): " +
-      complement(set1, set2));
+            Sets. complement(set1, set2));
   }
 }
 /* Output:

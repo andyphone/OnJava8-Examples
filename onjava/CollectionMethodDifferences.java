@@ -3,7 +3,7 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 // {java onjava.CollectionMethodDifferences}
-package onjava;
+//package onjava;
 import java.lang.reflect.*;
 import java.util.*;
 import java.util.stream.*;

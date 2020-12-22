@@ -2,8 +2,8 @@
 // (c)2020 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-// {java generics.coffee.CoffeeSupplier}
-package generics.coffee;
+// {java CoffeeSupplier}
+package coffee;
 import java.util.*;
 import java.util.function.*;
 import java.util.stream.*;
@@ -51,10 +51,12 @@ implements Supplier<Coffee>, Iterable<Coffee> {
     return new CoffeeIterator();
   }
   public static void main(String[] args) {
-    Stream.generate(new CoffeeSupplier())
+    CoffeeSupplier s = new CoffeeSupplier();
+    Stream.generate(s)
       .limit(5)
       .forEach(System.out::println);
-    for(Coffee c : new CoffeeSupplier(5))
+    CoffeeSupplier coffees = new CoffeeSupplier(5);
+    for(Coffee c : coffees)
       System.err.println(c);
   }
 }

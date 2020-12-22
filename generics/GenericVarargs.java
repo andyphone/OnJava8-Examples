@@ -5,7 +5,7 @@
 import java.util.*;
 
 public class GenericVarargs {
-  @SafeVarargs
+//  @SafeVarargs
   public static <T> List<T> makeList(T... args) {
     List<T> result = new ArrayList<>();
     for(T item : args)
@@ -17,8 +17,10 @@ public class GenericVarargs {
     System.err.println(ls);
     ls = makeList("A", "B", "C");
     System.err.println(ls);
+    String[] split = "ABCDEFFHIJKLMNOPQRSTUVWXYZ".split("");
+    System.err.println(Arrays.toString(split));
     ls = makeList(
-      "ABCDEFFHIJKLMNOPQRSTUVWXYZ".split(""));
+            split);
     System.err.println(ls);
   }
 }
