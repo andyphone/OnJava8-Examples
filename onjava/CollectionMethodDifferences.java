@@ -24,8 +24,7 @@ public class CollectionMethodDifferences {
   }
   static Set<String> object = methodSet(Object.class);
   static { object.add("clone"); }
-  static void
-  difference(Class<?> superset, Class<?> subset) {
+  static void difference(Class<?> superset, Class<?> subset) {
     System.err.print(superset.getSimpleName() +
       " extends " + subset.getSimpleName() +
       ", adds: ");
@@ -42,6 +41,7 @@ public class CollectionMethodDifferences {
     difference(Set.class, Collection.class);
     difference(HashSet.class, Set.class);
     difference(LinkedHashSet.class, HashSet.class);
+    System.err.println("*******************************************");
     difference(TreeSet.class, Set.class);
     difference(List.class, Collection.class);
     difference(ArrayList.class, List.class);

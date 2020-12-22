@@ -19,8 +19,8 @@ public class WatercolorSets {
     System.err.println(
       "union(set1, set2): " + Sets.union(set1, set2));
     Set<Watercolors> subset = Sets.intersection(set1, set2);
-    System.err.println(
-      "intersection(set1, set2): " + subset);
+
+    System.err.println("intersection(set1, set2)交集: " + subset);
     System.err.println("difference(set1, subset): " +
             Sets.difference(set1, subset));
     System.err.println("difference(set2, subset): " +
