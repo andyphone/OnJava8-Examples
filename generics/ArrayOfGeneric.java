@@ -11,11 +11,11 @@ public class ArrayOfGeneric {
     try {
       gia = (Generic<Integer>[])new Object[SIZE];
     } catch(ClassCastException e) {
-      System.err.println(e.getMessage());
+      System.err.println("异常1："+e.getMessage());
     }
     // Runtime type is the raw (erased) type:
     gia = (Generic<Integer>[])new Generic[SIZE];
-    System.err.println(gia.getClass().getSimpleName());
+    System.err.println("222: "+gia.getClass().getSimpleName());
     gia[0] = new Generic<>();
     //- gia[1] = new Object(); // Compile-time error
     // Discovers type mismatch at compile time:

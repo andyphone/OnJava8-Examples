@@ -5,7 +5,7 @@
 import java.util.*;
 
 public class GenericVarargs {
-//  @SafeVarargs
+  @SafeVarargs
   public static <T> List<T> makeList(T... args) {
     List<T> result = new ArrayList<>();
     for(T item : args)

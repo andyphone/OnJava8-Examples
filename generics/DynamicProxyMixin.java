@@ -4,9 +4,9 @@
 // Visit http://OnJava8.com for more book information.
 import java.lang.reflect.*;
 import java.util.*;
-import onjava.*;
-import static onjava.Tuple.*;
-
+//import onjava.*;
+//import static onjava.Tuple.*;
+//import static Tuple.tuple.*;
 class MixinProxy implements InvocationHandler {
   Map<String, Object> delegatesByMethod;
   @SuppressWarnings("unchecked")
@@ -46,9 +46,9 @@ public class DynamicProxyMixin {
   public static void main(String[] args) {
     @SuppressWarnings("unchecked")
     Object mixin = MixinProxy.newInstance(
-      tuple(new BasicImp(), Basic.class),
-      tuple(new TimeStampedImp(), TimeStamped.class),
-      tuple(new SerialNumberedImp(),
+      Tuple.tuple(new BasicImp(), Basic.class),
+            Tuple.tuple(new TimeStampedImp(), TimeStamped.class),
+            Tuple.tuple(new SerialNumberedImp(),
           SerialNumbered.class));
     Basic b = (Basic)mixin;
     TimeStamped t = (TimeStamped)mixin;

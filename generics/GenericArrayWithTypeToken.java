@@ -23,5 +23,23 @@ public class GenericArrayWithTypeToken<T> {
         Integer.class, 10);
     // This now works:
     Integer[] ia = gai.rep();
+    System.err.println(ia.length);
+
+    //self-note: 深入研究泛型的数组【】
+    try {
+      Object obj = new Object();
+      String str = (String)obj;
+    } catch (Exception e) {
+      System.err.println("not OK!  "+e);
+    }
+
+    try {
+      String str = new String();
+      Object obj = str;
+      String str2 = (String)obj;
+      System.err.println("OK!");
+    } catch (Exception e) {
+      System.err.println(e);
+    }
   }
 }

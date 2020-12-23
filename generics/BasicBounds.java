@@ -17,6 +17,8 @@ class Coord { public int x, y, z; }
 
 // This fails. Class must be first, then interfaces:
 // class WithColorCoord<T extends HasColor & Coord> {
+//
+// }
 
 // Multiple bounds:
 class WithColorCoord<T extends Coord & HasColor> {
@@ -44,8 +46,11 @@ class Solid<T extends Coord & HasColor & Weight> {
   int weight() { return item.weight(); }
 }
 
-class Bounded
-extends Coord implements HasColor, Weight {
+class Bounded extends Coord implements HasColor, Weight {
+  public Bounded() {
+    System.err.println("Bounded 构造器");
+  }
+
   @Override
   public java.awt.Color getColor() { return null; }
   @Override

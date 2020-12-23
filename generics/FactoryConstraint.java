@@ -21,8 +21,7 @@ class Widget {
   public String toString() {
     return "Widget " + id;
   }
-  public static
-  class Factory implements Supplier<Widget> {
+  public static class Factory implements Supplier<Widget> {
     private int i = 0;
     @Override
     public Widget get() { return new Widget(++i); }
@@ -32,6 +31,14 @@ class Widget {
 class Fudge {
   private static int count = 1;
   private int n = count++;
+  public Fudge() {
+    System.err.println("构造器启用");
+  }
+
+  public Fudge(int n) {
+    this.n = n;
+  }
+
   @Override
   public String toString() { return "Fudge " + n; }
 }
