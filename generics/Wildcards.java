@@ -7,7 +7,7 @@
 public class Wildcards {
    // Raw argument:
   static void rawArgs(Holder holder, Object arg) {
-    //- holder.set(arg);
+//     holder.set(arg);
     // warning: [unchecked] unchecked call to set(T)
     // as a member of the raw type Holder
     //     holder.set(arg);
@@ -17,7 +17,7 @@ public class Wildcards {
     // 1 warning
 
     // Can't do this; don't have any 'T':
-    // T t = holder.get();
+//     T t = holder.get();
 
     // OK, but type information is lost:
     Object obj = holder.get();
@@ -53,8 +53,7 @@ public class Wildcards {
     holder.set(arg);
     return holder.get();
   }
-  static <T>
-  T wildSubtype(Holder<? extends T> holder, T arg) {
+  static <T> T wildSubtype(Holder<? extends T> holder, T arg) {
     //- holder.set(arg);
     // error: method set in class Holder<T#2>
     // cannot be applied to given types;

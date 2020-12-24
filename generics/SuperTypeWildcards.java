@@ -8,6 +8,14 @@ public class SuperTypeWildcards {
   static void writeTo(List<? super Apple> apples) {
     apples.add(new Apple());
     apples.add(new Jonathan());
-    // apples.add(new Fruit()); // Error
+//     apples.add(new Fruit()); // Error
+
+    Holder<? super Apple> apple1 = new Holder<>(new Apple());
+    Holder<? super Apple> apple2 = new Holder<>(new Jonathan());
+    Holder<? super Apple> apple0 = new Holder<>(new Fruit());
+    apple1.set(new Jonathan());
+//    apple1.set(new Orange());
+//    apple0.set(new Fruit());
+
   }
 }

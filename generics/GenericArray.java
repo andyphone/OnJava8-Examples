@@ -6,7 +6,7 @@
 public class GenericArray<T> {
     private T[] array;
 
-//    @SuppressWarnings("unchecked")
+    @SuppressWarnings("unchecked")
     public GenericArray(int sz) {
         array = (T[]) new Object[sz];
     }
