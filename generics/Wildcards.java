@@ -74,8 +74,7 @@ public class Wildcards {
 
     return holder.get();
   }
-  static <T>
-  void wildSupertype(Holder<? super T> holder, T arg) {
+  static <T> void wildSupertype(Holder<? super T> holder, T arg) {
     holder.set(arg);
     //- T t = holder.get();
     // error: incompatible types:
@@ -96,7 +95,7 @@ public class Wildcards {
   public static void main(String[] args) {
     Holder raw = new Holder<>();
     // Or:
-    raw = new Holder();
+//    raw = new Holder();
     Holder<Long> qualified = new Holder<>();
     Holder<?> unbounded = new Holder<>();
     Holder<? extends Long> bounded = new Holder<>();
@@ -112,7 +111,7 @@ public class Wildcards {
     unboundedArg(unbounded, lng);
     unboundedArg(bounded, lng);
 
-    //- Object r1 = exact1(raw);
+//    Object r1 = exact1(raw);
     // warning: [unchecked] unchecked method invocation:
     // method exact1 in class Wildcards is applied
     // to given types
@@ -137,7 +136,7 @@ public class Wildcards {
     Object r3 = exact1(unbounded); // Must return Object
     Long r4 = exact1(bounded);
 
-    //- Long r5 = exact2(raw, lng);
+//     Long r5 = exact2(raw, lng);
     // warning: [unchecked] unchecked method invocation:
     // method exact2 in class Wildcards is
     // applied to given types
@@ -160,7 +159,7 @@ public class Wildcards {
 
     Long r6 = exact2(qualified, lng);
 
-    //- Long r7 = exact2(unbounded, lng);
+//     Long r7 = exact2(unbounded, lng);
     // error: method exact2 in class Wildcards
     // cannot be applied to given types;
     //     Long r7 = exact2(unbounded, lng);
