@@ -47,11 +47,11 @@ public class TurnOffChecking {
           throw re.getCause();
         } catch(FileNotFoundException e) {
           System.err.println(
-            "FileNotFoundException: " + e);
+            "1 FileNotFoundException: " + e);
         } catch(IOException e) {
-          System.err.println("IOException: " + e);
+          System.err.println("2 IOException: " + e);
         } catch(Throwable e) {
-          System.err.println("Throwable: " + e);
+          System.err.println("3 Throwable: " + e);
         }
       }
   }

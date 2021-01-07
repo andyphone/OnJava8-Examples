@@ -14,7 +14,7 @@ public class SelfBoundingAndCovariantArguments {
   void
   testA(Setter s1, Setter s2, SelfBoundSetter sbs) {
     s1.set(s2);
-    //- s1.set(sbs);
+//    s1.set(sbs);
     // error: method set in interface SelfBoundSetter<T>
     // cannot be applied to given types;
     //     s1.set(sbs);
