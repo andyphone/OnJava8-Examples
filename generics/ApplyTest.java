@@ -33,13 +33,13 @@ public class ApplyTest {
     Apply.apply(new FilledList<>(Square::new, 3),
       Shape.class.getMethod("rotate"));
 
-  /*  SimpleQueue<Shape> shapeQ = Suppliers.fill(
+    SimpleQueue<Shape> shapeQ = Suppliers.fill(
       new SimpleQueue<>(), SimpleQueue::add,
       Shape::new, 3);
     Suppliers.fill(shapeQ, SimpleQueue::add,
       Square::new, 3);
     Apply.apply(shapeQ,
-      Shape.class.getMethod("rotate"));*/
+      Shape.class.getMethod("rotate"));
   }
 }
 /* Output:

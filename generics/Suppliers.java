@@ -30,6 +30,7 @@ public class Suppliers {
   // produce a more general method:
   public static <H, A> H fill(H holder,
     BiConsumer<H, A> adder, Supplier<A> gen, int n) {
+    System.err.println("----------- <H, A> H fill ---------------");
     Stream.generate(gen)
       .limit(n)
       .forEach(a -> adder.accept(holder, a));
