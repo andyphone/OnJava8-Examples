@@ -8,6 +8,7 @@ import java.util.*;
 public class Apply {
   public static <T, S extends Iterable<T>>
   void apply(S seq, Method f, Object... args) {
+    System.err.println("---------apply------");
     try {
       for(T t: seq)
         f.invoke(t, args);
