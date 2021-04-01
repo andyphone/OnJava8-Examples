@@ -41,7 +41,7 @@ public class PetCount3 {
 //self-note: fun5
                     LiteralPetCreator.ALL_TYPES.stream().collect(Collectors.toMap(Function.identity(), x->0))
 
-
+//2021年4月1日10:45:25 上述均是从原来的一个list,生成一个key为list的值,且所有value均为0的初始Map,为下一步count()中累加做准备的
             );
         }
 
